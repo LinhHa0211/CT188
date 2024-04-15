@@ -1,0 +1,112 @@
+/* Fix nav */
+.header__nav{
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 15px 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgb(202, 195, 195);
+    opacity: 1;
+	display: flex;
+	flex-direction: row;
+}
+
+/* Logo image */
+#logo-img{
+	width: 50px;
+	left: 0px;
+}
+
+/* Dropdown menu */
+#main-menu{
+	font-family: "Lato", sans-serif;
+	font-size: 16px;
+	color: black;
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#main-menu li a{
+	text-align: left;
+	font-weight: 600;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+#main-menu li{
+	position: relative;
+}
+#main-menu li a{
+	color: black;
+	display: block;
+	padding: 15px 25px;
+	text-decoration: none;
+}
+
+#main-menu ul.sub-menu{
+	position: absolute;
+	background-color: rgb(241, 238, 238);
+	padding: 15px 0px;
+	list-style: none;
+	width: 200px;
+	display: none;
+}
+
+#main-menu li:hover > ul.sub-menu{
+	display: block;
+}
+
+#main-menu ul.sub-menu a{
+	padding: 15px 20px;
+	text-transform: initial;
+	font-weight: 500;
+	border-bottom: 1px solid #797171;
+}
+
+#main-menu ul.sub-menu li:hover a{
+	border-bottom: 1px solid #aea5a5;
+}
+
+#main-menu ul.sub-menu li:last-child a{
+	border: none;
+}
+
+/* Set up border when hovering */
+#main-menu > li > a::before{
+	content: "";
+	height: 4px;
+	width: 0px;
+	background-color: #0179B6;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#main-menu > li:hover > a::before{
+	width: 75%;
+}
+
+/* Add and edit dropdown arrow on the nav menu */
+#main-menu > li.has-child::after{
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f107";
+	position: absolute;
+	color: gray;
+	top: 0px;
+	right: 0px;
+	padding: 18px 0px;
+}
+
+#main-menu .sub-menu li:hover a{
+	color: rgb(109, 99, 99);
+}
+
+main {
+	height: 2000px;
+}
