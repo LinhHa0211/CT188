@@ -1,0 +1,189 @@
+main {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: "Poppins", sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	color: #111111;
+	font-weight: 400;
+	font-family: "Lato", sans-serif;
+}
+
+h1 {
+	font-size: 90px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+p {
+	font-size: 15px;
+	font-family: "Lato", sans-serif;
+	color: #727171;
+	font-weight: 400;
+	line-height: 25px;
+	margin: 0 0 15px 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+header{
+	height: 0;
+}
+
+/* SHOWROOM - PHUC */
+/* 1. Layout */
+.showroom__image {
+    position: relative;
+    width: 100%;
+    height: 20%;
+	margin-top: 78px;	
+
+	overflow: hidden;
+}
+
+#main-menu > li > a::before{
+	content: "";
+	height: 4px;
+	width: 0px;
+	background-color: #ffffff;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.showroom__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block; /* Đảm bảo hình ảnh là một khối hiển thị đầy đủ */
+}
+
+.showroom__img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Overlay chiếm toàn bộ kích thước của hình ảnh */
+    background-color: rgba(0, 0, 0, 0.4);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.showroom__img-text {
+	width: 75%;
+	padding: 3rem;
+
+	border: 1px solid #fff;
+}
+
+.showroom__img-header {
+	text-align: center;
+	color: #fff;
+	z-index: 2;
+
+	font-family: 'Montserrat';
+	font-weight: 400;
+	font-size: 90px;
+	
+}
+.showroom__img-content {
+	text-align: center;
+	color: #fff;
+	z-index: 2;
+
+	font-size: 20px;
+	font-weight: 300;
+	padding: 1rem;
+}
+
+
+
+.showroom__container {
+    padding: 0 10rem;
+}
+.showroom__container-header {
+    margin-top: 2rem;
+	margin-bottom: 1rem;
+}
+.showroom__container-content {
+	margin-bottom: 2rem;
+}
+.showroom__container-options {
+	border-right: 1px solid #c4c4c4;
+	padding-right: 1rem;
+}
+.showroom__container-map {
+	display: flex;
+	justify-content: center;
+	
+	margin-top: 1rem;
+}
+/* 2. Select box */
+.showroom__select-container {
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+.showroom__select-box {
+	appearance: none;
+    border: 1px solid #c4c4c4;
+    padding: 0 1em;
+    color: #4c4c4c;
+    font-size: 16px;
+    line-height: 40px;
+    width: 100%;
+}
+.showroom__select-icon {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+
+	height: 100%;
+	aspect-ratio: 1;
+	pointer-events: none;
+
+	background-color: #B0C4DE;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* 2. Map */
