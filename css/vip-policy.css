@@ -1,0 +1,46 @@
+#vip-policy-main{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 150px 80px;
+}
+
+#vip-policy-main ul.level-0 > li{
+    list-style: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#vip-policy-main ol.level-1 > li{
+    list-style: numeric;
+    margin-bottom: 5px;
+    margin-left: 40px;
+    font-weight: 400;
+}
+#vip-policy-main ul.level-2{
+    --icon-size: .8em;
+    --gutter: 1em;
+    padding: 0 0 0 var(--icon-size);
+}
+
+#vip-policy-main ul.level-2 > li {
+    padding-left: var(--gutter);
+    margin-bottom: 5px;
+    margin-left: 70px;
+    font-weight: 400;
+}
+
+#vip-policy-main ul.level-2 > li > span{
+    font-weight: 600;
+}
+
+#vip-policy-main ul.level-2 > li::marker{
+    content: "\f5a2";
+    font-family: FontAwesome;
+}
+
+#vip-policy-main ul.level-0#notice > li{
+    font-weight: 400;
+    font-style: italic;
+}
+
+
