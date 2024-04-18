@@ -13,6 +13,7 @@ contactForm.addEventListener('submit', function(event) {
     }
 
     alert("Form Is Submitted Successfully");
+    location.reload();
 });
 
 
