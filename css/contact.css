@@ -1,0 +1,55 @@
+main{
+    height: 1500px;
+}
+
+#contact-form{
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    margin-top: 300px;
+    width: 700px;
+    height: 300px;
+    padding: 2rem;
+    float: right;
+}
+
+.input__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+#contact-form > p{
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 75px;
+}
+
+#contact-form label{
+    color: rgb(60, 60, 60);
+    font-weight: 600;
+}
+
+#first-name, #last-name, #email, #topic, #content{
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1.3px solid #C0C0C0;
+    border-radius: 4px;
+}
+
+#content{
+    height: 200px;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    background-color: #333232;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); 
+    color: #ffffff;
+}
