@@ -12,16 +12,13 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
-
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap-grid.css" type="text/css">
-    <link rel="stylesheet" href="../css/style_phuc.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha384-...">
-    
-    
-    <!-- For header -->
-    <link rel="stylesheet" href="../bootstrap_template/css/bootstrap.min.css" type="text/css">
+
+        
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/js/bootstrap.bundle.js" type="text/css">
     <link rel="stylesheet" href="../bootstrap_template/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="../bootstrap_template/css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="../bootstrap_template/css/nice-select.css" type="text/css">
@@ -31,23 +28,25 @@
     <link rel="stylesheet" href="../bootstrap_template/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="../bootstrap_template/css/style.css" type="text/css">
     <link rel="stylesheet" href="../css/index.css" type="text/css">
+    <link rel="stylesheet" href="../css/style_phuc.css" type="text/css">
+    <!-- For header -->
+    
 </head>
 
-<body>
+<body class="body-showroom">
     <header>
-        <div class="container">
+        <div class="container"> 
             <div class="row">
-                <div class="col-lg-10">
-                    <div class="header__nav bg-white">
-                        
+                <div class="col-lg-12">
+                    <div class="header__nav w-100">
                         <nav>
                             <ul id="main-menu">
-                                <a href="./index.html"><img id="logo-img" src="../images/bmw.png"></a>
+                                <a href="./index.html"><img id="logo-img" src="../images/header/bmw.png"></a>
                                 <li id="header-show-home">
                                     <a href="./index.html">Trang chủ</a>
                                 </li>
                                 <li id="header-show-product">
-                                    <a href="#" >Sản phẩm</a>
+                                    <a href="#">Sản phẩm</a>
                                     <ul class="sub-menu">
                                         <li><a href="./bmw.html">BMW</a></li>
                                         <li><a href="./mercedes.html">Mercedes</a></li>
@@ -73,28 +72,26 @@
                                 </li>
                             </ul>
                         </nav>
+                        
                         <div class="header__nav__widget">
                             <div class="header__nav__widget__btn">
                                 <a href="#" class="search-switch">
                                     <i class="fa fa-search"></i>
                                 </a>
-                                <a href="#"">
+                                <a href="#">
                                     <i class="fa fa-location-dot"></i>
                                 </a>
-                                
+                                <a href="./login.html">
+                                    <i class="fa fa-user"></i>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 d-flex align-items-center">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="../img/logo.png" alt=""></a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <main>
+    <main class="main-showroom">
         
         <div class="showroom__image">
             <div class="showroom__img-overlay">
@@ -107,14 +104,39 @@
         </div>
         
         
-
+        <div class="showroom__commit container w-100">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-start">
+                    <h2 class="showroom__commit-header">Tự hào mang đến một showroom BMW chất lượng cao</h2>
+                    <div class="showroom__commit-line"></div>
+                    <h3 class="showroom__commit-description">Nơi mà bạn có thể tìm thấy sự kết hợp hoàn hảo giữa sự sang trọng của BMW và dịch vụ chăm sóc khách hàng tận tâm</h3>
+                    
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <i class="fa-solid fa-address-card showroom__commit-icon"></i><br>
+                            <span class="showroom__commit-miniheader">DỊCH VỤ TUYỆT VỜI</span>
+                            <p class="showroom__commit-minidesc">Tại showroom của chúng tôi, bạn sẽ trải nghiệm không chỉ việc mua xe, mà còn là một trải nghiệm đích thực về sản phẩm chất lượng và dịch vụ tuyệt vời.</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <i class="fa-solid fa-car showroom__commit-icon"></i><br>
+                            <span class="showroom__commit-miniheader">ĐỒNG HÀNH CÙNG BẠN</span>
+                            <p class="showroom__commit-minidesc">Chất lượng là ưu tiên hàng đầu tại showroom của chúng tôi. Chúng tôi cam kết đồng hành và luôn cung cấp những sản phẩm, dịch vụ tốt nhất.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="../images/showroom/showroomHelp.jpg" alt="">
+                </div>
+            </div>
+        </div>
         <div class="container w-100">
             <h2 class="showroom__container-header text-black">LIÊN HỆ SHOWROOM</h2>
             <div class="showroom__container-content row">
                 <div class="showroom__container-options col-lg-4">
-                    <p class="mb-3 mt-3">
+                    <p class="mb-3 mt-3 p-showroom">
                         Xin vui lòng chọn hệ thống showroom phân phối từ danh sách phía dưới hoặc trên bản đồ.
                     </p>
+                    
                     <div class = "showroom__select-container">
                         <select class="showroom__select-box" >
                             <option value="9" disabled selected>Chọn Trung tâm Dịch vụ.</option>
@@ -135,14 +157,14 @@
             </div>
         </div>
 
-
-        <script src="../js/jquery-3.7.1.min.js"></script>
-        <script src="../js/showroom_script.js"></script>
+        
+        
+        
     </main>
                    
-    <footer>
+    <footer class="showroom-footer">
         <div id="footer-1" class="row">
-            <div class="col-sm-2">
+            <div class="col-lg-2">
                 <ul>
                     <p>Về Chúng Tôi</p>
                     <li>Trung tâm trợ giúp</li>
@@ -150,7 +172,7 @@
                     <li>Hỗ trợ như bên thứ ba</li>
                 </ul>
             </div>
-            <div class="col-sm-2">
+            <div class="col-lg-2">
                 <ul>
                     <p>Về sản phẩm</p>
                     <li>Mẫu xe bán chạy</li>
@@ -158,7 +180,7 @@
                     <li>Mẫu xe cổ</li>
                 </ul>
             </div>
-            <div class="col-sm-3">
+            <div class="col-lg-3">
                 <ul class="payment">
                     <p>Phương thức thanh toán</p>
                     <li><img id="napas" src="../images/footer/napas.png"></li>
@@ -166,7 +188,7 @@
                     <li><img id="paypal" src="../images/footer/paypal.png"></li>
                 </ul>
             </div>
-            <div class="col-sm-2">
+            <div class="col-lg-2">
                 <ul class="follow">
                     <p>Theo dõi chúng tôi trên</p>
                     <li><i class="fa fa-facebook-square"></i> Facebook</li>
@@ -174,13 +196,13 @@
                     <li><i class="fa fa-twitter"></i> Twitter</li>
                 </ul>
             </div>
-            <div class="col-sm-3">
+            <div class="col-lg-3">
                 <div class="row">
                     <p>Truy cập vào ứng dụng trên</p>
-                    <div class="col-sm-5">
+                    <div class="col-lg-5">
                         <img id="qr" src="../images/footer/qr.png">
                     </div>
-                    <div class="col-sm-7">
+                    <div class="col-lg-7">
                         <ul class="access">
                             <li><i class="fa fa-google-play"></i> Google Play</button></li>
                             <li><i class="fa fa-app-store"></i> App Store</li>
@@ -202,7 +224,17 @@
 
 
 
-
+    <script src="../bootstrap_template/js/bootstrap.min.js"></script>
+        <script src="../bootstrap_template/js/jquery.nice-select.min.js"></script>
+        <script src="../bootstrap_template/js/jquery-ui.min.js"></script>
+        <script src="../bootstrap_template/js/jquery.magnific-popup.min.js"></script>
+        <script src="../bootstrap_template/js/mixitup.min.js"></script>
+        <script src="../bootstrap_template/js/jquery.slicknav.js"></script>
+        <script src="../bootstrap_template/js/owl.carousel.min.js"></script>
+        <script src="../bootstrap_template/js/main.js"></script>
+        <script src="../js/index.js"></script>
+        <script src="../js/jquery-3.7.1.min.js"></script>
+        <script src="../js/showroom_script.js"></script>
    
 </body>
 
