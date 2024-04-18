@@ -1,52 +1,12 @@
-main {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
 
-html,
-body {
-	height: 100%;
+
+.body-showroom {
+
 	font-family: "Poppins", sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0;
-	color: #111111;
-	font-weight: 400;
-	font-family: "Lato", sans-serif;
-}
 
-h1 {
-	font-size: 90px;
-}
-
-h2 {
-	font-size: 36px;
-}
-
-h3 {
-	font-size: 30px;
-}
-
-h4 {
-	font-size: 24px;
-}
-
-h5 {
-	font-size: 18px;
-}
-
-h6 {
-	font-size: 16px;
-}
-
-p {
+.p-showroom {
 	font-size: 15px;
 	font-family: "Lato", sans-serif;
 	color: #727171;
@@ -55,15 +15,21 @@ p {
 	margin: 0 0 15px 0;
 }
 
-img {
-	max-width: 100%;
-}
 
-header{
-	height: 0;
-}
+
 
 /* SHOWROOM - PHUC */
+
+.main-showroom {
+	height: 2000px;
+}
+
+.header__container{
+	padding : 0;
+	margin: 0;
+	
+}
+
 /* 1. Layout */
 .showroom__image {
     position: relative;
@@ -74,17 +40,6 @@ header{
 	overflow: hidden;
 }
 
-#main-menu > li > a::before{
-	content: "";
-	height: 4px;
-	width: 0px;
-	background-color: #ffffff;
-	position: absolute;
-	bottom: 0px;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
 
 .showroom__img {
     width: 100%;
@@ -139,11 +94,30 @@ header{
     padding: 0 10rem;
 }
 .showroom__container-header {
-    margin-top: 2rem;
-	margin-bottom: 1rem;
+	font-size: 60px;
+	font-family: 'Montserrat';
+	font-weight: 700;
+    margin-top: 10rem;
+	margin-bottom: 3rem;
+	position: relative;
 }
+
+.showroom__container-header::after {
+    content: '';
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    height: 1px; 
+    width: 100%; 
+    transform: translateY(-50%, -50%); 
+    transform-origin: right; 
+	background-color: #797171;
+}
+
 .showroom__container-content {
 	margin-bottom: 2rem;
+	font-size: 20px;
+
 }
 .showroom__container-options {
 	border-right: 1px solid #c4c4c4;
@@ -180,10 +154,64 @@ header{
 	aspect-ratio: 1;
 	pointer-events: none;
 
-	background-color: #B0C4DE;
+	background-color: #002351;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+/* 3. showroom-commit */
+.showroom__commit {
+	margin-top: 60px;
+}
+.showroom__commit-header {
+	position: relative;
+	font-size: 40px;
+	font-family: 'Montserrat';
+	line-height: 60px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
 
+
+
+.showroom__commit-description {
+	font-size: 18px;
+	font-family: 'Montserrat';
+	line-height: 30px;
+	margin: 15px 0;
+
+}
+
+.showroom__commit-line {
+	height: 3px;
+	width: 60%;
+	background-color: #982908;
+	margin: 20px 0;
+}
+
+.showroom__commit-icon {
+	font-size: 30px;
+	margin: 12px 0;
+	color: #0d0580;
+}
+.showroom__commit-miniheader {
+	font-size: 20px;
+	font-family: 'Montserrat';
+	font-weight: 700;
+	color: #10058a;
+}	
+.showroom__commit-minidesc {
+	font-size: 18px;
+	font-family: 'Montserrat';
+	text-align: justify;
+	line-height: 24px;
+}
 /* 2. Map */
+
+.showroom-footer {
+	overflow: hidden;
+}
+
+.showroom-header {
+	overflow-y: hidden;
+}
