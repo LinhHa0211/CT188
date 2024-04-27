@@ -83,23 +83,23 @@
     </header>
     <main id="register-main">
         <div class="wrapper">
-            <span class="close-icon"><i class="fa-solid fa-xmark"></i></span>
+            <span class="close-icon"><a href="index.html"><i class="fa-solid fa-xmark"></i></a></span>
             <div class="form">
                 <h2>Registration</h2>
-                <form action="#">
+                <form onsubmit="return registerValidate(this);" action="#" method="post" enctype="application/x-www-form-urlencoded">
                     <div class="form__input-box">
                         <span class="icon"><i class="fa-solid fa-user"></i></span>
-                        <input type="text" required>
+                        <input type="text" name="username" required>
                         <label>User name</label>
                     </div>
                     <div class="form__input-box">
                         <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                        <input type="email" required>
+                        <input name="email" required>
                         <label>Email</label>
                     </div>
                     <div class="form__input-box">
                         <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                        <input type="password" required>
+                        <input type="password" name="password" required>
                         <label>Password</label>
                     </div>
                     <div class="form__remember-forgot">
@@ -196,5 +196,6 @@
     <script src="../bootstrap_template/js/owl.carousel.min.js"></script>
     <script src="../bootstrap_template/js/main.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/login_register.js"></script>
 </body>
 </html>
