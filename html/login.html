@@ -2,16 +2,90 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="HVAC Template">
+    <meta name="keywords" content="HVAC, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login_register.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Login</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha384-...">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/js/bootstrap.bundle.js" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../css/index.css" type="text/css">
+    <link rel="stylesheet" href="../css/login_register.css">
 </head>
 <body>
     <header>
-
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header__nav">
+                        <nav>
+                            <ul id="main-menu">
+                                <a href="./index.html"><img id="logo-img" src="../images/header/bmw.png"></a>
+                                <li id="header-show-home">
+                                    <a href="./index.html">Trang chủ</a>
+                                </li>
+                                <li id="header-show-product">
+                                    <a href="#">Sản phẩm</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="./bmw.html">BMW</a></li>
+                                        <li><a href="./mercedes.html">Mercedes</a></li>
+                                        <li><a href="./toyota.html">Toyota</a></li>
+                                    </ul>
+                                </li>
+                                <li id="header-show-service">
+                                    <a href="#">Dịch vụ</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="./drive.html">Lái thử</a></li>
+                                        <li><a href="./maintain.html">Đăng ký bảo dưỡng</a></li>
+                                        <li><a href="./showroom.html">Showroom</a></li>
+                                        <li><a href="./contact.html">Liên hệ</a></li>
+                                    </ul>
+                                </li>
+                                <li id="header-show-policy">
+                                    <a href="#">Chính sách</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="./sell_policy.html">Chính sách bán hàng</a></li>
+                                        <li><a href="./warranty_policy.html">Chính sách bảo hành</a></li>
+                                        <li><a href="./vip_policy.html">Khách hàng thân thiết</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        
+                        <div class="header__nav__widget">
+                            <div class="header__nav__widget__btn">
+                                <a href="#" class="search-switch">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                                <a href="./cart.html">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                                <a href="./login.html">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
-    <main>
+    <main id="login-main">
         <div class="wrapper">
             <span class="close-icon"><i class="fa-solid fa-xmark"></i></span>
             <div class="form">
@@ -32,15 +106,71 @@
                         <a href="#">Forgot Password?</a>
                     </div>
                     <button type="submit" class="form__button">Login</button>
-                    <div class="form__login-register">
-                        <p>Don't have an account?<a href="./register.html">Register</a></p>
+                    <div class="form__login-register" id="have-account">
+                        <p>Don't have an account? <a href="./register.html">Register</a></p>
                     </div>
                 </form>
             </div>
         </div>
     </main>
     <footer>
+        <div id="footer-1" class="row">
+            <div class="col-sm-2">
+                <ul>
+                    <p>Về Chúng Tôi</p>
+                    <li>Trung tâm trợ giúp</li>
+                    <li>Hướng dẫn mua hàng</li>
+                    <li>Hỗ trợ như bên thứ ba</li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <ul>
+                    <p>Về sản phẩm</p>
+                    <li>Mẫu xe bán chạy</li>
+                    <li>Mẫu xe mới nhất</li>
+                    <li>Mẫu xe cổ</li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <ul class="payment">
+                    <p>Phương thức thanh toán</p>
+                    <li><img id="napas" src="../images/footer/napas.png"></li>
+                    <li><img id="visa" src="../images/footer/visa.png"></li>
+                    <li><img id="paypal" src="../images/footer/paypal.png"></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <ul class="follow">
+                    <p>Theo dõi chúng tôi trên</p>
+                    <li><i class="fa fa-facebook-square"></i> Facebook</li>
+                    <li><i class="fa fa-instagram"></i> Instagram</li>
+                    <li><i class="fa fa-twitter"></i> Twitter</li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <div class="row">
+                    <p>Truy cập vào ứng dụng trên</p>
+                    <div class="col-sm-5">
+                        <img id="qr" src="../images/footer/qr.png">
+                    </div>
+                    <div class="col-sm-7">
+                        <ul class="access">
+                            <li><i class="fa fa-google-play"></i> Google Play</button></li>
+                            <li><i class="fa fa-app-store"></i> App Store</li>
 
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="footer-2" class="row">
+            <div class="address">
+                <p>Hotline: &ensp; <i class="fa fa-phone-square"></i> 0292 388 9898 &ensp; - &ensp; <i class="fa fa-phone-square"></i> 0292 366 6688</p>
+                <p>Địa chỉ: &ensp; 12A, Đại Lộ Hòa Bình (gần đường 30/4), Phường Tân An, Quận Ninh Kiều, TPCT</p>
+                <p>&copy; 2024 - Bản quyền thuộc về Nhóm 1</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
