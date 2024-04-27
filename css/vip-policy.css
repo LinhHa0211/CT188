@@ -1,21 +1,53 @@
 #vip-policy-main{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 150px 80px;
+    overflow: hidden;
 }
+
+#vip-policy-main > .background-image{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../images/vip-policy/vip-policy-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    filter: blur(15px);
+    z-index: -1;
+}
+
+
+
 
 #vip-policy-main ul.level-0 > li{
     list-style: none;
     font-size: 18px;
-    font-weight: 600;
     margin-bottom: 20px;
 }
 
-#vip-policy-main ol.level-1 > li{
-    list-style: numeric;
-    margin-bottom: 5px;
-    margin-left: 40px;
-    font-weight: 400;
+#vip-policy-main ul.level-0 > li > h2{
+    font-weight: 600;
+    font-size: 35px;
+    color: black;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid rgb(56, 53, 53);
+    border-color: rgb(9, 52, 93);
 }
+
+#vip-policy-main ul.level-1{
+    margin-bottom: 40px;
+}
+
+#vip-policy-main ul.level-1 > li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+
 #vip-policy-main ul.level-2{
     --icon-size: .8em;
     --gutter: 1em;
@@ -24,9 +56,12 @@
 
 #vip-policy-main ul.level-2 > li {
     padding-left: var(--gutter);
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     margin-left: 70px;
+    margin-right: 60px;
     font-weight: 400;
+    color: rgb(223, 205, 205);
+    text-align: justify;
 }
 
 #vip-policy-main ul.level-2 > li > span{
@@ -38,9 +73,77 @@
     font-family: FontAwesome;
 }
 
-#vip-policy-main ul.level-0#notice > li{
+#vip-policy-main ul.level-0.notice > li{
     font-weight: 400;
     font-style: italic;
+    color: white;
 }
 
+
+#vip-policy-main .text{
+    margin-top: 100px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+
+#vip-policy-main #block-title-1-id1{
+    width: 32%;
+}
+
+#vip-policy-main #block-title-1-id2{
+    width: 40%;
+}
+
+#vip-policy-main .block-title-1{
+    position: relative;
+    text-align: center;
+    color: white;
+    border: 1px solid rgb(190, 190, 190);
+    background: linear-gradient(to right, rgb(45, 45, 45), rgb(100, 100, 100), rgb(144, 144, 144));
+    margin-left: 20px;
+    margin-bottom: -18px;
+    line-height: 45px;
+    box-shadow: 2px 2px 3px rgb(225, 225, 225);
+      
+}
+
+#vip-policy-main .block-content-1{
+    border: 1px solid rgb(110, 110, 110);
+    background-color: rgba(92, 84, 84, 0.95);
+    box-shadow: 2px 2px 5px rgb(99, 94, 94);
+    line-height: 30px;
+}
+
+#vip-policy-main .block-content-1 li:first-child{
+    margin-top: 27px;
+}
+#vip-policy-main .block-content-1 li{
+    margin-left: 30px;
+}
+
+#vip-policy-main .padding-img1{
+    margin-top: 150px;
+    width: 100%;
+    height: 74%;
+    box-shadow: 1px 1px 2px rgb(152, 168, 187);
+}
+
+#vip-policy-main .padding-img2{
+    margin-top: 110px;
+    width: 100%;
+    height: 83%;
+    box-shadow: 1px 1px 2px rgb(112, 71, 3);
+}
+
+#vip-policy-main .vip-img{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+
+#vip-policy-main ul.level-0.notice.end-of-page > li{
+    color: black;
+}
 
