@@ -1,7 +1,5 @@
 'use strict';
 
-
-// Thay doi vi tri trong showroom
 const changeShowroomLocation = () => {
     const locationArray = [
         '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.9135807034622!2d106.71870417480437!3d10.741143689405535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f2a4cc6c589%3A0x2c1e75e03385fe4a!2zQk1XIFBow7ogTeG7uSBIxrBuZw!5e0!3m2!1svi!2s!4v1711032926054!5m2!1svi!2s" width="700" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
@@ -18,6 +16,99 @@ const changeShowroomLocation = () => {
         var selectedIndex = $(this).val();
         mapContainer.html(locationArray[selectedIndex]);
     });
+}
+
+
+function hideDriveModal(){
+    document.getElementById('driveModal').style.display = 'none';
+    document.getElementsByTagName('body')[0].style.overflow = 'auto';
+}
+
+function showDriveModal(message, type='error'){
+    document.getElementById('driveModal').style.display = 'flex';
+    document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+    document.getElementById('driveModalMessage').innerHTML = message;
+    if (type === 'error') {
+        document.getElementById('driveModalMessage').style.color = 'red';
+        document.getElementById('driveModalTitle').innerHTML = 'Lỗi';
+    } else {
+        document.getElementById('driveModalMessage').style.color = 'green';
+        document.getElementById('driveModalTitle').innerHTML = 'Thành công';
+        document.getElementById('driveModalTitle').style.color = 'green';
+        document.getElementById('driveModalButton').style.backgroundColor = 'green';
+    }
+}
+
+
+function validateDriveForm() {
+    /*salutation
+fullName
+telephone
+email
+address
+birthday
+obtainedCar
+obtainedTime
+timeBuy
+tryCar*/
+
+    let inputName = {
+        salutation: 'cách xưng hô',
+        fullName: 'họ và tên',
+        telephone: 'số điện thoại',
+        email: 'email',
+        address: 'địa chỉ',
+        birthday: 'ngày sinh',
+        obtainedCar: 'dòng xe đã sở hữu',
+        obtainedTime: 'thời gian sở hữu',
+        timeBuy: 'thời gian dự kiến mua xe',
+        tryCar: 'dòng xe muốn thử'
+    }
+
+
+    let inputList  = document.getElementsByName('input')
+   
+
+    for (let i = 0; i < inputList.length; i++) {
+        if (inputList[i].tagName=="INPUT" && inputList[i].value === '' ) {
+            showDriveModal(`Bạn chưa nhập ${inputName[inputList[i].id]}`);
+            inputList[i].focus();
+            return;
+        }
+        if (inputList[i].tagName=="SELECT" && inputList[i].value == 9 ) {
+            showDriveModal(`Bạn chưa chọn ${inputName[inputList[i].id]}`);
+            inputList[i].focus();
+            return;
+        }
+    }
+
+    let fullName = document.getElementById('fullName');
+    let telephone = document.getElementById('telephone');
+    let email = document.getElementById('email');
+    let address = document.getElementById('address');
+    
+    if (fullName.value.length < 10) {
+        showDriveModal("Họ và tên phải chứa ít nhất 10 ký tự.");
+        return;
+    }
+
+    if (/[a-zA-Z]/.test(telephone.value)) {
+        showDriveModal("Số điện thoại không được chứa ký tự chữ.");
+    }
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailPattern.test(email.value)) {
+    showDriveModal("Email không hợp lệ.");
+    return;
+}
+
+   
+
+
+    showDriveModal('Đăng ký lái thử thành công!', 'success');
+    setTimeout(() => {
+        location.reload();
+    }, 1000);
 }
 
 
@@ -38,17 +129,13 @@ const changeShowroomLocation = () => {
     
         // Hàm thay đổi hình ảnh
         function changeImage() {
-            // Tăng chỉ số hiện tại
             currentIndex = (currentIndex + 1) % imagePaths.length;
-            // Lấy đường dẫn hình ảnh mới
             var newImagePath = imagePaths[currentIndex];
-            // Thay đổi thuộc tính src của thẻ img
             imgElement.attr('src', newImagePath);
         }
     
-        // Gọi hàm thay đổi hình ảnh mỗi 10 giây
-        setInterval(changeImage, 2000); // 10 giây (10000 miligiây)
-
+       
+        setInterval(changeImage, 2000);
     });
 })(jQuery); // Đảm bảo rằng jQuery được truyền vào như một tham số của IIFE
 

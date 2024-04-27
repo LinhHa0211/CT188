@@ -1,8 +1,8 @@
+/* SHOWROOM - PHUC */
 
-
+/* SHOWROOM - FIXBUG */
 .body-showroom {
-
-	font-family: "Poppins", sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -15,27 +15,32 @@
 	margin: 0 0 15px 0;
 }
 
-
-
-
-/* SHOWROOM - PHUC */
-
 .main-showroom {
+	margin-top: 78px;	
 	height: 2000px;
+
+	overflow: hidden;
 }
 
 .header__container{
 	padding : 0;
 	margin: 0;
-	
 }
 
-/* 1. Layout */
+.showroom-footer {
+	overflow: hidden;
+}
+
+.showroom-header {
+	overflow-y: hidden;
+}
+
+/* SHOWROOM - IMAGE CONTAINER */
 .showroom__image {
     position: relative;
     width: 100%;
     height: 20%;
-	margin-top: 78px;	
+	
 
 	overflow: hidden;
 }
@@ -86,9 +91,58 @@
 	font-size: 20px;
 	font-weight: 300;
 	padding: 1rem;
+	font-family: 'Montserrat';
 }
 
 
+/* SHOWSROOM - COMMIT PART */
+.showroom__commit {
+	margin-top: 60px;
+}
+
+.showroom__commit-header {
+	position: relative;
+	font-size: 40px;
+	font-family: 'Montserrat';
+	line-height: 60px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.showroom__commit-description {
+	font-size: 18px;
+	font-family: 'Montserrat';
+	line-height: 30px;
+	margin: 15px 0;
+
+}
+
+.showroom__commit-line {
+	height: 3px;
+	width: 60%;
+	background-color: #982908;
+	margin: 20px 0;
+}
+
+.showroom__commit-icon {
+	font-size: 30px;
+	margin: 12px 0;
+	color: #0d0580;
+}
+.showroom__commit-miniheader {
+	font-size: 20px;
+	font-family: 'Montserrat';
+	font-weight: 700;
+	color: #10058a;
+}	
+.showroom__commit-minidesc {
+	font-size: 18px;
+	font-family: 'Montserrat';
+	text-align: justify;
+	line-height: 24px;
+}
+
+/* SHOWROOM - CONTAINER */
 
 .showroom__container {
     padding: 0 10rem;
@@ -129,7 +183,7 @@
 	
 	margin-top: 1rem;
 }
-/* 2. Select box */
+
 .showroom__select-container {
 	position: relative;
 	padding: 0;
@@ -159,59 +213,139 @@
 	align-items: center;
 	justify-content: center;
 }
-/* 3. showroom-commit */
-.showroom__commit {
-	margin-top: 60px;
-}
-.showroom__commit-header {
+
+
+
+/* DRIVE - PHUC */
+
+.main-drive {
+	margin-top: 78px;	
+	height: 1000px;
+
+	overflow: hidden;
+	background: url('../images/drive/driveBackground.jpg') no-repeat center center/cover;
+	
+
 	position: relative;
-	font-size: 40px;
+}
+
+.main-drive-overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.drive__container {
+	background-color: white;
+	height: 900px;
+}
+
+.drive__image {
+	padding-left: 0;
+	padding-right: 0;
+    overflow: hidden;
+	background: url('../images/drive/driveFormBackground.jpg') no-repeat center center/cover;
+	position: relative;
+}
+
+
+
+.drive__image-overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background: linear-gradient(to bottom, #135c80c4 0%, #1a9bb888 100%);
+}
+
+.drive__input {
+	position: relative;
+}
+
+.drive__input-button {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%);
+
+	border: none;
+	border-radius: 40px;
+	width: 70%;
+	height: 40px;
+	background-image: linear-gradient(to right, #135c80 0%,  #1a94b8 40%, #1a9cb8 60%, 	#1aa4b8 100%);
+
+	font-size: 16px;
 	font-family: 'Montserrat';
-	line-height: 60px;
 	font-weight: 700;
+	color: #fff;
+	margin-bottom: 40px;
+}
+
+.drive__input h2{
+	font-size: 30px;
+	background-image: linear-gradient(to right, #135c80 0%, #1a8cb8 20%, #1a94b8 40%, #1a9cb8 60%, 	#1aa4b8 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+
+	text-transform: uppercase;
+	font-weight: 700;
+	font-family: 'Montserrat';
+	padding: 40px 12px 6px 12px;
+	text-align: center;
+}
+
+.drive__input h3{
+	font-size: 12px;
+	color: #000;
+
+	font-family: 'Montserrat';
+	text-transform: capitalize;
+	padding: 10px 52px;
+}
+
+.drive__input-element {
+	margin: 20px 40px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.drive__input-element name {
+	font-size: 12px;
+	font-family: 'Montserrat';
+	font-weight: 400;
+	color: #000000;
+	font-weight: 600;
+	
 	text-transform: uppercase;
 }
 
+.drive__input-element input {
+	height: 42px;
+  	line-height: 40px;
 
-
-.showroom__commit-description {
-	font-size: 18px;
-	font-family: 'Montserrat';
-	line-height: 30px;
-	margin: 15px 0;
-
+	border: 0.5px solid #c4c4c4;
+	border-radius: 4px;
 }
 
-.showroom__commit-line {
-	height: 3px;
-	width: 60%;
-	background-color: #982908;
-	margin: 20px 0;
+.drive__input-element div{
+	width: 50% !important;
+	
 }
 
-.showroom__commit-icon {
-	font-size: 30px;
-	margin: 12px 0;
-	color: #0d0580;
-}
-.showroom__commit-miniheader {
-	font-size: 20px;
-	font-family: 'Montserrat';
-	font-weight: 700;
-	color: #10058a;
-}	
-.showroom__commit-minidesc {
-	font-size: 18px;
-	font-family: 'Montserrat';
-	text-align: justify;
-	line-height: 24px;
-}
-/* 2. Map */
 
-.showroom-footer {
-	overflow: hidden;
-}
-
-.showroom-header {
-	overflow-y: hidden;
+.drive__input-element ul{
+	width: 100%;
+	z-index: 10;
 }
