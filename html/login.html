@@ -87,18 +87,18 @@
     </header>
     <main id="login-main">
         <div class="wrapper">
-            <span class="close-icon"><i class="fa-solid fa-xmark"></i></span>
+            <span class="close-icon"><a href="index.html"><i class="fa-solid fa-xmark"></i></a></span>
             <div class="form">
                 <h2>Login</h2>
-                <form action="#">
+                <form onsubmit="return loginValidate(this);" action="#" method="post" enctype="application/x-www-form-urlencoded">
                     <div class="form__input-box">
                         <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                        <input type="email" required>
+                        <input name="email" required>
                         <label>Email</label>
                     </div>
                     <div class="form__input-box">
                         <span class="icon"><i class="fa-solid fa-lock"></i></span>
-                        <input type="password" required>
+                        <input type="password" name="password" required>
                         <label>Password</label>
                     </div>
                     <div class="form__remember-forgot">
@@ -172,6 +172,30 @@
             </div>
         </div>
     </footer>
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../bootstrap_template/js/bootstrap.min.js"></script>
+    <script src="../bootstrap_template/js/jquery.nice-select.min.js"></script>
+    <script src="../bootstrap_template/js/jquery-ui.min.js"></script>
+    <script src="../bootstrap_template/js/jquery.magnific-popup.min.js"></script>
+    <script src="../bootstrap_template/js/mixitup.min.js"></script>
+    <script src="../bootstrap_template/js/jquery.slicknav.js"></script>
+    <script src="../bootstrap_template/js/owl.carousel.min.js"></script>
+    <script src="../bootstrap_template/js/main.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/login_register.js"></script>
 </body>
 </html>
 

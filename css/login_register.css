@@ -16,6 +16,7 @@
 
 #register-main .wrapper{
     height: 500px;
+    margin-top: 50px;
 }
 
 .wrapper{
@@ -53,6 +54,9 @@
     border-bottom-left-radius: 20px;
     cursor: pointer;
     z-index: 1;
+}
+.close-icon a{
+    color: #fff;
 }
 
 .form h2{
