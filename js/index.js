@@ -2,20 +2,41 @@ $(document).ready(function() {
     $('.sub-menu').parent('li').addClass('has-child');
 });    
 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
+var list = document.querySelector('.slider-img .list-img');
+var items = document.querySelectorAll('.slider-img .list-img .item-img');
+var dots = document.querySelectorAll('.slider-img .dots li');
 
-function changeSlide() {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + 1) % totalSlides;
-    slides[currentSlide].classList.add('active');
+let active = 0;
+let lastItems = items.length - 1;
+
+function nextImage() {
+    if(active == lastItems) {       
+        active = 0;
+    }
+    else {
+        active++;
+    }
+    reloadSlider();
+}
+let refreshSlider = setInterval(() => {nextImage()}, 5000);
+function reloadSlider() {
+    let checkLeft = items[active].offsetLeft;
+    list.style.transition = '1.5s';
+    list.style.left = -checkLeft + 'px';
+    
+    let lastActiveDot = document.querySelector('.slider-img .dots li.active');
+    lastActiveDot.classList.remove('active');
+    dots[active].classList.add('active');
+    clearInterval(refreshSlider);
+    refreshSlider = setInterval(() => {nextImage()}, 5000);
 }
 
-setInterval(changeSlide, 3000); // Change image every 3 seconds
-
-
-
+dots.forEach((li, key) => {
+    li.addEventListener('click', () => {
+        active = key;
+        reloadSlider();
+    });
+});
 
 
 
