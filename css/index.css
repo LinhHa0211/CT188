@@ -112,7 +112,7 @@
 
 #index-main{
 	background-color: rgb(250, 250, 250);
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 
@@ -250,7 +250,6 @@ footer{
 #index-main .part-1{
 	margin: 0;
 	padding: 0;
-
 	box-sizing: border-box;
 }
 #index-main .part-1 h1{
@@ -304,7 +303,7 @@ footer{
 #index-main .part-1 .block-img-2 .slide-img-2 .item-img-2:nth-child(n + 5){
 	left: calc(55% + 410px);
 	opacity: 0;
-	overflow: hidden;
+	/* display: none; */
 }
 #index-main .part-1 .block-img-2 .slide-img-2 .item-img-2 .content-img-2{
 	position: absolute;
