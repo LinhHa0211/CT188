@@ -1,7 +1,9 @@
+// Main menu
 $(document).ready(function() {
     $('.sub-menu').parent('li').addClass('has-child');
 });    
 
+// Ảnh ở phần đầu của main
 var list = document.querySelector('.slider-img .list-img');
 var items = document.querySelectorAll('.slider-img .list-img .item-img');
 var dots = document.querySelectorAll('.slider-img .dots li');
@@ -38,6 +40,17 @@ dots.forEach((li, key) => {
     });
 });
 
+// Ảnh ở phần sản phẩm mới nhất
+let nextBtn = document.querySelector('.part-1 .block-img-2 .button-img-2 .next-img-2');
+let prevBtn = document.querySelector('.part-1 .block-img-2 .button-img-2 .prev-img-2');
 
+nextBtn.addEventListener('click', function() {
+    let items = document.querySelectorAll('.part-1 .block-img-2 .slide-img-2 .item-img-2');
+    document.querySelector('.part-1 .block-img-2 .slide-img-2').appendChild(items[0]);
+    
+});
 
-
+prevBtn.addEventListener('click', function() {
+    let items = document.querySelectorAll('.part-1 .block-img-2 .slide-img-2 .item-img-2');
+    document.querySelector('.part-1 .block-img-2 .slide-img-2').prepend(items[items.length - 1]);
+});
