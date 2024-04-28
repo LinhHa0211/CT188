@@ -18,7 +18,6 @@ const changeShowroomLocation = () => {
     });
 }
 
-
 function hideDriveModal(){
     document.getElementById('driveModal').style.display = 'none';
     document.getElementsByTagName('body')[0].style.overflow = 'auto';
@@ -39,19 +38,7 @@ function showDriveModal(message, type='error'){
     }
 }
 
-
 function validateDriveForm() {
-    /*salutation
-fullName
-telephone
-email
-address
-birthday
-obtainedCar
-obtainedTime
-timeBuy
-tryCar*/
-
     let inputName = {
         salutation: 'cách xưng hô',
         fullName: 'họ và tên',
@@ -111,11 +98,26 @@ if (!emailPattern.test(email.value)) {
     }, 1000);
 }
 
+function transferPolicy(){
+    let transferList = document.querySelectorAll('.sell-policy__menu ul li');
+    transferList.forEach((item) => {
+        item.addEventListener('click', () => {
+            var target = item.getAttribute('data-target');
+            var targetElement = document.getElementById(target);
+
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        })
+    })
+}
 
 (function($){
     $(document).ready(function(){
         
         changeShowroomLocation();
+
         var imagePaths = [
             '../images/showroom/showroomImgBackground.jpg',
             '../images/showroom/showroomImgBackground2.jpg',
@@ -123,20 +125,62 @@ if (!emailPattern.test(email.value)) {
             '../images/showroom/showroomImgBackground4.jpg',
             '../images/showroom/showroomImgBackground5.jpg',
         ];
-    
+        
         var currentIndex = 0;
+        var imgContainer = $('.showroom__image');
         var imgElement = $('.showroom__img');
-    
-        // Hàm thay đổi hình ảnh
+        var intervalId; // Để lưu ID của setInterval
+        
         function changeImage() {
             currentIndex = (currentIndex + 1) % imagePaths.length;
             var newImagePath = imagePaths[currentIndex];
-            imgElement.attr('src', newImagePath);
+            imgElement.attr('src', newImagePath)
         }
+        
+        function startSlideshow() {
+            intervalId = setInterval(changeImage, 2000);
+        }
+        function stopSlideshow() {
+            clearInterval(intervalId);
+        }
+        startSlideshow(); 
+        imgContainer.hover(stopSlideshow, startSlideshow);
+        
+
+        //Hàm 
+        var listItems = document.querySelectorAll('.sell-policy__content-element ol li');
+
+      
+        listItems.forEach(function(item) {
+            var content = item.textContent;
+            var colonIndex = content.indexOf(':');
     
-       
-        setInterval(changeImage, 2000);
+            if (colonIndex !== -1) {
+                var boldText = content.substring(0, colonIndex);
+                item.innerHTML = '<strong>' + boldText + '</strong>' + content.substring(colonIndex);
+            }
+        });
+
+        transferPolicy();
     });
-})(jQuery); // Đảm bảo rằng jQuery được truyền vào như một tham số của IIFE
+})(jQuery); 
 
 
+window.addEventListener('scroll', function() {
+   
+    var footer = document.getElementById('footer'); 
+    var menuHeader = document.getElementById('policy-menu-header');
+    var menu = document.getElementById('policy-menu');
+    var distanceToTop = footer.getBoundingClientRect().top; 
+    var windowHeight = window.innerHeight; 
+
+    var distanceToBottom = windowHeight - distanceToTop;
+
+    if (distanceToBottom >= 80) {
+        menu.style.top = '5%';
+        menuHeader.style.display = 'none';
+    } 
+    else {menu.style.top = '35%'
+        menuHeader.style.display = 'block';};
+       
+});
