@@ -1,5 +1,5 @@
 #vip-policy-main{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     overflow: hidden;
 }
 
@@ -20,8 +20,6 @@
 }
 
 
-
-
 #vip-policy-main ul.level-0 > li{
     list-style: none;
     font-size: 18px;
@@ -36,6 +34,7 @@
     padding-bottom: 15px;
     border-bottom: 3px solid rgb(56, 53, 53);
     border-color: rgb(9, 52, 93);
+    font-family: 'Montserrat', sans-serif;
 }
 
 #vip-policy-main ul.level-1{
@@ -47,6 +46,11 @@
     margin-bottom: 5px;
 }
 
+#vip-policy-main ul.level-1 > li > h3{
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
 
 #vip-policy-main ul.level-2{
     --icon-size: .8em;
@@ -74,7 +78,7 @@
 }
 
 #vip-policy-main ul.level-0.notice > li{
-    font-weight: 400;
+    font-weight: bold;
     font-style: italic;
     color: white;
 }
@@ -88,11 +92,11 @@
 
 
 #vip-policy-main #block-title-1-id1{
-    width: 32%;
+    width: 30%;
 }
 
 #vip-policy-main #block-title-1-id2{
-    width: 40%;
+    width: 35%;
 }
 
 #vip-policy-main .block-title-1{
@@ -134,7 +138,7 @@
     margin-top: 110px;
     margin-left: 30px;
     width: 290px;
-    height: 530px;
+    height: 560px;
     box-shadow: 1px 1px 2px rgb(112, 71, 3);
 }
 

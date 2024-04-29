@@ -37,34 +37,59 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Offcanvas Menu Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__widget">
-            <a href="#"><i class="fa fa-cart-plus"></i></a>
-            <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
-            <a href="#" class="primary-btn">Add Car</a>
-        </div>
-        <div class="offcanvas__logo">
-            <a href="./index.html"><img src="../img/logo.png" alt=""></a>
-        </div>
-        <div id="mobile-menu-wrap"></div>
-        <ul class="offcanvas__widget__add">
-            <li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
-            <li><i class="fa fa-envelope-o"></i> Info.colorlib@gmail.com</li>
-        </ul>
-        <div class="offcanvas__phone__num">
-            <i class="fa fa-phone"></i>
-            <span>(+12) 345 678 910</span>
-        </div>
-        <div class="offcanvas__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-google"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
+    <!-- Contact Modal -->
+    <div id="contact-modal" style="
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 100;
+            display: none;">
+        <div>
+            <div style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 10px;
+                    width: 360px;
+                    height: 250px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    
+                ">
+    
+    
+                <h2 id="contact-modal-title" style="
+                    
+                        font-size: 30px;
+                        font-weight: 600;
+                        font-family: 'Montserrat', sans-serif;
+                        "> Thông báo </h2>
+    
+    
+                <p id="contact-modal-message" style="text-align: center; padding: 16px;
+                                                    font-size: 14px;
+                                                    font-family: 'Montserrat', sans-serif;
+                        ">Đăng ký lái thử thành công</p>
+                <button id="contact-modal-button" style="
+                        padding: 5px 5px;
+                        background-color: #f44336;
+                        color: white;
+                        border: none;
+                        border-radius: 20px;
+                        width: 70%;
+                        height: 40px;
+                        cursor: pointer;">Đóng</button>
+            </div>
         </div>
     </div>
-    <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
     <header>
@@ -143,29 +168,32 @@
                 <img id="contact-img1" src="../images/contact/contact-img1.png">
             </div>
             <div class="col-sm-8">
-                <form id="contact-form" onsubmit="return contactValidate(this);" method="POST" enctype="application/x-www-form-urlencoded" action="#">
+                <form id="contact-form" method="POST" enctype="application/x-www-form-urlencoded" action="#">
                     <h2>Liên hệ</h2>
                     <div class="input__container">
-                        <label for="first-name">Họ</label>
-                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                        <label for="first-name">Họ: <span style="color: red; display: inline;">*</span></label>
+                        <input type="text" id="first-name" name="input" placeholder="First Name">
                     </div>
                     <div class="input__container">
-                        <label for="last-name">Tên</label>
-                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                        <label for="last-name">Tên: <span style="color: red; display: inline;">*</span></label>
+                        <input type="text" id="last-name" name="input" placeholder="Last Name">
                     </div>
                     <div class="input__container">
-                        <label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="Email" required>
+                        <label for="email">Email: <span style="color: red; display: inline;">*</span></label>
+                        <input type="text" id="email" name="input" placeholder="Email">
                     </div>
                     <div class="input__container">
-                        <label for="topic">Chủ đề</label>
-                        <input type="text" id="topic" name="topic" placeholder="Topic" required>
+                        <label for="topic">Chủ đề: <span style="color: red; display: inline;">*</span></label>
+                        <input type="text" id="topic" name="input" placeholder="Topic">
                     </div>
                     <div class="input__container">
-                        <label for="content">Nội dung</label>
-                        <textarea id="content" name="content" placeholder="Content" required></textarea>
+                        <label for="content">Nội dung: <span style="color: red; display: inline;">*</span></label>
+                        <textarea id="content" name="input" placeholder="Content"></textarea>
                     </div>
-                    <button id="submit" type="submit">Gửi</button>
+                    <button type="button" onclick="contactValidate();">Xác nhận</button>
+                    <button id="submit" type="" onclick="submitContactForm()" alt="Bạn cần phải xác nhận biểu mẫu trước đó">Gửi</button>
+                    
+                
                 </form>
             </div>
         </div>

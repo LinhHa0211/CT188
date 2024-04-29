@@ -1,13 +1,17 @@
-.contact-text{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#contact-main{
+    overflow: hidden;
 }
 
-.contact-image{
+#contact-main .contact-text{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#contact-main .contact-image{
     margin-top: 80px;
     height: 400px;
 }
 
-#contact-img1{
+#contact-main #contact-img1{
     margin-top: 150px;
     margin-left: 120px;
     height: 850px;
@@ -15,12 +19,9 @@
     box-shadow: 2px 2px 5px #333232;
 }
 
-#contact-main{
-    overflow: hidden;
-}
 
 #contact-form{
-    font-family: "Lato", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     margin-top: 100px;
     margin-bottom: 800px;
@@ -30,7 +31,7 @@
     float: right;
 }
 
-.input__container{
+#contact-form .input__container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +40,8 @@
 
 
 #contact-form > h2{
-    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 75px;
@@ -51,7 +53,7 @@
     font-weight: 600;
 }
 
-#first-name, #last-name, #email, #topic, #content{
+#contact-form #first-name, #last-name, #email, #topic, #content{
     width: 80%;
     padding: 10px;
     margin-bottom: 20px;
@@ -59,11 +61,11 @@
     border-radius: 4px;
 }
 
-#content{
+#contact-form  #content{
     height: 200px;
 }
 
-button#submit {
+#contact-form button {
     width: 100px;
     height: 50px;
     background-color: #333232;
@@ -71,4 +73,10 @@ button#submit {
     border-radius: 3px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); 
     color: #ffffff;
+}
+
+#contact-form button#submit {
+    margin-left: 20px;
+    background-color: gray;
+    cursor: not-allowed;
 }
