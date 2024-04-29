@@ -112,6 +112,7 @@
 
 #index-main{
 	background-color: rgb(250, 250, 250);
+	font-family: 'Montserrat', sans-serif;
 	overflow: hidden;
 }
 
@@ -256,7 +257,9 @@ footer{
 	margin-top: -160px;
 	margin-bottom: 260px;
 	margin-left: 185px;
-	
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	font-size: 55px;
 }
 #index-main .part-1 .block-img-2{
 	position: absolute;
@@ -314,7 +317,6 @@ footer{
 	color: rgb(200, 200, 200);
 	text-shadow: 1px 1px 1px black;
 	transform: translate(0, -50%);
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	display: none;
 }
 #index-main .part-1 .block-img-2 .slide-img-2 .item-img-2:nth-child(2) .content-img-2{
@@ -400,4 +402,5 @@ footer{
 #index-main .part-3{
 	margin-bottom: 260px;
 	margin-left: 185px;
+	
 }
