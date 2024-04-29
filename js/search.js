@@ -1,37 +1,37 @@
 let products = {
     data: [
         {
-            productName: "Mer i1",
+            productName: "i1",
             category: "Mercedes",
             price: "12",
             image: "../images/bmw.png",
         },
         {
-            productName: "Mer i2",
+            productName: "i2",
             category: "Mercedes",
             price: "214",
             image: "../images/bmw.png",
         },
         {
-            productName: "BMW i1",
+            productName: "i1",
             category: "BMW",
             price: "124",
             image: "../images/bmw.png",
         },
         {
-            productName: "BMW i2",
+            productName: "i2",
             category: "BMW",
             price: "214",
             image: "../images/bmw.png",
         },
         {
-            productName: "Toyota i1",
+            productName: "i1",
             category: "Toyota",
             price: "124",
             image: "../images/bmw.png",
         },
         {
-            productName: "Toyota i2",
+            productName: "i2",
             category: "Toyota",
             price: "214",
             image: "../images/bmw.png",
@@ -57,7 +57,7 @@ for (let i of products.data) {
     //Product name
     let name = document.createElement("h5");
     name.classList.add("product-name");
-    name.innerText = i.productName.toUpperCase();
+    name.innerText = i.category.toUpperCase() + ' ' + i.productName.toUpperCase();
     container.appendChild(name);
     //Prize
     let price = document.createElement("h6");
