@@ -78,14 +78,17 @@ function filterProduct(value) {
         }
     });
     let elements = document.querySelectorAll(".card");
-    elements.forEach(element => {
-        if (value == "all") {
+    elements.forEach((element, index) => {
+        let searchInput = document.getElementById("search-input").value;
+        console.log(element.textContent.includes(searchInput.toUpperCase()));
+        if (value == "all" && element.textContent.includes(searchInput.toUpperCase())) {
             element.classList.remove("hide");
+        } else if (value == "all" && !element.textContent.includes(searchInput.toUpperCase())){
+            return;
         } else {
-            if (element.classList.contains(value)) {
+            if (element.classList.contains(value) && element.textContent.includes(searchInput.toUpperCase())) {
                 element.classList.remove("hide");
-            }
-            else {
+            }else {
                 element.classList.add("hide");
             }
         }
