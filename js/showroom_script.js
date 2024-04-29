@@ -18,100 +18,9 @@ const changeShowroomLocation = () => {
     });
 }
 
-function hideDriveModal(){
-    document.getElementById('driveModal').style.display = 'none';
-    document.getElementsByTagName('body')[0].style.overflow = 'auto';
-}
-
-function showDriveModal(message, type='error'){
-    document.getElementById('driveModal').style.display = 'flex';
-    document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-    document.getElementById('driveModalMessage').innerHTML = message;
-    if (type === 'error') {
-        document.getElementById('driveModalMessage').style.color = 'red';
-        document.getElementById('driveModalTitle').innerHTML = 'Lỗi';
-    } else {
-        document.getElementById('driveModalMessage').style.color = 'green';
-        document.getElementById('driveModalTitle').innerHTML = 'Thành công';
-        document.getElementById('driveModalTitle').style.color = 'green';
-        document.getElementById('driveModalButton').style.backgroundColor = 'green';
-    }
-}
-
-function validateDriveForm() {
-    let inputName = {
-        salutation: 'cách xưng hô',
-        fullName: 'họ và tên',
-        telephone: 'số điện thoại',
-        email: 'email',
-        address: 'địa chỉ',
-        birthday: 'ngày sinh',
-        obtainedCar: 'dòng xe đã sở hữu',
-        obtainedTime: 'thời gian sở hữu',
-        timeBuy: 'thời gian dự kiến mua xe',
-        tryCar: 'dòng xe muốn thử'
-    }
 
 
-    let inputList  = document.getElementsByName('input')
-   
 
-    for (let i = 0; i < inputList.length; i++) {
-        if (inputList[i].tagName=="INPUT" && inputList[i].value === '' ) {
-            showDriveModal(`Bạn chưa nhập ${inputName[inputList[i].id]}`);
-            inputList[i].focus();
-            return;
-        }
-        if (inputList[i].tagName=="SELECT" && inputList[i].value == 9 ) {
-            showDriveModal(`Bạn chưa chọn ${inputName[inputList[i].id]}`);
-            inputList[i].focus();
-            return;
-        }
-    }
-
-    let fullName = document.getElementById('fullName');
-    let telephone = document.getElementById('telephone');
-    let email = document.getElementById('email');
-    let address = document.getElementById('address');
-    
-    if (fullName.value.length < 10) {
-        showDriveModal("Họ và tên phải chứa ít nhất 10 ký tự.");
-        return;
-    }
-
-    if (/[a-zA-Z]/.test(telephone.value)) {
-        showDriveModal("Số điện thoại không được chứa ký tự chữ.");
-    }
-
-    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if (!emailPattern.test(email.value)) {
-    showDriveModal("Email không hợp lệ.");
-    return;
-}
-
-   
-
-
-    showDriveModal('Đăng ký lái thử thành công!', 'success');
-    setTimeout(() => {
-        location.reload();
-    }, 1000);
-}
-
-function transferPolicy(){
-    let transferList = document.querySelectorAll('.sell-policy__menu ul li');
-    transferList.forEach((item) => {
-        item.addEventListener('click', () => {
-            var target = item.getAttribute('data-target');
-            var targetElement = document.getElementById(target);
-
-            window.scrollTo({
-                top: targetElement.offsetTop - 80,
-                behavior: 'smooth'
-            });
-        })
-    })
-}
 
 (function($){
     $(document).ready(function(){
@@ -148,39 +57,9 @@ function transferPolicy(){
         
 
         //Hàm 
-        var listItems = document.querySelectorAll('.sell-policy__content-element ol li');
-
+        
       
-        listItems.forEach(function(item) {
-            var content = item.textContent;
-            var colonIndex = content.indexOf(':');
-    
-            if (colonIndex !== -1) {
-                var boldText = content.substring(0, colonIndex);
-                item.innerHTML = '<strong>' + boldText + '</strong>' + content.substring(colonIndex);
-            }
-        });
-
-        transferPolicy();
     });
 })(jQuery); 
 
 
-window.addEventListener('scroll', function() {
-   
-    var footer = document.getElementById('footer'); 
-    var menuHeader = document.getElementById('policy-menu-header');
-    var menu = document.getElementById('policy-menu');
-    var distanceToTop = footer.getBoundingClientRect().top; 
-    var windowHeight = window.innerHeight; 
-
-    var distanceToBottom = windowHeight - distanceToTop;
-
-    if (distanceToBottom >= 80) {
-        menu.style.top = '5%';
-        menuHeader.style.display = 'none';
-    } 
-    else {menu.style.top = '35%'
-        menuHeader.style.display = 'block';};
-       
-});
