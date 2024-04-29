@@ -1,3 +1,6 @@
+#bmw{
+    overflow: hidden;
+}
 #bmw .app_container{
     position: relative;
     margin-top: 87px;
@@ -38,14 +41,13 @@
 #bmw .car__item__text{
     text-align: center;
 }
-#bmw .col-sm-3:hover{
+#bmw .menu:hover{
     background-color: #f6f6f6;
 }
 #bmw .menu{
     position:relative;
     display: inline-block;
-    margin: 0 20px;
-    padding: 0 2px;
+    padding: 0 40px;
 }
 #bmw .info {
     position:relative;
@@ -64,7 +66,12 @@
     background-color: white;
     color: #000;
 }
-
+#bmw .info:hover{
+    background-color: #ccc;
+}
+#bmw .info-cart{
+    border-top: none;
+}
 #bmw .info li {
     width: 100%;
     text-align: center; 
