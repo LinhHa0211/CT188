@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="HVAC Template">
+    <meta name="keywords" content="HVAC, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trang chủ</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha384-...">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/js/bootstrap.bundle.js" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap_template/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap-utilities.rtl.min.css">
+	<link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap-utilities.rtl.min.css.map">
+	<link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css.map">
+	<link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css.map">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap-table.min.css">
+
+    <link rel="stylesheet" href="../css/index.css" type="text/css">
+    <link rel="stylesheet" href="../css/bmw.css" type="text/css">
+    <link rel="stylesheet" href="../css/style_phuc.css">
+    
+    <script>
+        window.onload=function(){show();};
+    </script>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__widget">
+            <a href="#"><i class="fa fa-cart-plus"></i></a>
+            <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
+            <a href="#" class="primary-btn">Add Car</a>
+        </div>
+        <div class="offcanvas__logo">
+            <a href="./index.html"><img src="../img/logo.png" alt=""></a>
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <ul class="offcanvas__widget__add">
+            <li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
+            <li><i class="fa fa-envelope-o"></i> Info.colorlib@gmail.com</li>
+        </ul>
+        <div class="offcanvas__phone__num">
+            <i class="fa fa-phone"></i>
+            <span>(+12) 345 678 910</span>
+        </div>
+        <div class="offcanvas__social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header__nav">
+                        <nav>
+                            <ul id="main-menu">
+                                <a href="./index.html"><img id="logo-img" src="../images/header/bmw.png"></a>
+                                <li id="header-show-home">
+                                    <a href="./index.html">Trang chủ</a>
+                                </li>
+                                <li id="header-show-product">
+                                    <a href="#">Sản phẩm</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="./bmw.html"  onclick="setLang('bmw')">BMW</a></li>
+                                        <li><a href="./mercedes.html">Mercedes</a></li>
+                                        <li><a href="./toyota.html">Toyota</a></li>
+                                    </ul>
+                                </li>
+                                <li id="header-show-service">
+                                    <a href="#">Dịch vụ</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="./drive.html">Lái thử</a></li>
+                                        <li><a href="./maintain.html">Đăng ký bảo dưỡng</a></li>
+                                        <li><a href="./showroom.html">Showroom</a></li>
+                                        <li><a href="./contact.html">Liên hệ</a></li>
+                                    </ul>
+                                </li>
+                                <li id="header-show-policy">
+                                    <a href="#">Chính sách</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="./sell_policy.html">Chính sách bán hàng</a></li>
+                                        <li><a href="./warranty_policy.html">Chính sách bảo hành</a></li>
+                                        <li><a href="./vip_policy.html">Khách hàng thân thiết</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        
+                        <div class="header__nav__widget">
+                            <div class="header__nav__widget__btn">
+                                <a href="#" class="search-switch">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                                <a href="./cart.html">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                                <a href="./login.html">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Main Section Begin -->
+    <main id="bmw">
+        <div class="showroom__image">
+            <div class="showroom__img-overlay">
+                <div class="showroom__img-text">
+                    <h2 class="showroom__img-header">SHOWROOM</h2>
+                    <p class="showroom__img-content">Đến với showroom của chúng tôi để trải nghiệm những dòng xe mới nhất.</p>
+                </div>
+            </div>
+            <img class="showroom__img" src="../images/showroom/showroomImgBackground.jpg" alt="">
+        </div>
+        <div class="app_container" style="margin-top: 150px;margin-bottom: 100px;">
+            <section class="row">
+                <div class="col-lg-1">
+                </div>
+                <div class="col-sm-2" style="border-right: 1px solid rgba(0,0,0,0.1);">
+                    <nav>
+                        <h4 class="category__heading">
+                            <img class="product-logo" src="../images/bmw.png">
+                            BMW
+                        </h4>
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <a href="#dong-xe-1" class="category-item__link"><i class="fa fa-angle-right"></i> Series X</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#dong-xe-2" class="category-item__link"><i class="fa fa-angle-right"></i> Series M</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#dong-xe-3" class="category-item__link"><i class="fa fa-angle-right"></i> Series I</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-sm-9">
+                    <h2><strong id="dong-xe-1">Series X</strong></h2>
+                    <div class="col-sm-3 menu" >
+                        <a id="bmw-1" href="detail.html" onclick="addDetail('bmw-1')" class="info-item">
+                            <div class="car__item__text item-text">
+                                <div class="car__item__text__inner">
+                                    <h4 ><div class="item"><span id="product-name-1"></span></div></h4>
+                                    <div class="car__item__price">
+                                        <h5><span id="price-1"></span></h5>
+                                    </div>
+                                    <div class="label-date date"><span id="year-1"></span></div>
+                                </div>
+                            </div>
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="../images/product/bmw/BMW-X3-1.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X3-2.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X3-3.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X3-4.avif" alt="">
+                            </div>
+                        </a>
+                        <ul>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-list"></i>Tìm hiểu thêm
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-cart-plus"></i>Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 menu" >
+                        <a id="bmw-2" href="detail.html" onclick="addDetail('bmw-2')" class="info-item">
+                            <div class="car__item__text item-text">
+                                <div class="car__item__text__inner">
+                                    <h4 ><div class="item"><span id="product-name-2"></span></div></h4>
+                                    <div class="car__item__price">
+                                        <h5><span id="price-2"></span></h5>
+                                    </div>
+                                    <div class="label-date date"><span id="year-2"></span></div>
+                                </div>
+                            </div>
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="../images/product/bmw/BMW-X4-1.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X4-2.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X4-3.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X4-4.avif" alt="">
+                            </div>
+                        </a>
+                        <ul>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-list"></i>Tìm hiểu thêm
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-cart-plus"></i>Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 menu" >
+                        <a id="bmw-3" href="detail.html" onclick="addDetail('bmw-3')" class="info-item">
+                            <div class="car__item__text item-text">
+                                <div class="car__item__text__inner">
+                                    <h4 ><div class="item"><span id="product-name-3"></span></div></h4>
+                                    <div class="car__item__price">
+                                        <h5><span id="price-3"></span></h5>
+                                    </div>
+                                    <div class="label-date date"><span id="year-3"></span></div>
+                                </div>
+                            </div>
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="../images/product/bmw/BMW-X5-1.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X5-2.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X5-3.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X5-4.avif" alt="">
+                            </div>
+                        </a>
+                        <ul>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-list"></i>Tìm hiểu thêm
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-cart-plus"></i>Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 menu" >
+                        <a id="bmw-4" href="detail.html" onclick="addDetail('bmw-4')" class="info-item">
+                            <div class="car__item__text item-text">
+                                <div class="car__item__text__inner">
+                                    <h4 ><div class="item"><span id="product-name-4"></span></div></h4>
+                                    <div class="car__item__price">
+                                        <h5><span id="price-4"></span></h5>
+                                    </div>
+                                    <div class="label-date date"><span id="year-4"></span></div>
+                                </div>
+                            </div>
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="../images/product/bmw/BMW-X6-1.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X6-2.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X6-3.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X6-4.avif" alt="">
+                            </div>
+                        </a>
+                        <ul>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-list"></i>Tìm hiểu thêm
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-cart-plus"></i>Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 menu" >
+                        <a id="bmw-5" href="detail.html" onclick="addDetail('bmw-5')" class="info-item">
+                            <div class="car__item__text item-text">
+                                <div class="car__item__text__inner">
+                                    <h4 ><div class="item"><span id="product-name-5"></span></div></h4>
+                                    <div class="car__item__price">
+                                        <h5><span id="price-5"></span></h5>
+                                    </div>
+                                    <div class="label-date date"><span id="year-5"></span></div>
+                                </div>
+                            </div>
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="../images/product/bmw/BMW-X7-1.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X7-2.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X7-3.avif" alt="">
+                                <img src="../images/product/bmw/BMW-X7-4.avif" alt="">
+                            </div>
+                        </a>
+                        <ul>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-list"></i>Tìm hiểu thêm
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-cart-plus"></i>Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h2><strong id="dong-xe-2">Series M</strong></h2>
+                    <div class="col-sm-3 menu" >
+                        <a id="bmw-6" href="detail.html" onclick="addDetail('bmw-6')" class="info-item">
+                            <div class="car__item__text item-text">
+                                <div class="car__item__text__inner">
+                                    <h4 ><div class="item"><span id="product-name-6"></span></div></h4>
+                                    <div class="car__item__price">
+                                        <h5><span id="price-6"></span></h5>
+                                    </div>
+                                    <div class="label-date date"><span id="year-6"></span></div>
+                                </div>
+                            </div>
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="../images/product/bmw/BMW-M2-1.avif" alt="">
+                                <img src="../images/product/bmw/BMW-M2-2.avif" alt="">
+                                <img src="../images/product/bmw/BMW-M2-3.avif" alt="">
+                                <img src="../images/product/bmw/BMW-M2-4.avif" alt="">
+                            </div>
+                        </a>
+                        <ul>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-list"></i>Tìm hiểu thêm
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-cart-plus"></i>Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 menu" >
+                        <a id="bmw-7" href="detail.html" onclick="addDetail('bmw-7')" class="info-item">
+                            <div class="car__item__text item-text">
+                                <div class="car__item__text__inner">
+                                    <h4 ><div class="item"><span id="product-name-7"></span></div></h4>
+                                    <div class="car__item__price">
+                                        <h5><span id="price-7"></span></h5>
+                                    </div>
+                                    <div class="label-date date"><span id="year-7"></span></div>
+                                </div>
+                            </div>
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="../images/product/bmw/BMW-M4-1.avif" alt="">
+                                <img src="../images/product/bmw/BMW-M4-2.avif" alt="">
+                                <img src="../images/product/bmw/BMW-M4-3.avif" alt="">
+                                <img src="../images/product/bmw/BMW-M4-4.avif" alt="">
+                            </div>
+                        </a>
+                        <ul>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-list"></i>Tìm hiểu thêm
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-cart-plus"></i>Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 menu" >
+                        <a id="bmw-8" href="detail.html" onclick="addDetail('bmw-8')" class="info-item">
+                            <div class="car__item__text item-text">
+                                <div class="car__item__text__inner">
+                                    <h4 ><div class="item"><span id="product-name-8"></span></div></h4>
+                                    <div class="car__item__price">
+                                        <h5><span id="price-8"></span></h5>
+                                    </div>
+                                    <div class="label-date date"><span id="year-8"></span></div>
+                                </div>
+                            </div>
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="../images/product/bmw/BMW-M8-1.avif" alt="">
+                                <img src="../images/product/bmw/BMW-M8-2.avif" alt="">
+                                <img src="../images/product/bmw/BMW-M8-3.avif" alt="">
+                                <img src="../images/product/bmw/BMW-M8-4.avif" alt="">
+                            </div>
+                        </a>
+                        <ul>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-list"></i>Tìm hiểu thêm
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-cart-plus"></i>Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 menu" >
+                        <a id="bmw-9" href="detail.html" onclick="addDetail('bmw-9')" class="info-item">
+                            <div class="car__item__text item-text">
+                                <div class="car__item__text__inner">
+                                    <h4 ><div class="item"><span id="product-name-9"></span></div></h4>
+                                    <div class="car__item__price">
+                                        <h5><span id="price-9"></span></h5>
+                                    </div>
+                                    <div class="label-date date"><span id="year-9"></span></div>
+                                </div>
+                            </div>
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="../images/product/bmw/BMW-XM-1.avif" alt="">
+                                <img src="../images/product/bmw/BMW-XM-2.avif" alt="">
+                                <img src="../images/product/bmw/BMW-XM-3.avif" alt="">
+                                <img src="../images/product/bmw/BMW-XM-4.avif" alt="">
+                            </div>
+                        </a>
+                        <ul>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-list"></i>Tìm hiểu thêm
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-cart-plus"></i>Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h2><strong id="dong-xe-3">Series I</strong></h2>
+                    <div class="col-sm-3 menu" >
+                        <a id="bmw-10" href="detail.html" onclick="addDetail('bmw-10')" class="info-item">
+                            <div class="car__item__text item-text">
+                                <div class="car__item__text__inner">
+                                    <h4 ><div class="item"><span id="product-name-10"></span></div></h4>
+                                    <div class="car__item__price">
+                                        <h5><span id="price-10"></span></h5>
+                                    </div>
+                                    <div class="label-date date"><span id="year-10"></span></div>
+                                </div>
+                            </div>
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="../images/product/bmw/BMW-I4-1.avif" alt="">
+                                <img src="../images/product/bmw/BMW-I4-2.avif" alt="">
+                                <img src="../images/product/bmw/BMW-I4-3.avif" alt="">
+                                <img src="../images/product/bmw/BMW-I4-4.avif" alt="">
+                            </div>
+                        </a>
+                        <ul>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-list"></i>Tìm hiểu thêm
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-cart-plus"></i>Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 menu" >
+                        <a id="bmw-11" href="detail.html" onclick="addDetail('bmw-11')" class="info-item">
+                            <div class="car__item__text item-text">
+                                <div class="car__item__text__inner">
+                                    <h4 ><div class="item"><span id="product-name-11"></span></div></h4>
+                                    <div class="car__item__price">
+                                        <h5><span id="price-11"></span></h5>
+                                    </div>
+                                    <div class="label-date date"><span id="year-11"></span></div>
+                                </div>
+                            </div>
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="../images/product/bmw/BMW-I5-1.avif" alt="">
+                                <img src="../images/product/bmw/BMW-I5-2.avif" alt="">
+                                <img src="../images/product/bmw/BMW-I5-3.avif" alt="">
+                                <img src="../images/product/bmw/BMW-I5-4.avif" alt="">
+                            </div>
+                        </a>
+                        <ul>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-list"></i>Tìm hiểu thêm
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-cart-plus"></i>Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 menu" >
+                        <a id="bmw-12" href="detail.html" onclick="addDetail('bmw-12')" class="info-item">
+                            <div class="car__item__text item-text">
+                                <div class="car__item__text__inner">
+                                    <h4 ><div class="item"><span id="product-name-12"></span></div></h4>
+                                    <div class="car__item__price">
+                                        <h5><span id="price-12"></span></h5>
+                                    </div>
+                                    <div class="label-date date"><span id="year-12"></span></div>
+                                </div>
+                            </div>
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="../images/product/bmw/BMW-I7-1.avif" alt="">
+                                <img src="../images/product/bmw/BMW-I7-2.avif" alt="">
+                                <img src="../images/product/bmw/BMW-I7-3.avif" alt="">
+                                <img src="../images/product/bmw/BMW-I7-4.avif" alt="">
+                            </div>
+                        </a>
+                        <ul>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-list"></i>Tìm hiểu thêm
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-cart-plus"></i>Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 menu" >
+                        <a id="bmw-13" href="detail.html" onclick="addDetail('bmw-13')" class="info-item">
+                            <div class="car__item__text item-text">
+                                <div class="car__item__text__inner">
+                                    <h4 ><div class="item"><span id="product-name-13"></span></div></h4>
+                                    <div class="car__item__price">
+                                        <h5><span id="price-13"></span></h5>
+                                    </div>
+                                    <div class="label-date date"><span id="year-13"></span></div>
+                                </div>
+                            </div>
+                            <div class="car__item__pic__slider owl-carousel">
+                                <img src="../images/product/bmw/BMW-IX-1.avif" alt="">
+                                <img src="../images/product/bmw/BMW-IX-2.avif" alt="">
+                                <img src="../images/product/bmw/BMW-IX-3.avif" alt="">
+                                <img src="../images/product/bmw/BMW-IX-4.avif" alt="">
+                            </div>
+                        </a>
+                        <ul>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-list"></i>Tìm hiểu thêm
+                                </a>
+                            </li>
+                            <li class="info">
+                                <a href="#" class="icon">
+                                    <i class="fa-solid fa-cart-plus"></i>Giỏ hàng
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <section>
+        </div>
+    </main>
+    <!-- Main Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer>
+        <div id="footer-1" class="row">
+            <div class="col-sm-2">
+                <ul>
+                    <p>Về Chúng Tôi</p>
+                    <li>Trung tâm trợ giúp</li>
+                    <li>Hướng dẫn mua hàng</li>
+                    <li>Hỗ trợ như bên thứ ba</li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <ul>
+                    <p>Về sản phẩm</p>
+                    <li>Mẫu xe bán chạy</li>
+                    <li>Mẫu xe mới nhất</li>
+                    <li>Mẫu xe cổ</li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <ul class="payment">
+                    <p>Phương thức thanh toán</p>
+                    <li><img id="napas" src="../images/footer/napas.png"></li>
+                    <li><img id="visa" src="../images/footer/visa.png"></li>
+                    <li><img id="paypal" src="../images/footer/paypal.png"></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <ul class="follow">
+                    <p>Theo dõi chúng tôi trên</p>
+                    <li><i class="fa fa-facebook-square"></i> Facebook</li>
+                    <li><i class="fa fa-instagram"></i> Instagram</li>
+                    <li><i class="fa fa-twitter"></i> Twitter</li>
+                </ul>
+            </div>
+            <div class="col-sm-3">
+                <div class="row">
+                    <p>Truy cập vào ứng dụng trên</p>
+                    <div class="col-sm-5">
+                        <img id="qr" src="../images/footer/qr.png">
+                    </div>
+                    <div class="col-sm-7">
+                        <ul class="access">
+                            <li><i class="fa fa-google-play"></i> Google Play</button></li>
+                            <li><i class="fa fa-app-store"></i> App Store</li>
+
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="footer-2" class="row">
+            <div class="address">
+                <p>Hotline: &ensp; <i class="fa fa-phone-square"></i> 0292 388 9898 &ensp; - &ensp; <i class="fa fa-phone-square"></i> 0292 366 6688</p>
+                <p>Địa chỉ: &ensp; 12A, Đại Lộ Hòa Bình (gần đường 30/4), Phường Tân An, Quận Ninh Kiều, TPCT</p>
+                <p>&copy; 2024 - Bản quyền thuộc về Nhóm 1</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../bootstrap_template/js/bootstrap.min.js"></script>
+    <script src="../bootstrap_template/js/jquery.nice-select.min.js"></script>
+    <script src="../bootstrap_template/js/jquery-ui.min.js"></script>
+    <script src="../bootstrap_template/js/jquery.magnific-popup.min.js"></script>
+    <script src="../bootstrap_template/js/mixitup.min.js"></script>
+    <script src="../bootstrap_template/js/jquery.slicknav.js"></script>
+    <script src="../bootstrap_template/js/owl.carousel.min.js"></script>
+    <script src="../bootstrap_template/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>	
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap-table.min.js"></script>  
+    <script src="../js/index.js"></script>
+    <script src="../js/bmw.js"></script>
+    <script src="../js/showroom_script.js"></script>
+</body>
+
+</html>
+

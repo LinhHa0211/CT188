@@ -1,0 +1,105 @@
+#bmw .app_container{
+    position: relative;
+    margin-top: 87px;
+}
+#bmw .category__heading{
+    font-size: 1.8rem;
+    padding: 12px 16px;
+}
+#bmw .product-logo{
+    width: 12%;
+    position: relative;
+    top: -3px;
+}
+#bmw .category-list > li{
+    list-style: none;
+    margin-left: 60px;
+}
+#bmw .category-item__link{
+    position: relative;
+    font-size: 1.4rem;
+    columns: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    transition: right linear 0.1s;
+    right: 0;
+}
+#bmw .category-item__link{
+    color: black;
+}
+#bmw .category-item__link:hover{
+    right: -4px;
+    color:tomato;
+}
+#bmw .car__item__text__inner .item{
+    color: black;
+}
+#bmw .car__item__text{
+    text-align: center;
+}
+#bmw .col-sm-3:hover{
+    background-color: #f6f6f6;
+}
+#bmw .menu{
+    position:relative;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 0 2px;
+}
+#bmw .info {
+    position:relative;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content:left;
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #000;
+}
+
+#bmw .info li {
+    width: 100%;
+    text-align: center; 
+}
+#bmw .menu:hover .info {
+    opacity: 1; 
+    pointer-events: auto;
+}
+#bmw .info > a{
+    color: #000;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+#bmw .info > i{
+    padding: 7px 12px;
+}
+#bmw .date{
+    border-radius: 50px;
+    background-color: #ccc;
+} 
+#bmw .item-text{
+    border: none;
+}
+#bmw ul{
+    margin-top: 10px;
+}
+#bmw .info-item{
+    color: white;
+}
+#bmw .icon{
+    font-size: 16px; 
+    margin: 5px;
+    padding-left: 20px; 
+    text-decoration: none;
+}
+#bmw .icon i{
+    margin-right: 10px;
+}
