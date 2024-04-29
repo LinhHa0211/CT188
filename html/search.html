@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../bootstrap_template/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="../bootstrap_template/css/style.css" type="text/css">
     <link rel="stylesheet" href="../css/index.css" type="text/css">
+    <link rel="stylesheet" href="../css/search.css" type="text/css">
 </head>
 
 <body>
@@ -124,7 +125,19 @@
 
     <!-- Main Section Begin -->
     <main id="search-main">
-        
+        <div class="search-wrapper">
+            <div id="search-container">
+                <input type="search" id="search-input" placeholder="Nhập vào nội dung cần tìm kiếm...">
+                <button id="search-input-button">Tìm kiếm</button>
+            </div>
+            <div id="search-buttons">
+                <button class="button-value" onclick="filterProduct('all')">All</button>
+                <button class="button-value" onclick="filterProduct('BMW')">BMW</button>
+                <button class="button-value" onclick="filterProduct('Mercedes')">Mercedes</button>
+                <button class="button-value" onclick="filterProduct('Toyota')">Toyota</button>
+            </div>
+            <div id="products"></div>
+        </div>
     </main>
     <!-- Main Section End -->
 
@@ -201,6 +214,7 @@
     <script src="../bootstrap_template/js/owl.carousel.min.js"></script>
     <script src="../bootstrap_template/js/main.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 
 </html>
