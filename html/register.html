@@ -120,15 +120,21 @@
     
     <!-- Main Section Begin -->
     <main id="register-main">
+        <button onclick="setLanguage('en_US', 'login')">
+            <img style="width: 20px; height: auto;" src="../images/translation/united-states.png" alt="">
+        </button>
+        <button onclick="setLanguage('vi-VN', 'login')">
+            <img style="width: 20px; height: auto;" src="../images/translation/vietnam.png" alt="">
+        </button>
         <div class="wrapper">
             <span class="close-icon"><a href="index.html"><i class="fa-solid fa-xmark"></i></a></span>
             <div class="form">
-                <h2>Registration</h2>
+                <h2 id="FORM_REGISTER_NAME">Registration</h2>
                 <form onsubmit="return registerValidate(this);" action="#" method="post" enctype="application/x-www-form-urlencoded">
                     <div class="form__input-box">
                         <span class="icon"><i class="fa-solid fa-user"></i></span>
                         <input type="text" name="username" required>
-                        <label>User name</label>
+                        <label id="FORM_REGISTER_INPUT-NAME">User name</label>
                     </div>
                     <div class="form__input-box">
                         <span class="icon"><i class="fa-solid fa-envelope"></i></span>
@@ -138,14 +144,14 @@
                     <div class="form__input-box">
                         <span class="icon"><i class="fa-solid fa-lock"></i></span>
                         <input type="password" name="password" required>
-                        <label>Password</label>
+                        <label id="FORM_REGISTER_INPUT-PASSWORD">Password</label>
                     </div>
                     <div class="form__remember-forgot">
-                        <label><input type="checkbox">I agree to the terms & conditions</label>
+                        <label id="FORM_REGISTER_POLICY"><input type="checkbox">I agree to the terms & conditions</label>
                     </div>
-                    <button type="submit" class="form__button">Register</button>
+                    <button id="FORM_REGISTER_BUTTON" type="submit" class="form__button">Register</button>
                     <div class="form__register-login" id="have-account">
-                        <p>Already have an account? <a href="./login.html">Login</a></p>
+                        <p id="FORM_REGISTER_HAVE-ACCOUNT">Already have an account? <a id="FORM_REGISTER_LOGIN" href="./login.html">Login</a></p>
                     </div>
                 </form>
             </div>
@@ -214,6 +220,10 @@
         </div>
     </footer>
     <!-- Footer Section End -->
+    <script src="../js/translation.js"></script>
+    <script>
+        changeRegisterLanguage();
+    </script>
 
     <!-- Js Plugins -->
     <script src="../js/jquery-3.7.1.min.js"></script>

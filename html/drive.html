@@ -39,69 +39,25 @@
 
 
 <body class="body-showroom">
-    <div id="driveModal" style="
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 100;
-            display: none;
-    
-            
-        ">
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <div id="driveModal" class="drive__modal-overlay">
         <div>
-            <div style="
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background-color: white;
-                    padding: 20px;
-                    border-radius: 10px;
-                    width: 360px;
-                    height: 250px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    
-                ">
-    
-    
-                <h2 id="driveModalTitle" style="
-                    
-                        font-size: 30px;
-                        font-weight: 600;
-                        font-family: 'Montserrat', sans-serif;
-                        "> Thông báo </h2>
-    
-    
-                <p id="driveModalMessage" style="text-align: center; padding: 16px;
-                        font-size: 14px;
-                        
-                        font-family: 'Montserrat', sans-serif;
-                        ">Đăng ký lái thử thành công</p>
-                <button id="driveModalButton" style="
-                       
-                        padding: 5px 5px;
-                        background-color: #f44336;
-                        color: white;
-                        border: none;
-                        border-radius: 20px;
-                        width: 70%;
-                        height: 40px;
-                        cursor: pointer;
-                    " onclick="hideDriveModal()">Đóng</button>
+            <div class="drive__modal-container">
+                <h2 id="driveModalTitle"> Thông báo </h2>
+                <p id="driveModalMessage">Đăng ký lái thử thành công</p>
+                <button id="driveModalButton" onclick="hideDriveModal()">Đóng</button>
             </div>
         </div>
     </div>
+    
     <header>
-        <div class="container"> 
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="header__nav w-100">
+                    <div class="header__nav">
                         <nav>
                             <ul id="main-menu">
                                 <a href="./index.html"><img id="logo-img" src="../images/header/bmw.png"></a>
@@ -138,11 +94,11 @@
                         
                         <div class="header__nav__widget">
                             <div class="header__nav__widget__btn">
-                                <a href="#" class="search-switch">
+                                <a href="./search.html" class="search-switch">
                                     <i class="fa fa-search"></i>
                                 </a>
-                                <a href="#">
-                                    <i class="fa fa-location-dot"></i>
+                                <a href="./cart.html">
+                                    <i class="fa-solid fa-cart-shopping"></i>
                                 </a>
                                 <a href="./login.html">
                                     <i class="fa fa-user"></i>
@@ -172,7 +128,7 @@
                     <div class="col-lg-6 drive__input">
                         <h2>Đăng ký lái thử</h2>
                         <h3>Vui lòng điền thông tin vào ô có dấu <span style="color: red; display: inline;">*</span></h3>
-                        <form action="">
+                        <form id="myForm" action="#" method="post" enctype="application/x-www-form-urlencoded">
                             <div class="row drive__input-element">
                                 <name class="col-lg-6">Xưng hô: <span style="color: red; display: inline;">*</span></name>
                         
@@ -276,47 +232,47 @@
         </div>
     </main>
                    
-    <footer class="showroom-footer">
+    <footer>
         <div id="footer-1" class="row">
-            <div class="col-lg-2">
+            <div class="col-sm-2">
                 <ul>
-                    <p>Về Chúng Tôi</p>
+                    <h6>Về Chúng Tôi</h6>
                     <li>Trung tâm trợ giúp</li>
                     <li>Hướng dẫn mua hàng</li>
                     <li>Hỗ trợ như bên thứ ba</li>
                 </ul>
             </div>
-            <div class="col-lg-2">
+            <div class="col-sm-2">
                 <ul>
-                    <p>Về sản phẩm</p>
+                    <h6>Về sản phẩm</h6>
                     <li>Mẫu xe bán chạy</li>
                     <li>Mẫu xe mới nhất</li>
                     <li>Mẫu xe cổ</li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-sm-3">
                 <ul class="payment">
-                    <p>Phương thức thanh toán</p>
+                    <h6>Phương thức thanh toán</h6>
                     <li><img id="napas" src="../images/footer/napas.png"></li>
                     <li><img id="visa" src="../images/footer/visa.png"></li>
                     <li><img id="paypal" src="../images/footer/paypal.png"></li>
                 </ul>
             </div>
-            <div class="col-lg-2">
+            <div class="col-sm-2">
                 <ul class="follow">
-                    <p>Theo dõi chúng tôi trên</p>
+                    <h6>Theo dõi chúng tôi trên</h6>
                     <li><i class="fa fa-facebook-square"></i> Facebook</li>
                     <li><i class="fa fa-instagram"></i> Instagram</li>
                     <li><i class="fa fa-twitter"></i> Twitter</li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-sm-3">
                 <div class="row">
-                    <p>Truy cập vào ứng dụng trên</p>
-                    <div class="col-lg-5">
+                    <h6>Truy cập vào ứng dụng trên</h6>
+                    <div class="col-sm-5">
                         <img id="qr" src="../images/footer/qr.png">
                     </div>
-                    <div class="col-lg-7">
+                    <div class="col-sm-7">
                         <ul class="access">
                             <li><i class="fa fa-google-play"></i> Google Play</button></li>
                             <li><i class="fa fa-app-store"></i> App Store</li>
@@ -341,7 +297,7 @@
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/index.js"></script>
     
-    <script src="../js/showroom_script.js"></script>
+    <script src="../js/drive_script.js"></script>
     <script src="../bootstrap_template/js/bootstrap.min.js"></script>
     <script src="../bootstrap_template/js/jquery.nice-select.min.js"></script>
     <script src="../bootstrap_template/js/jquery-ui.min.js"></script>
