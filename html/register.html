@@ -68,10 +68,10 @@
                             <ul id="main-menu">
                                 <a href="./index.html"><img id="logo-img" src="../images/header/bmw.png"></a>
                                 <li id="header-show-home">
-                                    <a href="./index.html">Trang chủ</a>
+                                    <a href="./index.html" id="HEADER_HOME-PAGE">Trang chủ</a>
                                 </li>
                                 <li id="header-show-product">
-                                    <a href="#">Sản phẩm</a>
+                                    <a href="#" id="HEADER_PRODUCTS">Sản phẩm</a>
                                     <ul class="sub-menu">
                                         <li><a href="./bmw.html">BMW</a></li>
                                         <li><a href="./mercedes.html">Mercedes</a></li>
@@ -79,20 +79,20 @@
                                     </ul>
                                 </li>
                                 <li id="header-show-service">
-                                    <a href="#">Dịch vụ</a>
+                                    <a href="#" id="HEADER_SERVICE">Dịch vụ</a>
                                     <ul class="sub-menu">
-                                        <li><a href="./drive.html">Lái thử</a></li>
-                                        <li><a href="./maintain.html">Đăng ký bảo dưỡng</a></li>
-                                        <li><a href="./showroom.html">Showroom</a></li>
-                                        <li><a href="./contact.html">Liên hệ</a></li>
+                                        <li><a href="./drive.html" id="HEADER_SERVICE-DRIVE">Lái thử</a></li>
+                                        <li><a href="./maintain.html" id="HEADER_SERVICE-MAINTAIN">Đăng ký bảo dưỡng</a></li>
+                                        <li><a href="./showroom.html" id="HEADER_SERVICE-SHOWROOM">Showroom</a></li>
+                                        <li><a href="./contact.html" id="HEADER_SERVICE-CONTACT">Liên hệ</a></li>
                                     </ul>
                                 </li>
                                 <li id="header-show-policy">
-                                    <a href="#">Chính sách</a>
+                                    <a href="#" id="HEADER_POLICY">Chính sách</a>
                                     <ul class="sub-menu">
-                                        <li><a href="./sell_policy.html">Chính sách bán hàng</a></li>
-                                        <li><a href="./warranty_policy.html">Chính sách bảo hành</a></li>
-                                        <li><a href="./vip_policy.html">Khách hàng thân thiết</a></li>
+                                        <li><a href="./sell_policy.html" id="HEADER_POLICY-SALES">Chính sách bán hàng</a></li>
+                                        <li><a href="./warranty_policy.html" id="HEADER_POLICY-WARRANTY">Chính sách bảo hành</a></li>
+                                        <li><a href="./vip_policy.html" id="HEADER_POLICY-VIP">Khách hàng thân thiết</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -124,7 +124,7 @@
             <span class="close-icon"><a href="index.html"><i class="fa-solid fa-xmark"></i></a></span>
             <div class="form">
                 <div id="language-button">
-                    <button onclick="setLanguage('en_US', 'login')">EN</button>
+                    <button onclick="setLanguage('en-US', 'login')">EN</button>
                     <button onclick="setLanguage('vi-VN', 'login')">VI</button>
                 </div>
                 <h2 id="FORM_REGISTER_NAME">Registration</h2>
@@ -158,27 +158,28 @@
     <!-- Main Section End -->
 
     <!-- Footer Section Begin -->
+  
     <footer>
         <div id="footer-1" class="row">
             <div class="col-sm-2">
                 <ul>
-                    <h6>Về Chúng Tôi</h6>
-                    <li>Trung tâm trợ giúp</li>
-                    <li>Hướng dẫn mua hàng</li>
-                    <li>Hỗ trợ như bên thứ ba</li>
+                    <h6 id="FOOTER_ABOUT-US">Về Chúng Tôi</h6>
+                    <li id="FOOTER_HELP-CENTER">Trung tâm trợ giúp</li>
+                    <li id="FOOTER_SHOPPING-GUIDE">Hướng dẫn mua hàng</li>
+                    <li id="FOOTER_THIRD-PARTY">Hỗ trợ như bên thứ ba</li>
                 </ul>
             </div>
             <div class="col-sm-2">
                 <ul>
-                    <h6>Về sản phẩm</h6>
-                    <li>Mẫu xe bán chạy</li>
-                    <li>Mẫu xe mới nhất</li>
-                    <li>Mẫu xe cổ</li>
+                    <h6 id="FOOTER_ABOUT-COMMODITIES">Về sản phẩm</h6>
+                    <li id="FOOTER_BEST-SELLING-MODEL">Mẫu xe bán chạy</li>
+                    <li id="FOOTER_LASTEST-MODEL">Mẫu xe mới nhất</li>
+                    <li id="FOOTER_CLASSIC-CAR">Mẫu xe cổ</li>
                 </ul>
             </div>
             <div class="col-sm-3">
                 <ul class="payment">
-                    <h6>Phương thức thanh toán</h6>
+                    <h6 id="FOOTER_MODE-OF-PAYMENT">Phương thức thanh toán</h6>
                     <li><img id="napas" src="../images/footer/napas.png"></li>
                     <li><img id="visa" src="../images/footer/visa.png"></li>
                     <li><img id="paypal" src="../images/footer/paypal.png"></li>
@@ -186,7 +187,7 @@
             </div>
             <div class="col-sm-2">
                 <ul class="follow">
-                    <h6>Theo dõi chúng tôi trên</h6>
+                    <h6 id="FOOTER_FOLLO-US">Theo dõi chúng tôi trên</h6>
                     <li><i class="fa fa-facebook-square"></i> Facebook</li>
                     <li><i class="fa fa-instagram"></i> Instagram</li>
                     <li><i class="fa fa-twitter"></i> Twitter</li>
@@ -194,7 +195,7 @@
             </div>
             <div class="col-sm-3">
                 <div class="row">
-                    <h6>Truy cập vào ứng dụng trên</h6>
+                    <h6 id="FOOTER_ACCESS-APPLICATION">Truy cập vào ứng dụng trên</h6>
                     <div class="col-sm-5">
                         <img id="qr" src="../images/footer/qr.png">
                     </div>
@@ -211,9 +212,9 @@
         </div>
         <div id="footer-2" class="row">
             <div class="address">
-                <p>Hotline: &ensp; <i class="fa fa-phone-square"></i> 0292 388 9898 &ensp; - &ensp; <i class="fa fa-phone-square"></i> 0292 366 6688</p>
-                <p>Địa chỉ: &ensp; 12A, Đại Lộ Hòa Bình (gần đường 30/4), Phường Tân An, Quận Ninh Kiều, TPCT</p>
-                <p>&copy; 2024 - Bản quyền thuộc về Nhóm 1</p>
+                <p id="FOOTER_HOTLINE">Hotline: &ensp; <i class="fa fa-phone-square"></i> 0292 388 9898 &ensp; - &ensp; <i class="fa fa-phone-square"></i> 0292 366 6688</p>
+                <p id="FOOTER_ADRESS">Địa chỉ: &ensp; 12A, Đại Lộ Hòa Bình (gần đường 30/4), Phường Tân An, Quận Ninh Kiều, TPCT</p>
+                <p id="FOOTER_COPYRIGHT">&copy; 2024 - Bản quyền thuộc về Nhóm 1</p>
             </div>
         </div>
     </footer>
@@ -221,6 +222,7 @@
     <script src="../js/translation.js"></script>
     <script>
         changeRegisterLanguage();
+        changeHeaderAndFooterLanguage();
     </script>
 
     <!-- Js Plugins -->
