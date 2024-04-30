@@ -1,5 +1,5 @@
 #search-main{
-    padding: 100px 0 0;
+    padding: 80px 0 0;
     margin: 0;
     box-sizing: border-box;
     border: none;
@@ -29,38 +29,39 @@ body #search-main{
 }
 
 #search-container input:focus{
-    border-bottom-color: #6759ff;
+    border-bottom-color: #5b95c1;
 }
 
 #search-container button{
     padding: 1em 2em;
     margin-left: 1em;
-    background-color: #6759ff;
+    background-color: #5b95c1;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 15px;
     margin-top: 0.5em;
+    border: solid #6295bc;
 }
 
 #search-buttons button{
-    border: 2px solid #6759ff;
+    border: 2px solid #5b95c1;
     padding: 1em 2.2em;
     border-radius: 3em;
     background-color: transparent;
-    color: #6759ff;
+    color: #5b95c1;
     cursor: pointer;
 }
 
 #search-buttons .button-value{
-    border: 2px solid #6759ff;
+    border: 2px solid #5b95c1;
     padding: 1em 2.2em;
     border-radius: 3em;
     background-color: transparent;
-    color: #6759ff;
+    color: #5b95c1;
     cursor: pointer;
 }
 
 #search-buttons .active{
-    background-color: #6759ff;
+    background-color: #5b95c1;
     color: #fff;
 }
 
@@ -74,7 +75,7 @@ body #search-main{
 
 .card{
     background-color: #fff;
-    max-width: 18em;
+    max-width: 22em;
     margin-top: 1em;
     padding: 1em;
     border-radius: 5px;
@@ -111,7 +112,7 @@ body #search-main{
         height: 10em;
     }
     .card{
-        max-width: 10em;
+        max-width: 12em;
         margin-top: 1em;
     }
     #products{
