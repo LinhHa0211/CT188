@@ -120,15 +120,13 @@
     
     <!-- Main Section Begin -->
     <main id="register-main">
-        <button onclick="setLanguage('en_US', 'login')">
-            <img style="width: 20px; height: auto;" src="../images/translation/united-states.png" alt="">
-        </button>
-        <button onclick="setLanguage('vi-VN', 'login')">
-            <img style="width: 20px; height: auto;" src="../images/translation/vietnam.png" alt="">
-        </button>
         <div class="wrapper">
             <span class="close-icon"><a href="index.html"><i class="fa-solid fa-xmark"></i></a></span>
             <div class="form">
+                <div id="language-button">
+                    <button onclick="setLanguage('en_US', 'login')">EN</button>
+                    <button onclick="setLanguage('vi-VN', 'login')">VI</button>
+                </div>
                 <h2 id="FORM_REGISTER_NAME">Registration</h2>
                 <form onsubmit="return registerValidate(this);" action="#" method="post" enctype="application/x-www-form-urlencoded">
                     <div class="form__input-box">
