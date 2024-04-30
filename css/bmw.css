@@ -1,6 +1,17 @@
 #bmw{
     overflow: hidden;
 }
+#bmw .contact-image{
+    margin-top: 80px;
+    height: 90vh;
+    margin-top: -200px;
+    margin-bottom: -50px;
+}
+#bmw .bmw__img-text{
+    margin-top: 250px;
+    width: 80%;
+    height: 40%;
+}
 #bmw .app_container{
     position: relative;
     margin-top: 87px;
@@ -22,7 +33,7 @@
     position: relative;
     font-size: 1.4rem;
     columns: black;
-    padding: 8px 16px;
+    padding: 8px 10px;
     text-decoration: none;
     display: block;
     transition: right linear 0.1s;
