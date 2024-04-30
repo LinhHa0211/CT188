@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="../css/index.css" type="text/css">
     <link rel="stylesheet" href="../css/bmw.css" type="text/css">
     <link rel="stylesheet" href="../css/style_phuc.css" type="text/css">
+    <link rel="stylesheet" href="../css/cart.css" type="text/css">
     <script>
         window.onload=function(){show("mer-");};
     </script>
@@ -46,7 +47,35 @@
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
-    </div>    
+    </div>
+  
+    <!-- Cart Input Begin -->
+    <div id="cart-input" class="cart-modal"> 
+        <div>
+            <div id="cart-modal-center-1" class="cart-modal-center">
+                <h2 id="cart-modal-title-1" class="cart-modal-title"> Chọn số lượng </h2>
+                <div id="cart-modal-input-container">
+                    <button class="cart-modal-input-button" onclick="decrement()"><i class="fa fa-minus"></i></button>
+                    <input id="cart-modal-input" type="number" value="0">
+                    <button class="cart-modal-input-button" onclick="increment()"><i class="fa fa-plus"></i></button>
+                </div> 
+                <button id="cart-modal-ok-button-1" class="cart-modal-ok-button">OK</button>
+            </div>
+        </div>
+    </div>
+    <!-- Cart Input End -->
+
+    <!-- Cart Show Message Begin -->
+    <div id="cart-show-message" class="cart-modal">
+        <div>
+            <div id="cart-modal-center-2" class="cart-modal-center">
+                <h2 id="cart-modal-title-2" class="cart-modal-title"> Thông báo </h2>
+                <p id="cart-modal-message"></p>
+                <button id="cart-modal-ok-button-2" class="cart-modal-ok-button">OK</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Header Section Begin -->
     <header>
         <div class="container">
@@ -112,7 +141,7 @@
         <div class="showroom__image contact-image">
             <div class="showroom__img-overlay">
                 <div class="showroom__img-text bmw__img-text">
-                    <h2 class="showroom__img-header" style="margin-top: 50px;">Mercedes</h2>
+                    <h2 class="showroom__img-header" style="margin-top: 0px;">Mercedes</h2>
                     <p class="showroom__img-content">Cung cấp các sản phẩm đa dạng, phù hợp cho việc đi lại tiện nghi và phong cách</p>
                 </div>
             </div>
@@ -167,9 +196,9 @@
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -198,9 +227,9 @@
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -229,9 +258,9 @@
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -260,9 +289,9 @@
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -292,9 +321,9 @@
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -323,9 +352,9 @@
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -354,9 +383,9 @@
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -385,9 +414,9 @@
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -417,9 +446,9 @@
                                 </a>
                             </li>
                             <li class="info info-cart" >
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -448,9 +477,9 @@
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -479,9 +508,9 @@
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -510,9 +539,9 @@
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -620,6 +649,21 @@
         ];
     </script>
     <script src="../js/product.js"></script>
+    <script>
+        function increment() {
+            var value = parseInt(document.getElementById('cart-modal-input').value, 10);
+            if(value < 300)
+                value++;
+            document.getElementById('cart-modal-input').value = value;
+        }  
+        function decrement() {
+            var value = parseInt(document.getElementById('cart-modal-input').value, 10);
+            if(value > 0)
+                value--;
+            document.getElementById('cart-modal-input').value = value;
+        }
+    </script>
+    <script src="../js/cart.js"></script>
 </body>
 
 </html>
