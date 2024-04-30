@@ -37,6 +37,8 @@
 .wrapper .form{
     width: 100%;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 .close-icon{
@@ -184,4 +186,23 @@
 
 .form__register-login p a:hover{
     text-decoration: underline;
+}
+
+#language-button{
+    float: left;
+}
+
+#language-button button{
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 5px;
 }

@@ -874,7 +874,7 @@ var productList = {
                         "../images/product/Mercedes/Mer-EQS-13.avif", 
         ],
     },
-    "toyota-1" : {
+    "toy-1" : {
         "product-name" : "Mirai",
         "automaker" : "Toyota",
         "price" : 1250000000,
@@ -909,7 +909,7 @@ var productList = {
                         "../images/product/toyota/Toyota-Mirai-13.avif", 
         ],
     },
-    "toyota-2" : {
+    "toy-2" : {
         "product-name" : "Corolla",
         "automaker" : "Toyota",
         "price" : 955000000,
@@ -944,7 +944,7 @@ var productList = {
                         "../images/product/toyota/Toyota-Corolla-13.avif", 
         ],
     },
-    "toyota-3" : {
+    "toy-3" : {
         "product-name" : "Prius",
         "automaker" : "Toyota",
         "price" : 626000000,
@@ -979,7 +979,7 @@ var productList = {
                         "../images/product/toyota/Toyota-Prius-13.avif", 
         ],
     },
-    "toyota-4" : {
+    "toy-4" : {
         "product-name" : "Camry",
         "automaker" : "Toyota",
         "price" : 1105000000,
@@ -1014,7 +1014,7 @@ var productList = {
                         "../images/product/toyota/Toyota-Camry-13.avif", 
         ],
     },
-    "toyota-5" : {
+    "toy-5" : {
         "product-name" : "Crown",
         "automaker" : "Toyota",
         "price" : 976000000,
@@ -1049,7 +1049,7 @@ var productList = {
                         "../images/product/toyota/Toyota-Crown-13.avif", 
         ],
     },
-    "toyota-6" : {
+    "toy-6" : {
         "product-name" : "Sequoia",
         "automaker" : "Toyota",
         "price" : 7250000000,
@@ -1084,7 +1084,7 @@ var productList = {
                         "../images/product/toyota/Toyota-Sequoia-13.avif", 
         ],
     },
-    "toyota-7" : {
+    "toy-7" : {
         "product-name" : "RAV4",
         "automaker" : "Toyota",
         "price" : 2600000000,
@@ -1119,7 +1119,7 @@ var productList = {
                         "../images/product/toyota/Toyota-RAV4-13.avif", 
         ],
     },
-    "toyota-8" : {
+    "toy-8" : {
         "product-name" : "Grand Highlander",
         "automaker" : "Toyota",
         "price" : 4900000000,
@@ -1154,7 +1154,7 @@ var productList = {
                         "../images/product/toyota/Toyota-GrandHighlander-13.avif", 
         ],
     },
-    "toyota-9" : {
+    "toy-9" : {
         "product-name" : "4Runner",
         "automaker" : "Toyota",
         "price" : 4100000000,
@@ -1189,7 +1189,7 @@ var productList = {
                         "../images/product/toyota/Toyota-4Runner-13.avif", 
 ],
     },
-    "toyota-10" : {
+    "toy-10" : {
         "product-name" : "Tacoma",
         "automaker" : "Toyota",
         "price" : 5520000000,
@@ -1224,7 +1224,7 @@ var productList = {
                         "../images/product/toyota/Toyota-Tacoma-13.avif", 
         ],
     },
-    "toyota-11" : {
+    "toy-11" : {
         "product-name" : "Tundra",
         "automaker" : "Toyota",
         "price" : 2599000000,
