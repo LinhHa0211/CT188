@@ -96,6 +96,14 @@
     font-size: 1.2rem;
     padding-bottom: 5px;
 }
+#bmw .info > span{
+    color: #000;
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+#bmw .info{
+    cursor: pointer;
+}
 #bmw .info > i{
     padding: 7px 12px;
 }

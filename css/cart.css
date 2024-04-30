@@ -1,0 +1,86 @@
+/* Phần xuất hiện ở các trang sản phẩm và trang chủ */
+.cart-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+.cart-modal .cart-modal-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 450px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-modal .cart-modal-title{
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+
+.cart-modal .cart-modal-center #cart-modal-input-container{
+    display: inline-block;
+}
+
+#cart-modal-input-container #cart-modal-input{
+    padding: 10px 25px; 
+    margin-bottom: 25px; 
+    text-align: center;
+    border: 1.5px solid silver;
+    border-radius: 8px;
+}
+#cart-modal-input-container input[type="number"]::-webkit-inner-spin-button,
+#cart-modal-input-container input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Style the custom buttons */
+#cart-modal-input-container .cart-modal-input-button{
+    margin: 8px; /* Adjust the margin as needed */
+    padding: 10px 18px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgb(85, 197, 212);
+    color: #fff;
+    box-shadow: 1px 1px 2px silver;
+}
+#cart-modal-input-container .cart-modal-input-button:hover{
+    opacity: 0.5;
+}
+
+.cart-modal .cart-modal-center .cart-modal-ok-button{
+    padding: 5px 5px;
+    background-color: rgb(16, 188, 211);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 30%;
+    height: 40px;
+    cursor: pointer;
+}
+
+#cart-show-message .cart-modal-center{
+    width: 600px;
+    height: 300px;
+}
+#cart-show-message .cart-modal-center #cart-modal-message{
+    text-align: center; padding: 16px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
