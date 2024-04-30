@@ -120,7 +120,109 @@ var registerLabels = {
     "FORM_REGISTER_LOGIN": {
         "vi-VN": "Đăng Nhập",
         "en_US": "Login",
-    }
+    },
+    //Header
+    "HEADER_HOME-PAGE": {
+        "vi-VN": "TRANG CHỦ",
+        "en-US": "HOME PAGE",
+    },
+    "HEADER_PRODUCTS": {
+        "vi-VN": "SẢN PHẨM",
+        "en-US": "PRODUCTS",
+    },
+    "HEADER_SERVICE": {
+        "vi-VN": "DỊCH VỤ",
+        "en-US": "SERVICE",
+    },
+    "HEADER_SERVICE-DRIVE": {
+        "vi-VN": "Lái thử",
+        "en-US": "Test Ride",
+    },
+    "HEADER_SERVICE-MAINTAIN": {
+        "vi-VN": "Đăng ký bảo dưỡng",
+        "en-US": "Maintainance",
+    },
+    "HEADER_SERVICE-SHOWROOM": {
+        "vi-VN": "Phòng trưng bày",
+        "en-US": "Showroom",
+    },
+    "HEADER_SERVICE-CONTACT": {
+        "vi-VN": "Liên hệ",
+        "en-US": "Contact",
+    },
+    "HEADER_POLICY": {
+        "vi-VN": "CHÍNH SÁCH",
+        "en-US": "POLICY",
+    },
+    "HEADER_POLICY-SALES": {
+        "vi-VN": "Chính sách bán hàng",
+        "en-US": "Sales policy",
+    },
+    "HEADER_POLICY-WARRANTY": {
+        "vi-VN": "Chính sách bảo hành",
+        "en-US": "Warranty policy",
+    },
+    "HEADER_POLICY-VIP": {
+        "vi-VN": "Khách hàng thân thiết",
+        "en-US": "VIP",
+    },
+    //Footer
+    "FOOTER_ABOUT-US": {
+        "vi-VN": "VỀ CHÚNG TÔI",
+        "en-US": "ABOUT US",
+    },
+    "FOOTER_HELP-CENTER": {
+        "vi-VN": "Trung tâm trợ giúp",
+        "en-US": "Help center",
+    },
+    "FOOTER_SHOPPING-GUIDE": {
+        "vi-VN": "Hướng dẫn mua hàng",
+        "en-US": "Shopping guide",
+    },
+    "FOOTER_THIRD-PARTY": {
+        "vi-VN": "Hỗ trợ từ bên thứ ba",
+        "en-US": "Third party support",
+    },
+    "FOOTER_ABOUT-COMMODITIES": {
+        "vi-VN": "VỀ SẢN PHẨM",
+        "en-US": "ABOUT COMMODITIES",
+    },
+    "FOOTER_BEST-SELLING-MODEL": {
+        "vi-VN": "Mẫu xe bán chạy",
+        "en-US": "Best selling model",
+    },
+    "FOOTER_LASTEST-MODEL": {
+        "vi-VN": "Mẫu xe mới nhất",
+        "en-US": "Lastest model",
+    },
+    "FOOTER_CLASSIC-CAR": {
+        "vi-VN": "Mẫu xe cổ",
+        "en-US": "Classic car",
+    },
+    "FOOTER_MODE-OF-PAYMENT": {
+        "vi-VN": "PHƯƠNG THỨC THANH TOÁN",
+        "en-US": "MODE OF PAYMENT",
+    },
+    "FOOTER_FOLLO-US": {
+        "vi-VN": "THEO DÕI CHÚNG TÔI TRÊN",
+        "en-US": "FOLLOW US ON",
+    },
+    "FOOTER_ACCESS-APPLICATION": {
+        "vi-VN": "TRUY CẬP VÀO ỨNG DỤNG TRÊN",
+        "en-US": "ACCESS APPLICATION ON",
+    },
+    "FOOTER_HOTLINE": {
+        "vi-VN": "Đường dây nóng",
+        "en-US": "Hotline",
+    },
+    "FOOTER_ADRESS": {
+        "vi-VN": "Địa chỉ:   12A, Đại Lộ Hòa Bình (gần đường 30/4), Phường Tân An, Quận Ninh Kiều, TPCT",
+        "en-US": "Address: 12A, Hoa Binh Avenue (near 30/4 Street), Tan An, Ninh Kieu, Can Tho City",
+    },
+    "FOOTER_COPYRIGHT": {
+        "vi-VN": "© 2024 - Bản quyền thuộc về Nhóm 1",
+        "en-US": "© 2024 - Copyright belongs to Group 1",
+    },
 }
 
 function setLanguage(language){
