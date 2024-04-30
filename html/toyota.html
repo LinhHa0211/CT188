@@ -8,11 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sản Phẩm Toyota</title>
-    <!--font-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
 
     <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha384-...">
 
@@ -37,9 +36,11 @@
     <link rel="stylesheet" href="../css/index.css" type="text/css">
     <link rel="stylesheet" href="../css/bmw.css" type="text/css">
     <link rel="stylesheet" href="../css/style_phuc.css" type="text/css">
+    <link rel="stylesheet" href="../css/cart.css" type="text/css">
     <script>
-        window.onload=function(){show();};
+        window.onload = function(){show("bmw-");};
     </script>
+    
 </head>
 
 <body>
@@ -47,6 +48,37 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
+
+    
+    <!-- Cart Input Begin -->
+    <div id="cart-input" class="cart-modal"> 
+        <div>
+            <div id="cart-modal-center-1" class="cart-modal-center">
+                <h2 id="cart-modal-title-1" class="cart-modal-title"> Chọn số lượng </h2>
+                <div id="cart-modal-input-container">
+                    <button class="cart-modal-input-button" onclick="decrement()"><i class="fa fa-minus"></i></button>
+                    <input id="cart-modal-input" type="number" value="0">
+                    <button class="cart-modal-input-button" onclick="increment()"><i class="fa fa-plus"></i></button>
+                </div> 
+                <button id="cart-modal-ok-button-1" class="cart-modal-ok-button">OK</button>
+            </div>
+        </div>
+    </div>
+    <!-- Cart Input End -->
+
+    <!-- Cart Show Message Begin -->
+    <div id="cart-show-message" class="cart-modal">
+        <div>
+            <div id="cart-modal-center-2" class="cart-modal-center">
+                <h2 id="cart-modal-title-2" class="cart-modal-title"> Thông báo </h2>
+                <p id="cart-modal-message"></p>
+                <button id="cart-modal-ok-button-2" class="cart-modal-ok-button">OK</button>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- Header Section Begin -->
     <header>
         <div class="container">
@@ -62,7 +94,7 @@
                                 <li id="header-show-product">
                                     <a href="#">Sản phẩm</a>
                                     <ul class="sub-menu">
-                                        <li><a href="./bmw.html">BMW</a></li>
+                                        <li><a href="./bmw.html"  onclick="setLang('bmw')">BMW</a></li>
                                         <li><a href="./mercedes.html">Mercedes</a></li>
                                         <li><a href="./toyota.html">Toyota</a></li>
                                     </ul>
@@ -86,10 +118,9 @@
                                 </li>
                             </ul>
                         </nav>
-                        
                         <div class="header__nav__widget">
                             <div class="header__nav__widget__btn">
-                                <a href="./search.html" class="search-switch">
+                                <a href="#" class="search-switch">
                                     <i class="fa fa-search"></i>
                                 </a>
                                 <a href="./cart.html">
@@ -116,32 +147,32 @@
                     <p class="showroom__img-content">Cung cấp các sản phẩm đa dạng, phù hợp cho việc đi lại tiện nghi và phong cách</p>
                 </div>
             </div>
-            <img class="showroom__img" src="../images/product/bmw/BMW-IX-5.avif" alt="">
+            <img class="showroom__img" src="../images/product/toyota/Toyota-GrandHighlander-1.avif" alt="">
         </div>
         <div class="app_container" style="margin-top: 150px;margin-bottom: 100px;">
             <section class="row">
                 <div class="col-sm-2" style="border-right: 1px solid rgba(0,0,0,0.1);">
                     <nav style="margin-left: 50px;">
                         <h4 class="category__heading">
-                            <img class="product-logo" src="../images/product/toyota/toyota">
+                            <img class="product-logo" src="../images/product/toyota/Toyota.jpg">
                             Toyota
                         </h4>
                         <ul class="category-list">
                             <li class="category-item">
-                                <a href="#dong-xe-1" class="category-item__link"><i class="fa fa-angle-right"></i> Series I</a>
+                                <a href="#dong-xe-1" class="category-item__link"><i class="fa fa-angle-right"></i> Sedan</a>
                             </li>
                             <li class="category-item">
-                                <a href="#dong-xe-2" class="category-item__link"><i class="fa fa-angle-right"></i> Series M</a>
+                                <a href="#dong-xe-2" class="category-item__link"><i class="fa fa-angle-right"></i> SUV</a>
                             </li>
                             <li class="category-item">
-                                <a href="#dong-xe-3" class="category-item__link"><i class="fa fa-angle-right"></i> Series X</a>
+                                <a href="#dong-xe-3" class="category-item__link"><i class="fa fa-angle-right"></i> Truck</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
                 <div class="col-sm-10">
                     <div class="row">
-                    <h2><strong id="dong-xe-1">Series I</strong></h2>
+                    <h2><strong id="dong-xe-1">Sedan</strong></h2>
                     <div class="col-sm-4 menu" >
                         <a id="bmw-1" href="detail.html" onclick="addDetail('bmw-1')" class="info-item">
                             <div class="car__item__text item-text">
@@ -162,14 +193,14 @@
                         </a>
                         <ul>
                             <li class="info">
-                                <a href="#" class="icon">
+                                <a href="detail.html" onclick="addDetail('bmw-1')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -193,14 +224,14 @@
                         </a>
                         <ul>
                             <li class="info">
-                                <a href="#" class="icon">
+                                <a href="detail.html" onclick="addDetail('bmw-2')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -224,14 +255,14 @@
                         </a>
                         <ul>
                             <li class="info">
-                                <a href="#" class="icon">
+                                <a href="detail.html" onclick="addDetail('bmw-3')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -255,18 +286,18 @@
                         </a>
                         <ul>
                             <li class="info">
-                                <a href="#" class="icon">
+                                <a href="detail.html" onclick="addDetail('bmw-4')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
-                    <h2><strong id="dong-xe-2">Series M</strong></h2>
+                    <h2><strong id="dong-xe-2">SUV</strong></h2>
                     <div class="col-sm-4 menu" >
                         <a id="bmw-5" href="detail.html" onclick="addDetail('bmw-5')" class="info-item">
                             <div class="car__item__text item-text">
@@ -287,14 +318,14 @@
                         </a>
                         <ul>
                             <li class="info">
-                                <a href="#" class="icon">
+                                <a href="detail.html" onclick="addDetail('bmw-5')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -318,14 +349,14 @@
                         </a>
                         <ul>
                             <li class="info">
-                                <a href="#" class="icon">
+                                <a href="detail.html" onclick="addDetail('bmw-6')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -349,14 +380,14 @@
                         </a>
                         <ul>
                             <li class="info">
-                                <a href="#" class="icon">
+                                <a href="detail.html" onclick="addDetail('bmw-7')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -380,18 +411,18 @@
                         </a>
                         <ul>
                             <li class="info">
-                                <a href="#" class="icon">
+                                <a href="detail.html" onclick="addDetail('bmw-8')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
-                    <h2><strong id="dong-xe-3">Series X</strong></h2>
+                    <h2><strong id="dong-xe-3">Truck</strong></h2>
                     <div class="col-sm-4 menu" >
                         <a id="bmw-9" href="detail.html" onclick="addDetail('bmw-9')" class="info-item">
                             <div class="car__item__text item-text">
@@ -412,14 +443,14 @@
                         </a>
                         <ul>
                             <li class="info">
-                                <a href="#" class="icon">
+                                <a href="detail.html" onclick="addDetail('bmw-9')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart" >
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -443,14 +474,14 @@
                         </a>
                         <ul>
                             <li class="info">
-                                <a href="#" class="icon">
+                                <a href="detail.html" onclick="addDetail('bmw-10')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -474,14 +505,14 @@
                         </a>
                         <ul>
                             <li class="info">
-                                <a href="#" class="icon">
+                                <a href="detail.html" onclick="addDetail('bmw-11')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -505,14 +536,14 @@
                         </a>
                         <ul>
                             <li class="info">
-                                <a href="#" class="icon">
+                                <a href="detail.html" onclick="addDetail('bmw-12')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -536,14 +567,14 @@
                         </a>
                         <ul>
                             <li class="info">
-                                <a href="#" class="icon">
+                                <a href="detail.html" onclick="addDetail('bmw-13')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart">
-                                <a href="#" class="icon">
+                                <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
-                                </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -559,7 +590,7 @@
         <div id="footer-1" class="row">
             <div class="col-sm-2">
                 <ul>
-                    <h6>Về Chúng Tôi</h6>
+                    <p>Về Chúng Tôi</p>
                     <li>Trung tâm trợ giúp</li>
                     <li>Hướng dẫn mua hàng</li>
                     <li>Hỗ trợ như bên thứ ba</li>
@@ -567,7 +598,7 @@
             </div>
             <div class="col-sm-2">
                 <ul>
-                    <h6>Về sản phẩm</h6>
+                    <p>Về sản phẩm</p>
                     <li>Mẫu xe bán chạy</li>
                     <li>Mẫu xe mới nhất</li>
                     <li>Mẫu xe cổ</li>
@@ -575,7 +606,7 @@
             </div>
             <div class="col-sm-3">
                 <ul class="payment">
-                    <h6>Phương thức thanh toán</h6>
+                    <p>Phương thức thanh toán</p>
                     <li><img id="napas" src="../images/footer/napas.png"></li>
                     <li><img id="visa" src="../images/footer/visa.png"></li>
                     <li><img id="paypal" src="../images/footer/paypal.png"></li>
@@ -583,7 +614,7 @@
             </div>
             <div class="col-sm-2">
                 <ul class="follow">
-                    <h6>Theo dõi chúng tôi trên</h6>
+                    <p>Theo dõi chúng tôi trên</p>
                     <li><i class="fa fa-facebook-square"></i> Facebook</li>
                     <li><i class="fa fa-instagram"></i> Instagram</li>
                     <li><i class="fa fa-twitter"></i> Twitter</li>
@@ -591,7 +622,7 @@
             </div>
             <div class="col-sm-3">
                 <div class="row">
-                    <h6>Truy cập vào ứng dụng trên</h6>
+                    <p>Truy cập vào ứng dụng trên</p>
                     <div class="col-sm-5">
                         <img id="qr" src="../images/footer/qr.png">
                     </div>
@@ -640,18 +671,32 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>	
     <script src="../bootstrap-5.3.3-dist/js/bootstrap-table.min.js"></script>  
     <script src="../js/index.js"></script>
-    <script src="../js/toyota.js"></script>
+    <script src="../js/bmw.js"></script>
     <script>
         var listPhotoMain = [
-            '../images/product/bmw/BMW-M8-5.avif',
-            '../images/product/bmw/BMW-XM-5.avif',
-            '../images/product/bmw/BMW-IX-5.avif',
-            '../images/product/bmw/BMW-X7-5.avif',
-            '../images/product/bmw/BMW-I7-5.avif',
+            '../images/product/toyota/Toyota-4Runner-1.avif',
+            '../images/product/toyota/Toyota-Mirai-1.avif',
+            '../images/product/toyota/Toyota-Tacoma-1.avif',
+            '../images/product/toyota/Toyota-Sequoia-1.avif',
+            '../images/product/toyota/Toyota-Tundra-1.avif',
         ];
     </script>
     <script src="../js/product.js"></script>
+    <script>
+        function increment() {
+            var value = parseInt(document.getElementById('cart-modal-input').value, 10);
+            if(value < 300)
+                value++;
+            document.getElementById('cart-modal-input').value = value;
+        }  
+        function decrement() {
+            var value = parseInt(document.getElementById('cart-modal-input').value, 10);
+            if(value > 0)
+                value--;
+            document.getElementById('cart-modal-input').value = value;
+        }
+    </script>
+    <script src="../js/cart.js"></script>
 </body>
 
 </html>
-
