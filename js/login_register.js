@@ -33,6 +33,10 @@ function registerValidate(frm) {
         frm.password.focus();
         return false;
     }
+    if (!document.querySelectorAll('input')[3].checked) {
+        alert("Vui lòng đồng ý với các Điều Khoản & Điều Kiện");
+        return false;
+    }
     alert("Gửi dữ liệu đăng ký thành công!");
     return true;
 }
