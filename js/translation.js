@@ -123,6 +123,7 @@ var registerLabels = {
     }
 }
 
+setLanguage("vi-VN");
 
 function setLanguage(language){
     if (localStorage.getItem("language") == language){
