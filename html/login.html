@@ -116,6 +116,10 @@
                                     <i class="fa fa-user"></i>
                                 </a>
                             </div>
+                            <div id="language-button">
+                                <button onclick="setLanguage('en-US', 'login')">EN</button>
+                                <button onclick="setLanguage('vi-VN', 'login')">VI</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -130,10 +134,7 @@
         <div class="wrapper">
             <span class="close-icon"><a href="index.html"><i class="fa-solid fa-xmark"></i></a></span>
             <div class="form">
-                <div id="language-button">
-                    <button onclick="setLanguage('en-US', 'login')">EN</button>
-                    <button onclick="setLanguage('vi-VN', 'login')">VI</button>
-                </div>
+                
                 <h2 id="FORM_LOGIN_NAME">Login</h2>
                 <form onsubmit="return loginValidate(this);" action="#" method="post" enctype="application/x-www-form-urlencoded">
                     <div class="form__input-box">
