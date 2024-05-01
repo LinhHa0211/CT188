@@ -1269,11 +1269,7 @@ function displayToday() {
     document.getElementById("today").innerText = formattedDate;
 }
 function addDetail(Code){
-    window.localStorage.clear();
-    window.localStorage.setItem(Code,1);
-}
-function get_id(){
-    return window.localStorage.key(0);
+    window.localStorage.setItem("detail", Code);
 }
 function show(typeCar){
     for (var i = 0 ; i < Object.keys(productList).length; i++){
@@ -1295,7 +1291,7 @@ function showPhoto(id,list,item){
     }
 }
 function showDetail(){
-    var item = productList[window.localStorage.key(0)];
+    var item = productList[window.localStorage.getItem('detail')];
     for (var i = 0 ; i < 10; i++){
         document.getElementById("technical-specification-"+(i+1).toString()).innerText = item["technical-specification"][i];
         if ( i == 1 || i == 5 || i == 7 || i == 8 || i == 9)
