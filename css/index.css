@@ -393,14 +393,153 @@ footer{
 
 /* Phần sản phẩm bán chạy nhất */
 #index-main .part-2{
-	margin-top: 1000px;
+	margin-top: 900px;
 	margin-bottom: 260px;
 	margin-left: 185px;
+	font-family: 'Montserrat', sans-serif;
 }
+#index-main .part-2 > h1{
+	font-size: 55px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+}
+
+#index-main .hot-product{
+	margin-left: 15px;
+	margin-bottom: 50px;
+	margin-right: 175px;
+}
+#index-main .hot-product{
+	margin-top: 50px;
+}
+#index-main .hot-product.brother{
+	margin-top: 100px;
+}
+
+
+#index-main .hot-pro-title > h2{
+	font-size: 38px;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 15px;
+	font-weight: bold;
+	color: rgb(4, 80, 93);
+}
+
+#index-main .hot-pro-img{
+	width: 100%;
+	height: 20%;
+	margin-bottom: 20px; 
+}
+
+#index-main .hot-pro-content{
+	text-align: justify;
+}
+#index-main .hot-pro-content .content-icon{
+	font-weight: bold;
+	color: rgb(61, 53, 53);
+}
+#index-main .hot-pro-content p{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	line-height: 2rem;
+	font-style: italic;
+	color: rgb(82, 75, 75);
+}
+#index-main .hot-pro-content p > a{
+	color: rgb(27, 112, 208);
+}
+
+
 
 /* Phần sản phẩm giá rẻ */
 #index-main .part-3{
+	margin-top: -100px;
 	margin-bottom: 260px;
-	margin-left: 185px;
-	
+	margin-left: 180px;
+	margin-right: 180px;
+}
+#index-main .part-3 > h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 55px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+#index-main .cheap-product{
+	font-family: 'Montserrat', sans-serif;
+}
+#index-main .cheap-product{
+	margin-top: 50px;
+}
+#index-main .cheap-product.brother{
+	margin-top: 120px;
+}
+#index-main .cheap-pro-content > h2{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 30px;
+	font-weight: 600;
+	font-style: italic;
+	color: rgb(4, 80, 93);
+	margin-top: -8px;
+	margin-bottom: 10px;
+}
+
+#index-main .cheap-pro-content p {
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+	font-style: italic;
+	color: rgb(6, 62, 71);
+	line-height: 1.9rem;
+	text-align: justify;
+}
+#index-main .cheap-pro-content p > i {
+	color: rgb(4, 80, 93);
+}
+
+#index-main .cheap-pro-img{
+	width: 400px;
+	height: auto;
+	justify-content: justify;
+	display: flex;
+}
+#index-main .cheap-pro-img img{
+	object-fit: cover;
+}
+
+#index-main .ctrl-btn-block{
+	margin-top: -150px;
+	margin-bottom: 80px;
+	display: flex;
+	justify-content: center;
+}
+
+#index-main .ctrl-btn-block button{
+	padding: 8px 10px;
+	margin-left: 100px;
+	margin-right: 100px;
+	background-color: rgb(76, 66, 66);
+	color: white;
+	border: 0.5px solid gray;
+	font-size: 20px;
+	font-weight: 600;
+	/* border-radius: 10px; */
+}
+
+#index-main .ctrl-btn-block button:hover{
+    background-color: rgb(143, 135, 135);
+}
+
+.top-btn{
+	position: fixed;
+	margin-left: 97.5%;
+	font-size: 40px;
+	overflow: hidden;
+	bottom: 0;
+}
+.top-btn > a{
+	text-decoration: none;
+	color: rgb(52, 47, 47);
+}
+.top-btn > a:hover{
+	color: lightgray;
 }

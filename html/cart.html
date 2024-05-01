@@ -7,9 +7,11 @@
     <meta name="keywords" content="HVAC, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trang chủ</title>
+    <title>Giỏ hàng</title>
 
     <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha384-...">
 
@@ -25,6 +27,13 @@
     <link rel="stylesheet" href="../bootstrap_template/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="../bootstrap_template/css/style.css" type="text/css">
     <link rel="stylesheet" href="../css/index.css" type="text/css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="../js/cart.js"></script>
+    <script>
+        window.onload = function() {
+            showCart('SILVER', true);
+        };
+    </script>
 </head>
 
 <body>
@@ -33,34 +42,6 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Offcanvas Menu Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__widget">
-            <a href="#"><i class="fa fa-cart-plus"></i></a>
-            <a href="#" class="search-switch"><i class="fa fa-search"></i></a>
-            <a href="#" class="primary-btn">Add Car</a>
-        </div>
-        <div class="offcanvas__logo">
-            <a href="./index.html"><img src="../img/logo.png" alt=""></a>
-        </div>
-        <div id="mobile-menu-wrap"></div>
-        <ul class="offcanvas__widget__add">
-            <li><i class="fa fa-clock-o"></i> Week day: 08:00 am to 18:00 pm</li>
-            <li><i class="fa fa-envelope-o"></i> Info.colorlib@gmail.com</li>
-        </ul>
-        <div class="offcanvas__phone__num">
-            <i class="fa fa-phone"></i>
-            <span>(+12) 345 678 910</span>
-        </div>
-        <div class="offcanvas__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-google"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-        </div>
-    </div>
-    <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
     <header>
@@ -123,8 +104,52 @@
     <!-- Header Section End -->
 
     <!-- Main Section Begin -->
-    <main id="index-main">
+    <main id="cart-main">
+        <div id="cart-content">
+            <h1>CHI TIẾT GIỎ HÀNG</h1>
+            <table id="cart-detail" border="1" width="95%">
+                <thead>
+                    <tr>
+                        <th class="car-img">Ảnh Xe</th>
+                        <th class="car-name">Tên Xe</th>
+                        <th class="pro-year">Năm Sản Xuất</th>
+                        <th class="number">Số Lượng</th>
+                        <th class="price">Giá</th>
+                        <th class="sum-price">Thành Tiền</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
         
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="8" align="right">
+                            <strong>Tổng Thành Tiền (A) = </strong><span id="pre-tax-total"></span>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" align="right">
+                            <strong>Chiết Khấu (B) =  </strong><span id="discount"></span>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" align="right">
+                            <strong>Thuế (C) = 10% x (A - B) = </strong><span id="tax"></span>    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" align="right">
+                            <strong>Thanh toán (D) = </strong><span id="total"></span>    
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div>
+                <button class="purchase-all-btn">Đặt Mua Toàn Bộ</button>
+            </div>
+        </div>
     </main>
     <!-- Main Section End -->
 
@@ -187,6 +212,9 @@
                 <p>&copy; 2024 - Bản quyền thuộc về Nhóm 1</p>
             </div>
         </div>
+        <div class="top-btn">
+            <a href="#top"><i class="fa fa-angle-up"></i></a>
+        </div>
     </footer>
     <!-- Footer Section End -->
 
@@ -212,6 +240,7 @@
     <script src="../bootstrap_template/js/owl.carousel.min.js"></script>
     <script src="../bootstrap_template/js/main.js"></script>
     <script src="../js/index.js"></script>
+    
 </body>
 
 </html>
