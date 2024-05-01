@@ -20,6 +20,7 @@
 #logo-img{
 	width: 50px;
 	left: 0px;
+	margin-top: 1.5px;
 }
 
 /* Dropdown menu */
@@ -535,6 +536,7 @@ footer{
 	font-size: 40px;
 	overflow: hidden;
 	bottom: 0;
+	z-index: 1000;
 }
 .top-btn > a{
 	text-decoration: none;
