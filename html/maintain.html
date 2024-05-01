@@ -7,8 +7,11 @@
     <meta name="keywords" content="HVAC, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bảo trì</title>
-
+    <title>Bảo dưỡng</title>
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -27,7 +30,10 @@
     <link rel="stylesheet" href="../bootstrap_template/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="../bootstrap_template/css/style.css" type="text/css">
     <link rel="stylesheet" href="../css/index.css" type="text/css">
+    <link rel="stylesheet" href="../css/style_phuc.css">
     <link rel="stylesheet" href="../css/maintain.css" type="text/css">
+
+    <script src="../js/maintain.js"></script>
 </head>
 
 <body>
@@ -98,13 +104,282 @@
 
     <!-- Main Section Begin -->
     <main id="maintain-main">
-        
+        <div class="showroom__image contact-image">
+            <div class="showroom__img-overlay">
+                <div class="showroom__img-text">
+                    <h2 class="showroom__img-header">BẢO DƯỠNG</h2>
+                    <p class="showroom__img-content">Cùng với chúng tôi kiểm tra xe định kì, tăng tuổi thọ cho xe.</p>
+                </div>
+            </div>
+            <img class="showroom__img" src="../images/showroom/showroomImgBackground.jpg" alt="">
+        </div>
+        <div class="container">
+            <form class="row" id="maintain-form" method="post" enctype="application/x-www-form-urlencoded">
+               <div class="col-lg-11">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                        <div class="row" style="height: 100px; padding: 25px 0;font-size: 14px;">
+                            <div class="col-lg-9" style="padding: 15px 0;">
+                                <span style="padding-right: 10px;"><strong>Đặt lịch bảo dưỡng</strong> </span> 
+                                <i class="fa fa-angle-right" style="padding-right: 10px;"></i> 
+                                <span>Chi tiết cá nhân</span>
+                            </div>
+                            <div class="col-lg-3" style="padding: 15px 0;">
+                                <h4 >Đã hoàn thành 0%</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8" style="padding-right: 8%;">
+                                <h4 class="maintain-title-info"><strong>Thông tin cá nhân</strong></h4>
+                                <p>Chúng tôi chỉ cần một số thông tin về bạn.</p>
+                                <div>
+                                    <table>
+                                        <tr class="input__container">
+                                            <td>
+                                                <label for="customer-name">Họ và tên: </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" id="customer-name" class="name-id-1" name="input" placeholder="Vui lòng nhập họ">
+                                            </td>
+                                        </tr>
+                                        <tr class="input__container">
+                                            <td >
+                                                <label for="customer-id">CCCD: </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" id="customer-id" class="name-id-1" name="input" placeholder="Vui lòng nhập căn cước công dân">
+                                            </td>
+                                        </tr>
+                                        <tr class="input__container">
+                                            <td>
+                                                <label for="email">Email: </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" id="email" class="name-id-1" name="input" placeholder="Vui lòng nhập email">
+                                            </td>
+                                        </tr>
+                                        <tr class="input__container">
+                                            <td>
+                                                <label for="none">
+                                                    <select id="id-phone" name="input" class="name-id-2" style="margin: 0px;width: 100px;">
+                                                        <option value="0" disabled selected>Mã vùng</option>
+                                                        <option value="(+84)">VN(+84)</option>
+                                                        <option value="(+86)">CN(+86)</option>
+                                                        <option value="(+81)">JP(+81)</option>
+                                                        <option value="(+886)">TW(+886)</option>
+                                                        <option value="(+82)">KR(+82)</option>
+                                                        <option value="(+49)">DE(+49)</option>
+                                                        <option value="(+33)">FR(+33)</option>
+                                                    </select>
+                                                    
+                                                </label>
+                                                
+                                            </td>
+                                            <td>
+                                                <input type="text" id="phone" class="name-id-1" name="input" placeholder="Vui lòng nhập số điện thoại">
+                                            </td>
+                                        </tr>
+                                        <tr class="input__container">
+                                            <td>
+                                                <label for="company-name">Tên công ty:</label>
+                                            </td>
+                                            <td>
+                                                <input type="text" id="company-name" class="name-id-1" name="input" placeholder="Không bắt buộc">
+                                            </td>
+                                        </tr>
+                                        <tr class="input__container">
+                                            <td>
+                                                <label for="address-name">Địa chỉ:</label>
+                                            </td>
+                                            <td>
+                                                <input type="text" id="address-name" class="name-id-1" name="input" placeholder="Không bắt buộc">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div>
+                                        <h4>Điều khoản và điều kiện</h4>
+                                        <div class="row">
+                                            <div class="col-sm-1">
+                                                <input type="checkbox" id="checkbox" name="input" style="width: 24px;height: 24px;margin-top: 15px;">
+                                            </div>
+                                            <div class="col-sm-11" style="margin-left: -20px;">
+                                                <p>Tôi hiểu rằng Dữ liệu liên quan của khách hàng và phương tiện được thu thập trong quá trình đặt chỗ sẽ được chuyến tiếp đến Xưởng dịch vụ ủy quyền Mercedes-Benz liên quan sau khi hoàn thành đặt chỗ. Tôi đã đọc và đồng thuận với tất cả các điều khoản và điều kiện được đề cập trong Lưu ý về Bảo vệ Dữ liệu Cá nhân.</p>
+                                            </div>
+                                        </div>
+                                        <h4>Quyền riêng tư của bạn là ưu tiên của chúng tôi</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="info-main-blue">
+                                    Chi tiết cá nhân
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <p>Tên khách hàng:</p>
+                                            <p>CCCD: </p>
+                                            <p>Email:</p>
+                                            <p>Phone: </p>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <p id="customer-name-load-1">.</p>
+                                            <p id="customer-id-load-1">.</p>
+                                            <p id="email-load-1">.</p>
+                                            <p>
+                                                <span id="id-phone-load-1">.</span>
+                                                <span id="phone-load-1"> </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-main-grey">
+                                    Thông tin xe
+                                </div>
+                                <div class="info-main-grey">
+                                    Các dịch vụ bảo dưỡng
+                                </div>
+                                <div class="info-main-grey">
+                                    Showroom và lịch hẹn
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tabs-2" role="tabpanel">
+                        <div class="row" style="height: 100px; padding: 25px 0;font-size: 14px;">
+                            <div class="col-lg-9" style="padding: 15px 0;">
+                                <span style="padding-right: 10px;"><strong>Đặt lịch bảo dưỡng</strong> </span> 
+                                <i class="fa fa-angle-right" style="padding-right: 10px;"></i> 
+                                <span>Xe</span>
+                            </div>
+                            <div class="col-lg-3" style="padding: 15px 0;">
+                                <h4 >Đã hoàn thành 30%</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8" style="padding-right: 8%;">
+                                <h4 class="maintain-title-info"><strong>Thông tin xe</strong></h4>
+                                <p>Chúng tôi chỉ cần một số thông tin về xe cuả bạn.</p>
+                                <div>
+                                    <table>
+                                        <tr class="input__container">
+                                            <td>
+                                                <label for="name-company">Hãng xe: </label>
+                                            </td>
+                                            <td>
+                                                <select id="name-company" name="input"  class="name-id-2">
+                                                    <option value="0" disabled selected>Vui lòng chọn</option>
+                                                    <option value="BMW">BMW</option>
+                                                    <option value="Mercedes">Mercedes</option>
+                                                    <option value="Toyota">Toyota</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr class="input__container">
+                                            <td >
+                                                <label for="line-car">Dòng xe: </label>
+                                            </td>
+                                            <td>
+                                                <select id="line-car" name="input" class="name-id-2">
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr class="input__container">
+                                            <td>
+                                                <label for="name-car">Tên xe: </label>
+                                            </td>
+                                            <td>
+                                                <select id="name-car" name="input" class="name-id-2"  >
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr class="input__container">
+                                            <td>
+                                                <label for="license-plates">Biển số xe: </label>
+                                            </td>
+                                            <td>
+                                                <input type="text" class="name-id-1" id="license-plates" name="input" placeholder="VD: 65A-987.67">
+                                            </td>
+                                        </tr>
+                                        <tr class="input__container">
+                                            <td>
+                                                <label for="mileage">Quảng đường đi:</label>
+                                                </td>
+                                            <td>
+                                                <input type="text" id="mileage" class="name-id-1" name="input" placeholder="km" style="padding-right: 10px;">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="info-main-blue">
+                                    Chi tiết cá nhân
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <p>Tên khách hàng:</p>
+                                            <p>CCCD: </p>
+                                            <p>Email:</p>
+                                            <p>Phone: </p>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <p id="customer-name-load-2">.</p>
+                                            <p id="customer-id-load-2">.</p>
+                                            <p id="email-load-2">.</p>
+                                            <p>
+                                                <span id="id-phone-load-2">.</span>
+                                                <span id="phone-load-2"> </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-main-blue">
+                                    Thông tin xe
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <p>Hãng xe:</p>
+                                            <p>Tên xe: </p>
+                                            <p>Dòng xe:</p>
+                                            <p>Biển số xe: </p>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <p id="name-company-load-1">.</p>
+                                            <p id="line-car-load-1">.</p>
+                                            <p id="name-car-load-1">.</p>
+                                            <p id="plate-load-1">.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-main-grey">
+                                    Các dịch vụ bảo dưỡng
+                                </div>
+                                <div class="info-main-grey">
+                                    Showroom và lịch hẹn
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tabs-3" role="tabpanel">
+
+                    </div>
+                    <div class="tab-pane" id="tabs-4" role="tabpanel">>    
+                    </div>
+                </div>
+               </div>
+               <div class="col-lg-1">
+                    <div class="nav" style="margin-top: 40px;">
+                        <a data-toggle="tab" href="#tabs-1" role="tab" style="color: black;"><i class="fa-solid fa-pen" style="padding-left: 100px;"></i></a>
+                        <a data-toggle="tab" href="#tabs-2" role="tab" style="color: black;"><i class="fa-solid fa-pen" style="padding-left: 100px;"></i></a>
+                        <a data-toggle="tab" href="#tabs-3" role="tab" style="color: black;"><i class="fa-solid fa-pen" style="padding-left: 100px;"></i></a>
+                        <a data-toggle="tab" href="#tabs-4" role="tab" style="color: black;"><i class="fa-solid fa-pen" style="padding-left: 100px;"></i></a>
+                    </div>   
+                </div>
+            </form>
+        </div>
     </main>
     <!-- Main Section End -->
 
     <!-- Footer Section Begin -->
-    <footer>
-        <div id="footer-1" class="row">
+    <footer style="margin-top: 100px;">
+        <div id="footer-1" class="row" >
             <div class="col-sm-2">
                 <ul>
                     <h6>Về Chúng Tôi</h6>
@@ -184,8 +459,10 @@
     <script src="../bootstrap_template/js/mixitup.min.js"></script>
     <script src="../bootstrap_template/js/jquery.slicknav.js"></script>
     <script src="../bootstrap_template/js/owl.carousel.min.js"></script>
-    <script src="../bootstrap_template/js/main.js"></script>
+    <script src="../bootstrap_template/js/main1.js"></script>
     <script src="../js/index.js"></script>
+    <script src="../js/showroom_script.js"></script>
+    
 </body>
 
 </html>

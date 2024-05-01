@@ -1,3 +1,76 @@
-#maintain-main {
-    margin-top: 80px; 
+#maintain-main .contact-image{
+    margin-top: 80px;
+    height: 400px;
+}
+#maintain-main p{
+    margin-top: 10px;
+    font-size: 16px;
+}
+#maintain-main .maintain-title-info{
+    color: rgba(0, 0, 0, 0.723);
+}
+#maintain-main .button{
+    display: inline-block;
+    width: 150px;
+    height: 50px;
+    background-color:deepskyblue;
+    font-size: 18px;
+    border-radius: 2px;
+    padding: 7px 31px;
+    border: none;
+    color: white;
+}
+#maintain-main .input__container{
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#maintain-main .name-id-1{
+    width: 30vw;
+    height: 5vh;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1.3px solid #C0C0C0;
+    border-radius: 4px;
+}
+#maintain-main .name-id-2{
+    border: 1.3px solid #C0C0C0;
+    border-radius: 4px;
+    height: 5vh;
+    margin-bottom: 20px;
+}
+#maintain-main label{
+    color: rgb(60, 60, 60);
+    font-size: 18px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    width: 200px;
+}
+#maintain-main .info-main-blue,.info-main-grey{
+    padding-left: 30px;
+    padding-bottom: 30px;
+    font-size: 26px;
+}
+#maintain-main .info-main-blue{
+    border-left: 4px solid #1c6df7;
+    color: #1c6df7;
+}
+#maintain-main .info-main-grey{ 
+    border-left: 4px solid #ccc;
+    color: #aaa;
+}
+#maintain-main .info-main-blue:hover,.info-main-grey:hover{
+    background-color: #e4e4e4;
+}
+#maintain-main .asterisk{
+    color: red;
+    display: inline;
+}
+#maintain-main .info-main-blue p{
+    list-style: none;
+    padding-left: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 15px;
+    color:#767676;
 }
