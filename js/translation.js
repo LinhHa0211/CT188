@@ -219,10 +219,6 @@ var footerLabels = {
         "vi-VN": "TRUY CẬP VÀO ỨNG DỤNG TRÊN",
         "en-US": "ACCESS APPLICATION ON",
     },
-    "FOOTER_HOTLINE": {
-        "vi-VN": "Đường dây nóng",
-        "en-US": "Hotline",
-    },
     "FOOTER_ADRESS": {
         "vi-VN": "Địa chỉ:   12A, Đại Lộ Hòa Bình (gần đường 30/4), Phường Tân An, Quận Ninh Kiều, TPCT",
         "en-US": "Address: 12A, Hoa Binh Avenue (near 30/4 Street), Tan An, Ninh Kieu, Can Tho City",

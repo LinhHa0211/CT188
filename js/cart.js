@@ -1309,7 +1309,7 @@ okBtn1.onclick = () => {
     document.getElementById('cart-input').style.display = 'none';
     var number = parseInt(document.getElementById('cart-modal-input').value, 10);
     setInput(getCode(), number);
-    if(getValue() == 0){
+    if(getValue() <= 0){
         document.getElementById('cart-modal-title-2').innerHTML = 'Lỗi';
         document.getElementById('cart-modal-message').innerHTML = 'Số lượng sản phẩm phải lớn hơn 0!';
         document.getElementById('cart-modal-message').style.color = 'red';
@@ -1317,16 +1317,16 @@ okBtn1.onclick = () => {
         document.getElementById('cart-modal-ok-button-2').innerHTML = 'Đóng';
     }
     else {
+        document.getElementById('cart-modal-title-2').innerHTML = 'Thông báo';
+        document.getElementById('cart-modal-message').style.color = 'black';
+        document.getElementById('cart-modal-ok-button-2').style.backgroundColor = 'rgb(16, 188, 211)';
+        document.getElementById('cart-modal-ok-button-2').innerHTML = 'OK';
         var name = productList[getCode()].automaker + " " + productList[getCode()]["product-name"];
         var current = 0;
         if(typeof localStorage[getCode()] === "undefined") {
             window.localStorage.setItem(getCode(), getValue());
         }
         else {
-            document.getElementById('cart-modal-title-2').innerHTML = 'Thông báo';
-            document.getElementById('cart-modal-message').style.color = 'black';
-            document.getElementById('cart-modal-ok-button-2').style.backgroundColor = 'rgb(16, 188, 211)';
-            document.getElementById('cart-modal-ok-button-2').innerHTML = 'OK';
             current = parseInt(window.localStorage.getItem(getCode()), 10);
             if(current + number > 300) {
                 window.localStorage.setItem(getCode(), 300);
