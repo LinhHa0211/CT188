@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bảo dưỡng</title>
+    <link href="../images/logo.png" rel="shortcut icon" type="image/vnd.microsoft.icon">
+
     <!--font-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -50,7 +52,7 @@
                     <div class="header__nav">
                         <nav>
                             <ul id="main-menu">
-                                <a href="./index.html"><img id="logo-img" src="../images/header/bmw.png"></a>
+                                <a href="./index.html"><img id="logo-img" src="../images/logo.png"></a>
                                 <li id="header-show-home">
                                     <a href="./index.html">Trang chủ</a>
                                 </li>
@@ -218,7 +220,7 @@
                                             <p>Tên khách hàng:</p>
                                             <p>CCCD: </p>
                                             <p>Email:</p>
-                                            <p>Phone: </p>
+                                            <p>SĐT: </p>
                                         </div>
                                         <div class="col-lg-7">
                                             <p id="customer-name-load-1">.</p>
@@ -235,10 +237,10 @@
                                     Thông tin xe
                                 </div>
                                 <div class="info-main-grey">
-                                    Các dịch vụ bảo dưỡng
+                                    Showroom và lịch hẹn
                                 </div>
                                 <div class="info-main-grey">
-                                    Showroom và lịch hẹn
+                                    Các dịch vụ bảo dưỡng
                                 </div>
                             </div>
                         </div>
@@ -301,7 +303,7 @@
                                         </tr>
                                         <tr class="input__container">
                                             <td>
-                                                <label for="mileage">Quảng đường đi:</label>
+                                                <label for="mileage">Quãng đường đi:</label>
                                                 </td>
                                             <td>
                                                 <input type="text" id="mileage" class="name-id-1" name="input" placeholder="km" style="padding-right: 10px;">
@@ -318,7 +320,7 @@
                                             <p>Tên khách hàng:</p>
                                             <p>CCCD: </p>
                                             <p>Email:</p>
-                                            <p>Phone: </p>
+                                            <p>SĐT: </p>
                                         </div>
                                         <div class="col-lg-7">
                                             <p id="customer-name-load-2">.</p>
@@ -339,28 +341,185 @@
                                             <p>Tên xe: </p>
                                             <p>Dòng xe:</p>
                                             <p>Biển số xe: </p>
+                                            <p>Quãng đường:</p>
                                         </div>
                                         <div class="col-lg-7">
                                             <p id="name-company-load-1">.</p>
                                             <p id="line-car-load-1">.</p>
                                             <p id="name-car-load-1">.</p>
                                             <p id="plate-load-1">.</p>
+                                            <p id="mileage-load-1">.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="info-main-grey">
-                                    Các dịch vụ bảo dưỡng
+                                    Showroom và lịch hẹn
                                 </div>
                                 <div class="info-main-grey">
-                                    Showroom và lịch hẹn
+                                    Các dịch vụ bảo dưỡng
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-pane" id="tabs-3" role="tabpanel">
-
+                        <div class="row" style="height: 100px; padding: 25px 0;font-size: 14px;">
+                            <div class="col-lg-9" style="padding: 15px 0;">
+                                <span style="padding-right: 10px;"><strong>Đặt lịch bảo dưỡng</strong> </span> 
+                                <i class="fa fa-angle-right" style="padding-right: 10px;"></i> 
+                                <span>showroom và lịch hẹn</span>
+                            </div>
+                            <div class="col-lg-3" style="padding: 15px 0;">
+                                <h4 >Đã hoàn thành 60%</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8" style="padding-right: 5%;">
+                                <h4 class="maintain-title-info"><strong>Chọn showroom và lịch hẹn</strong></h4>
+                                <p>Cho chúng tôi biết showroom mà bạn chọn và khung giờ bảo dưỡng.</p>
+                                <div>
+                                    <div class="showroom__container-content">
+                                        <div class="showroom__container-options">
+                                            <p class="mb-3 mt-3 p-showroom">
+                                                Xin vui lòng chọn hệ thống showroom phân phối từ danh sách phía dưới hoặc trên bản đồ.
+                                            </p>
+                                            
+                                            <div class = "showroom__select-container">
+                                                <select class="showroom__select-box" >
+                                                    <option value="9" disabled selected>Chọn Trung tâm Dịch vụ.</option>
+                                                    <option value="0">BMW Phú Mỹ Hưng</option>
+                                                    <option value="1">BMW Long Biên</option>
+                                                    <option value="2">BMW Sala</option>
+                                                    <option value="3">BMW Đà Nẵng</option>
+                                                    <option value="4">BMW Nguyễn Văn Trỗi</option>
+                                                </select>
+                                                <div class="showroom__select-icon">
+                                                    <i class="fa-solid fa-chevron-down text-white"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="showroom__container-map">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1938775228377!2d106.67228917480519!3d10.796458089353496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529837c180a19%3A0xbf43d70040a95b8e!2zU2hvd3Jvb20gQk1XIFBow7ogTmh14bqtbg!5e0!3m2!1svi!2s!4v1711033244665!5m2!1svi!2s" width="700" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="info-main-blue">
+                                    Chi tiết cá nhân
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <p>Tên khách hàng:</p>
+                                            <p>CCCD: </p>
+                                            <p>Email:</p>
+                                            <p>SĐT: </p>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <p id="customer-name-load-3">.</p>
+                                            <p id="customer-id-load-3">.</p>
+                                            <p id="email-load-3">.</p>
+                                            <p>
+                                                <span id="id-phone-load-3">.</span>
+                                                <span id="phone-load-3"> </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-main-blue">
+                                    Thông tin xe
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <p>Hãng xe:</p>
+                                            <p>Tên xe: </p>
+                                            <p>Dòng xe:</p>
+                                            <p>Biển số xe: </p>
+                                            <p>Quãng đường:</p>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <p id="name-company-load-2">.</p>
+                                            <p id="line-car-load-2">.</p>
+                                            <p id="name-car-load-2">.</p>
+                                            <p id="plate-load-2">.</p>
+                                            <p id="mileage-load-2">.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-main-blue">
+                                    Showroom và lịch hẹn
+                                </div>
+                                <div class="info-main-grey">
+                                    Các dịch vụ bảo dưỡng
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tab-pane" id="tabs-4" role="tabpanel">>    
+                    <div class="tab-pane" id="tabs-4" role="tabpanel">
+                        <div class="row" style="height: 100px; padding: 25px 0;font-size: 14px;">
+                            <div class="col-lg-9" style="padding: 15px 0;">
+                                <span style="padding-right: 10px;"><strong>Đặt lịch bảo dưỡng</strong> </span> 
+                                <i class="fa fa-angle-right" style="padding-right: 10px;"></i> 
+                                <span>Các dịch vụ</span>
+                            </div>
+                            <div class="col-lg-3" style="padding: 15px 0;">
+                                <h4 >Đã hoàn thành 60%</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8" style="padding-right: 8%;">
+                                <h4 class="maintain-title-info"><strong>Chọn dịch vụ phù hợp với bạn</strong></h4>
+                                <p>Chúng tôi cần một số thông tin về dịch vụ bạn cần để có thể phục vụ tốt nhất.</p>
+                                <div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="info-main-blue">
+                                    Chi tiết cá nhân
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <p>Tên khách hàng:</p>
+                                            <p>CCCD: </p>
+                                            <p>Email:</p>
+                                            <p>SĐT: </p>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <p id="customer-name-load-3">.</p>
+                                            <p id="customer-id-load-3">.</p>
+                                            <p id="email-load-3">.</p>
+                                            <p>
+                                                <span id="id-phone-load-3">.</span>
+                                                <span id="phone-load-3"> </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-main-blue">
+                                    Thông tin xe
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <p>Hãng xe:</p>
+                                            <p>Tên xe: </p>
+                                            <p>Dòng xe:</p>
+                                            <p>Biển số xe: </p>
+                                            <p>Quãng đường:</p>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <p id="name-company-load-2">.</p>
+                                            <p id="line-car-load-2">.</p>
+                                            <p id="name-car-load-2">.</p>
+                                            <p id="plate-load-2">.</p>
+                                            <p id="mileage-load-2">.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="info-main-blue">
+                                    Showroom và lịch hẹn
+                                </div>
+                                <div class="info-main-grey">
+                                    Các dịch vụ bảo dưỡng
+                                </div>
+                            </div>
+                        </div>    
                     </div>
                 </div>
                </div>
@@ -435,6 +594,9 @@
                 <p>Địa chỉ: &ensp; 12A, Đại Lộ Hòa Bình (gần đường 30/4), Phường Tân An, Quận Ninh Kiều, TPCT</p>
                 <p>&copy; 2024 - Bản quyền thuộc về Nhóm 1</p>
             </div>
+        </div>
+        <div class="top-btn">
+            <a href="#top"><i class="fa fa-angle-up"></i></a>
         </div>
     </footer>
     <!-- Footer Section End -->
