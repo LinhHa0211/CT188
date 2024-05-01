@@ -1,4 +1,3 @@
-
 const fullNamePattern = /^[a-zA-Z\s]+$/;
 const numberPattern = /^\d+$/;
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -6,12 +5,11 @@ const licensePlatesPattern = /^[0-9]{2}[A-Z]-[0-9]{6}$/;
 function checkNameCustomer(){
     var customerName = document.getElementById("customer-name");
     if (!fullNamePattern.test(customerName.value)){
-        customerName.style.borderColor = "red";
-        if (customerName.value == '')
-            alert("Tên chưa được nhập!");
-        else    
-            alert("Tên nhập chưa đúng");
-        setValue("customer-name-load-",".");
+        if (customerName.value != ''){
+            alert("Tên nhập chưa đúng"); 
+            customerName.style.borderColor = "red";
+        }
+        setValue("customer-name-load-",".",4);
         return false;
     }
     return true;
@@ -19,12 +17,11 @@ function checkNameCustomer(){
 function checkIdCustomer(){
     var customerId = document.getElementById("customer-id");
     if (!numberPattern.test(customerId.value)){
-        if (customerId.value == '')
-            alert("CCCD chưa được nhập!");
-        else
+        if (customerId.value != ''){
             alert("CCCD nhập chưa đúng!");
-        customerId.style.borderColor ="red";
-        setValue("customer-id-load-",".");
+            customerId.style.borderColor = "red";
+        }
+        setValue("customer-id-load-",".",4);
         return false;
     }
     return true;
@@ -32,12 +29,11 @@ function checkIdCustomer(){
 function checkEmail(){
     var email = document.getElementById("email");
     if (!emailPattern.test(email.value)){
-        if (email.value == '')
-            alert("Email chưa được nhập!");
-        else
+        if (email.value != ''){
             alert("Email nhập chưa đúng!");
-        email.style.borderColor ="red";
-        setValue("email-load-",".");
+            email.style.borderColor ="red";
+        }
+        setValue("email-load-",".",4);
         return false;
     }
     return true;
@@ -45,12 +41,11 @@ function checkEmail(){
 function checkPhone(){
     var phone = document.getElementById("phone");
     if (!numberPattern.test(phone.value)){
-        if (phone.value == '')
-            alert("Số điện thoại chưa được nhập!");
-        else
+        if (phone.value != ''){
             alert("Số điện thoại nhập chưa đúng!");
-        phone.style.borderColor ="red";
-        setValue("phone-load-",".");
+            phone.style.borderColor ="red";
+        }
+        setValue("phone-load-",".",4);
         return false;
     }
     return true;
@@ -59,20 +54,7 @@ function checkIdPhone(){
     var idPhone = document.getElementById("id-phone");
     if  (idPhone.value == 0){
         alert("Mã vùng quốc gia chưa được chọn!");
-        setValue("id-phone-load-",".",3);
-        return false;
-    }
-    return true;
-}
-function checkLicensePlates(){
-    var plate = document.getElementById("license-plates");
-    if (!licensePlatesPattern.test(plate.value)){
-        if (plate.value == '')
-            alert("Biển số xe chưa được nhập!");
-        else
-            alert("Biển số xe nhập chưa đúng!");
-        plate.style.borderColor ="red";
-        setValue("plate-load-",".");
+        setValue("id-phone-load-",".",4);
         return false;
     }
     return true;
@@ -106,7 +88,30 @@ function checkNameCar(){
     if (nameCar.value == 0){
         alert("Tên xe chưa được chọn!");
         setValue("name-car-load-",".",3);
-        document.getElementById("name-car").value = 0;
+        return false;
+    }
+    return true;
+}
+function checkLicensePlates(){
+    var plate = document.getElementById("license-plates");
+    if (!licensePlatesPattern.test(plate.value)){
+        if (plate.value != ''){
+            alert("Biển số xe nhập chưa đúng!");
+            plate.style.borderColor ="red";
+        }
+        setValue("plate-load-",".",3);
+        return false;
+    }
+    return true;
+}
+function checkMileage(){
+    var  mileage = document.getElementById("mileage");
+    if (!numberPattern.test(mileage.value)){
+        if (mileage.value != ''){
+            alert("Quãng đường nhập chưa đúng!");
+            mileage.style.borderColor ="red";
+        }
+        setValue("mileage-load-",".",3);
         return false;
     }
     return true;
@@ -122,6 +127,7 @@ window.onload = function() {
     var email = document.getElementById("email");
     var phone = document.getElementById("phone");
     var plate = document.getElementById("license-plates");
+    var mileage = document.getElementById("mileage");
     customerName.onchange = function(){
         if (checkNameCustomer()){
             customerName.style.borderColor = "#C0C0C0";
@@ -162,15 +168,15 @@ window.onload = function() {
     var lineCarSelect = document.getElementById("line-car");
     var nameCarSelect = document.getElementById("name-car");
     var carLines = {
-        "BMW": ["Chọn dòng xe","I", "M", "W"],
-        "Mercedes": ["Chọn dòng xe","GL", "Class", "EQS"],
+        "BMW": ["Chọn dòng xe","Series I", "Series M", "Series W"],
+        "Mercedes": ["Chọn dòng xe","Series GL", "Class", "Sedan"],
         "Toyota": ["Chọn dòng xe","Sedan", "SUV", "Truck"]
     };
     var nameCars = {
-        "I" : ["Chọn tên xe","I4","I5","I7","IX"],
-        "M" : ["Chọn tên xe","M2","M4","M8","XM"],
-        "W" : ["Chọn tên xe","X3","X4","X5","X6","X7"],
-        "GL" : ["Chọn tên xe","GLC","GLE","GLI","GLS"],
+        "Series I" : ["Chọn tên xe","I4","I5","I7","IX"],
+        "Series M" : ["Chọn tên xe","M2","M4","M8","XM"],
+        "Series W" : ["Chọn tên xe","X3","X4","X5","X6","X7"],
+        "Series GL" : ["Chọn tên xe","GLC","GLE","GLI","GLS"],
         "Class" : ["Chọn tên xe","Class C","Class E","Class S","Class GT63"],
         "EQS" : ["Chọn tên xe","450","580","AMG","EQS"],
         "Sedan" : ["Chọn tên xe","Mirai","Corolla","Prius","Camry","Crown"],
@@ -231,6 +237,12 @@ window.onload = function() {
         if (checkNameCar()){
             nameCarSelect.style.borderColor = "#C0C0C0";
             setValue("name-car-load-",nameCarSelect.value,3);
+        }
+    }
+    mileage.onchange = function(){
+        if (checkMileage()){
+            mileage.style.borderColor = "#C0C0C0";
+            setValue("mileage-load-",mileage.value,3);
         }
     }
 
