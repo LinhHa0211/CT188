@@ -85,3 +85,98 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+#cart-main{
+    margin-top: 120px;
+    margin-bottom: 50px;
+    min-height: 300px;
+}
+
+#cart-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+}
+
+#cart-content > h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#cart-content #cart-detail tr > th, #cart-content #cart-detail tr > td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#cart-content #cart-detail tr > th {
+    background-color: silver;
+}
+
+#cart-detail tr, #cart-detail th {
+    text-align: center;
+}
+
+#cart-detail .car-img{
+    width: 20%;
+    object-fit: cover;
+}
+#cart-detail .car-name{
+    width: 15%;
+}
+#cart-detail .pro-year{
+    width: 10%;
+}
+#cart-detail .number{
+    width: 10%;
+}
+#cart-detail .price{
+    width: 16%;
+}
+#cart-detail .sum-price{
+    width: 16%;
+}
+
+#cart-detail .remove{
+    width: 3%;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+#cart-detail .purchase-btn {
+    padding: 5px 8px;
+    background-color: rgb(10, 139, 14);
+    color: #fff;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+}
+
+#cart-detail .purchase-btn:hover{
+    opacity: 0.5;
+}
+
+.purchase-all-btn {
+    padding: 10px 20px;
+    margin-top: 40px;
+    background-color: rgb(10, 139, 14);
+    color: #fff;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+}
+.purchase-all-btn:hover{
+    opacity: 0.5;
+}
+
+#pre-tax-total, #discount, #tax, #total {
+    margin-right: 10px;
+    font-style: italic;
+}
