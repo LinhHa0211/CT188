@@ -87,6 +87,7 @@ function validateDriveForm() {
 
     if (/[a-zA-Z]/.test(telephone.value)) {
         showDriveModal("Số điện thoại không được chứa ký tự chữ.");
+        return false;
     }
 
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -96,7 +97,7 @@ function validateDriveForm() {
     }
 
     setType('success');
-    showDriveModal("Thanh cong", 'success');
+    showDriveModal("Đăng ký lái thử thành công!", 'success');
 
     return true;
 }
