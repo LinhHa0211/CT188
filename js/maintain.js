@@ -269,10 +269,7 @@ function submitMaintain(){
         alert("Chưa có dịch vụ nào được chọn!");
         return false;
     }
-    if (checkboxList[0].value == "on" ){
-        alert("Bạn chưa đồng ý với điều khoản!");
-        return false;
-    }
+    
     if (!checkNameCustomer()){
         return false;
     }
@@ -286,6 +283,10 @@ function submitMaintain(){
         return false;
     if (!checkMileage())
         return false;
+    if (checkboxList[0].value == "on" ){
+         alert("Bạn chưa đồng ý với điều khoản!");
+        return false;
+    }
     alert("Đơn bảo dưỡng đã được cập nhật!");
     document.getElementById('myForm').submit();
     
