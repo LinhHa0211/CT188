@@ -305,7 +305,7 @@ footer{
 	left: calc(55% + 330px);
 }
 #index-main .part-1 .block-img-2 .slide-img-2 .item-img-2:nth-child(n + 5){
-	left: calc(55% + 410px);
+	left: calc(55% + 389px);
 	opacity: 0;
 	/* display: none; */
 }
