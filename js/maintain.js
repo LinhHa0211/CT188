@@ -1,7 +1,13 @@
+
+
+
 const fullNamePattern = /^[a-zA-Z\s]+$/;
 const numberPattern = /^\d+$/;
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const licensePlatesPattern = /^[0-9]{2}[A-Z]-[0-9]{6}$/;
+const licensePlatesPattern = /^[0-9]{2}[A-Z]-[0-9]{4,6}$/;
+var listService =[
+    "Hệ thống máy","Hệ thống thắng","Cao su gạt mưa","Thay vỏ xe","Canh chỉnh góc lái","Sửa chữa chung"
+]
 function checkNameCustomer(){
     var customerName = document.getElementById("customer-name");
     if (!fullNamePattern.test(customerName.value)){
@@ -50,48 +56,6 @@ function checkPhone(){
     }
     return true;
 }
-function checkIdPhone(){
-    var idPhone = document.getElementById("id-phone");
-    if  (idPhone.value == 0){
-        alert("Mã vùng quốc gia chưa được chọn!");
-        setValue("id-phone-load-",".",4);
-        return false;
-    }
-    return true;
-}
-function checkNameCompany(){
-    var nameCompany = document.getElementById("name-company");
-    if  (nameCompany.value == 0){
-        alert("Hãng xe chưa được chọn!");
-        setValue("name-company-load-",".",3);
-        setValue("line-car-load-",".",3);
-        setValue("name-car-load-",".",3);
-        document.getElementById("line-car").value = 0;
-        document.getElementById("name-car").value = 0;
-        return false;
-    }
-    return true;
-}
-function checkLineCar(){
-    var lineCar = document.getElementById("line-car");
-    if (lineCar.value == 0){
-        alert("Dòng xe chưa được chọn!");
-        setValue("line-car-load-",".",3);
-        setValue("name-car-load-",".",3);
-        document.getElementById("name-car").value = 0;
-        return false;
-    }
-    return true;
-}
-function checkNameCar(){
-    var nameCar = document.getElementById("name-car");
-    if (nameCar.value == 0){
-        alert("Tên xe chưa được chọn!");
-        setValue("name-car-load-",".",3);
-        return false;
-    }
-    return true;
-}
 function checkLicensePlates(){
     var plate = document.getElementById("license-plates");
     if (!licensePlatesPattern.test(plate.value)){
@@ -128,6 +92,9 @@ window.onload = function() {
     var phone = document.getElementById("phone");
     var plate = document.getElementById("license-plates");
     var mileage = document.getElementById("mileage");
+    var showroom = document.getElementById("showroom");
+    var date = document.getElementById("date");
+    var time = document.getElementById("time");
     customerName.onchange = function(){
         if (checkNameCustomer()){
             customerName.style.borderColor = "#C0C0C0";
@@ -147,10 +114,7 @@ window.onload = function() {
         }
     }
     idPhone.onchange = function(){
-        if (checkIdPhone()){
-            idPhone.style.borderColor = "#C0C0C0";
-            setValue("id-phone-load-",idPhone.value,4);
-        }
+        setValue("id-phone-load-",idPhone.value,4);
     }
     phone.onchange = function(){
         if (checkPhone()){
@@ -191,21 +155,22 @@ window.onload = function() {
             carLines[companyId].forEach(function(line) {
                 var option = document.createElement("option");
                 option.text = line;
-                if (line == "Chọn dòng xe")
-                    option.value = 0;
+                if (line == "Chọn dòng xe"){
+                    option.disabled = true;
+                    option.selected = true;
+                    option.value = -1;
+                }
                 else
                     option.value = line;
                 lineCarSelect.appendChild(option);
             });
         }
-        if (checkNameCompany()){
-            companySelect.style.borderColor = "#C0C0C0";
-            setValue("name-company-load-",companySelect.value,1);
-            setValue("line-car-load-",".",1);
-            setValue("name-car-load-",".",1);
-            document.getElementById("line-car").value = 0;
-            document.getElementById("name-car").value = 0;
-        }
+        setValue("name-company-load-",companySelect.value,3);
+        setValue("line-car-load-",".",3);
+        setValue("name-car-load-",".",3);
+        document.getElementById("line-car").value = 0;
+        document.getElementById("name-car").value = 0;
+        document.getElementById("name-car").innerHTML = "";
     };
     lineCarSelect.onchange = function() {
         var lineCar = this.value;
@@ -215,29 +180,22 @@ window.onload = function() {
             nameCars[lineCar].forEach(function(line) {
                 var option = document.createElement("option");
                 option.text = line;
-                if (line == "Chọn tên xe")
-                    option.value = 0;
+                if (line == "Chọn tên xe"){
+                    option.value = -1;
+                    option.disabled = true;
+                    option.selected = true;
+                }
                 else
                     option.value = line;
-                option.value = line;
                 nameCarSelect.appendChild(option);
             });
         }
-        else {
-
-        }
-        if (checkLineCar()){
-            lineCarSelect.style.borderColor = "#C0C0C0";
-            setValue("line-car-load-",lineCarSelect.value,1);
-            setValue("name-car-load-",".",1);
-            document.getElementById("name-car").value = 0;
-        }
+        setValue("line-car-load-",lineCarSelect.value,3);
+        setValue("name-car-load-",".",3);
+        document.getElementById("name-car").value = 0;
     }
     nameCarSelect.onchange = function(){
-        if (checkNameCar()){
-            nameCarSelect.style.borderColor = "#C0C0C0";
-            setValue("name-car-load-",nameCarSelect.value,3);
-        }
+        setValue("name-car-load-",nameCarSelect.value,3);
     }
     mileage.onchange = function(){
         if (checkMileage()){
@@ -245,28 +203,91 @@ window.onload = function() {
             setValue("mileage-load-",mileage.value,3);
         }
     }
-
+    showroom.onchange = function(){
+        setValue("showroom-load-",showroom.value,2);
+    }
+    date.onchange = function(){
+        setValue("date-load-",date.value,2);
+    }
+    time.onchange = function(){
+        setValue("time-load-",time.value,2);
+    }
+    var maintenance1 = document.getElementById("maintenance-1");
+    maintenance1.onchange = function(){
+        
+    }
 };
-function check1(id){
-    let customerName = document.getElementById("customer-name");
-    let customerId = document.getElementById("customer-id");
-    let email = document.getElementById("email");
-    let phone = document.getElementById("phone");
-    let idPhone = document.getElementById("id-phone");
-    
-    
-    if (!numberPattern.test(customerId.value)) {
-        alert("Nhap CCCD sai");
-        return;
-    }
-    if (!emailPattern.test(email.value)){
-        alert("Nhap email sai");
-        return;
-    }
-    if (!numberPattern.test(phone.value)){
-        alert("Nhap so dien thoai sai");
-        return;
-    }
-   id.href="#tabs-2";
-}
 
+function update(i){
+    var check = document.getElementById("maintenance-"+i.toString());
+    if (check.value == "on"){
+        check.value = "off";
+        document.getElementById("icon-"+i.toString()).style = "color: green;font-size:24px;margin-left: 12px;";
+        document.getElementById("maintenance-load-"+i.toString()).innerText = listService[i-1];
+        document.getElementById("icon-"+i.toString()).innerHTML = "&#10003";
+    }
+    else{
+        check.value = "on";
+        document.getElementById("icon-"+i.toString()).innerHTML = "";
+        document.getElementById("maintenance-load-"+i.toString()).innerText = "";
+    }
+}
+function updateAgree(){
+    var check = document.getElementById("agree");
+    if (check.value == "on"){
+        check.value = "off";
+    }
+    else{
+        check.value = "on";
+    }
+}
+function submitMaintain(){
+    let input = ["Mã vùng","Hãng xe","Dòng xe","Tên xe","Showroom","Ngày bảo dưỡng","Khung giờ bảo dưỡng"];
+    let text = ["Họ và tên","CCCD","Email","Số điện thoại","","","Biển số xe","Quãng đường đi"];
+    let inputList = document.getElementsByName('input');
+    let checkboxList = document.getElementsByName('checkbox');
+    let textList  = document.getElementsByName('text');
+    for(let i = 0; i < textList.length; i++) {
+        if (textList[i].value == 0 && i != 4 && i != 5){
+            alert(text[i] + " chưa được nhập!");
+            return false;
+        }
+    }
+    for(let i = 0; i < inputList.length; i++) {
+        if (inputList[i].value == 0){
+            alert(input[i] + " chưa được chọn!");
+            return false;
+        }
+    }
+    var num = 0;
+    for(let i = 1; i < checkboxList.length; i++) {
+        if (checkboxList[i].value == "off"){
+            num = 1;
+        }
+    }
+    if (num == 0){
+        alert("Chưa có dịch vụ nào được chọn!");
+        return false;
+    }
+    if (checkboxList[0].value == "on" ){
+        alert("Bạn chưa đồng ý với điều khoản!");
+        return false;
+    }
+    if (!checkNameCustomer()){
+        return false;
+    }
+    if (!checkIdCustomer())
+        return false;
+    if (!checkEmail())
+        return false;
+    if (!checkPhone())
+        return false;
+    if (!checkLicensePlates())
+        return false;
+    if (!checkMileage())
+        return false;
+    alert("Đơn bảo dưỡng đã được cập nhật!");
+    document.getElementById('myForm').submit();
+    
+    return true;
+}
