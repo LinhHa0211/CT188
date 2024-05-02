@@ -114,6 +114,12 @@
             </div>
             <img class="showroom__img" src="../images/showroom/showroomImgBackground.jpg" alt="">
         </div>
+        <div class="w-100"style=" display: flex; justify-content: flex-end;">
+            <div class="d-flex" style="margin-right: 30px; margin-bottom: -50px;flex-direction: column; width: 30%; height: 180px; align-items: flex-end;">
+                <button id="submit" type="button" class="button" onclick="submitMaintain()">Xác nhận</button>
+                <p style="font-style:italic;text-align: center;">Nhấn vào bút để chuyển sang mục tương ứng<p>        
+            </div>
+        </div>
         <div class="container">
             <form class="row"  id="myForm" action="#" method="post" enctype="application/x-www-form-urlencoded">
                <div class="col-lg-11">
@@ -291,7 +297,7 @@
                                                 <label for="license-plates">Biển số xe: </label>
                                             </td>
                                             <td>
-                                                <input type="text" class="name-id-1" id="license-plates" name="text" placeholder="VD: 65A-987.67">
+                                                <input type="text" class="name-id-1" id="license-plates" name="text" placeholder="VD: 65A-98767">
                                             </td>
                                         </tr>
                                         <tr class="input__container">
@@ -516,7 +522,7 @@
                                                     Hệ thống thắng
                                                 </div>
                                                 <div class="col-lg-2" style="margin-top: 5px;">
-                                                    <input name="checkbox" id="maintenance-2" type="checkbox" class="round-checkbox" onclick="update(1)">
+                                                    <input name="checkbox" id="maintenance-2" type="checkbox" class="round-checkbox" onclick="update(2)">
                                                     <label class="round" for="maintenance-2">
                                                         <div id="icon-2"></div>
                                                     </label>
@@ -658,7 +664,6 @@
                     </div>   
                 </div>
             </form>
-            <button id="submit" type="button" onclick="submitMaintain()">Xac nhan</button>
         </div>
     </main>
     <!-- Main Section End -->
