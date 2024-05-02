@@ -74,3 +74,35 @@
     font-size: 15px;
     color:#767676;
 }
+#maintain-main .service {
+    margin-right: 5%;
+    margin: 15px 0px;
+    height: 50px;
+    background-color: #f9f9f9;
+    border: 2px solid grey;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Sử dụng flexbox để căn chỉnh các phần tử trong service cùng hàng */
+    align-items: center; /* Canh giữa theo chiều dọc */
+    flex-direction: column; /* Đặt hướng cột cho flexbox */
+}
+#maintain-main .checkbox-container {
+    margin-top: 10px; /* Khoảng cách giữa tiêu đề và checkbox */
+    margin-bottom: 10px; /* Khoảng cách giữa checkbox và chi tiết */
+}
+#maintain-main .round-checkbox {
+    display: none; /* Ẩn checkbox mặc định */
+}
+#maintain-main .round {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    margin-top: -2px;
+}
+#maintain-main h4 {
+    margin: 0; /* Loại bỏ margin top và bottom */
+}

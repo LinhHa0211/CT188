@@ -35,15 +35,14 @@
     <link rel="stylesheet" href="../css/style_phuc.css">
     <link rel="stylesheet" href="../css/maintain.css" type="text/css">
 
-    <script src="../js/maintain.js"></script>
 </head>
 
 <body>
+    
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
-
     <!-- Header Section Begin -->
     <header>
         <div class="container">
@@ -116,18 +115,15 @@
             <img class="showroom__img" src="../images/showroom/showroomImgBackground.jpg" alt="">
         </div>
         <div class="container">
-            <form class="row" id="maintain-form" method="post" enctype="application/x-www-form-urlencoded">
+            <form class="row"  id="myForm" action="#" method="post" enctype="application/x-www-form-urlencoded">
                <div class="col-lg-11">
                 <div class="tab-content">
                     <div class="tab-pane active" id="tabs-1" role="tabpanel">
-                        <div class="row" style="height: 100px; padding: 25px 0;font-size: 14px;">
-                            <div class="col-lg-9" style="padding: 15px 0;">
+                        <div style="height: 100px; padding: 25px 0;font-size: 14px;">
+                            <div style="padding: 15px 0;">
                                 <span style="padding-right: 10px;"><strong>Đặt lịch bảo dưỡng</strong> </span> 
                                 <i class="fa fa-angle-right" style="padding-right: 10px;"></i> 
                                 <span>Chi tiết cá nhân</span>
-                            </div>
-                            <div class="col-lg-3" style="padding: 15px 0;">
-                                <h4 >Đã hoàn thành 0%</h4>
                             </div>
                         </div>
                         <div class="row">
@@ -141,7 +137,7 @@
                                                 <label for="customer-name">Họ và tên: </label>
                                             </td>
                                             <td>
-                                                <input type="text" id="customer-name" class="name-id-1" name="input" placeholder="Vui lòng nhập họ">
+                                                <input type="text" id="customer-name" class="name-id-1" name="text" placeholder="Vui lòng nhập họ">
                                             </td>
                                         </tr>
                                         <tr class="input__container">
@@ -149,7 +145,7 @@
                                                 <label for="customer-id">CCCD: </label>
                                             </td>
                                             <td>
-                                                <input type="text" id="customer-id" class="name-id-1" name="input" placeholder="Vui lòng nhập căn cước công dân">
+                                                <input type="text" id="customer-id" class="name-id-1" name="text" placeholder="Vui lòng nhập căn cước công dân">
                                             </td>
                                         </tr>
                                         <tr class="input__container">
@@ -157,7 +153,7 @@
                                                 <label for="email">Email: </label>
                                             </td>
                                             <td>
-                                                <input type="text" id="email" class="name-id-1" name="input" placeholder="Vui lòng nhập email">
+                                                <input type="text" id="email" class="name-id-1" name="text" placeholder="Vui lòng nhập email">
                                             </td>
                                         </tr>
                                         <tr class="input__container">
@@ -178,7 +174,7 @@
                                                 
                                             </td>
                                             <td>
-                                                <input type="text" id="phone" class="name-id-1" name="input" placeholder="Vui lòng nhập số điện thoại">
+                                                <input type="text" id="phone" class="name-id-1" name="text" placeholder="Vui lòng nhập số điện thoại">
                                             </td>
                                         </tr>
                                         <tr class="input__container">
@@ -186,7 +182,7 @@
                                                 <label for="company-name">Tên công ty:</label>
                                             </td>
                                             <td>
-                                                <input type="text" id="company-name" class="name-id-1" name="input" placeholder="Không bắt buộc">
+                                                <input type="text" id="company-name" class="name-id-1" name="text" placeholder="Không bắt buộc">
                                             </td>
                                         </tr>
                                         <tr class="input__container">
@@ -194,7 +190,7 @@
                                                 <label for="address-name">Địa chỉ:</label>
                                             </td>
                                             <td>
-                                                <input type="text" id="address-name" class="name-id-1" name="input" placeholder="Không bắt buộc">
+                                                <input type="text" id="address-name" class="name-id-1" name="text" placeholder="Không bắt buộc">
                                             </td>
                                         </tr>
                                     </table>
@@ -202,7 +198,7 @@
                                         <h4>Điều khoản và điều kiện</h4>
                                         <div class="row">
                                             <div class="col-sm-1">
-                                                <input type="checkbox" id="checkbox" name="input" style="width: 24px;height: 24px;margin-top: 15px;">
+                                                <input type="checkbox" id="agree" onclick="updateAgree()" name="checkbox" style="width: 24px;height: 24px;margin-top: 15px;">
                                             </div>
                                             <div class="col-sm-11" style="margin-left: -20px;">
                                                 <p>Tôi hiểu rằng Dữ liệu liên quan của khách hàng và phương tiện được thu thập trong quá trình đặt chỗ sẽ được chuyến tiếp đến Xưởng dịch vụ ủy quyền Mercedes-Benz liên quan sau khi hoàn thành đặt chỗ. Tôi đã đọc và đồng thuận với tất cả các điều khoản và điều kiện được đề cập trong Lưu ý về Bảo vệ Dữ liệu Cá nhân.</p>
@@ -246,14 +242,11 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="tabs-2" role="tabpanel">
-                        <div class="row" style="height: 100px; padding: 25px 0;font-size: 14px;">
-                            <div class="col-lg-9" style="padding: 15px 0;">
+                        <div style="height: 100px; padding: 25px 0;font-size: 14px;">
+                            <div style="padding: 15px 0;">
                                 <span style="padding-right: 10px;"><strong>Đặt lịch bảo dưỡng</strong> </span> 
                                 <i class="fa fa-angle-right" style="padding-right: 10px;"></i> 
                                 <span>Xe</span>
-                            </div>
-                            <div class="col-lg-3" style="padding: 15px 0;">
-                                <h4 >Đã hoàn thành 30%</h4>
                             </div>
                         </div>
                         <div class="row">
@@ -298,7 +291,7 @@
                                                 <label for="license-plates">Biển số xe: </label>
                                             </td>
                                             <td>
-                                                <input type="text" class="name-id-1" id="license-plates" name="input" placeholder="VD: 65A-987.67">
+                                                <input type="text" class="name-id-1" id="license-plates" name="text" placeholder="VD: 65A-987.67">
                                             </td>
                                         </tr>
                                         <tr class="input__container">
@@ -306,7 +299,7 @@
                                                 <label for="mileage">Quãng đường đi:</label>
                                                 </td>
                                             <td>
-                                                <input type="text" id="mileage" class="name-id-1" name="input" placeholder="km" style="padding-right: 10px;">
+                                                <input type="text" id="mileage" class="name-id-1" name="text" placeholder="km" style="padding-right: 10px;">
                                             </td>
                                         </tr>
                                     </table>
@@ -362,15 +355,13 @@
                         </div>
                     </div>
                     <div class="tab-pane" id="tabs-3" role="tabpanel">
-                        <div class="row" style="height: 100px; padding: 25px 0;font-size: 14px;">
-                            <div class="col-lg-9" style="padding: 15px 0;">
+                        <div style="height: 100px; padding: 25px 0;font-size: 14px;">
+                            <div style="padding: 15px 0;">
                                 <span style="padding-right: 10px;"><strong>Đặt lịch bảo dưỡng</strong> </span> 
                                 <i class="fa fa-angle-right" style="padding-right: 10px;"></i> 
                                 <span>showroom và lịch hẹn</span>
                             </div>
-                            <div class="col-lg-3" style="padding: 15px 0;">
-                                <h4 >Đã hoàn thành 60%</h4>
-                            </div>
+                        
                         </div>
                         <div class="row">
                             <div class="col-lg-8" style="padding-right: 5%;">
@@ -378,25 +369,51 @@
                                 <p>Cho chúng tôi biết showroom mà bạn chọn và khung giờ bảo dưỡng.</p>
                                 <div>
                                     <div class="showroom__container-content">
-                                        <div class="showroom__container-options">
+                                        <div class="showroom__container-options" style="margin-bottom: 20px;">
                                             <p class="mb-3 mt-3 p-showroom">
                                                 Xin vui lòng chọn hệ thống showroom phân phối từ danh sách phía dưới hoặc trên bản đồ.
                                             </p>
-                                            
                                             <div class = "showroom__select-container">
-                                                <select class="showroom__select-box" >
-                                                    <option value="9" disabled selected>Chọn Trung tâm Dịch vụ.</option>
-                                                    <option value="0">BMW Phú Mỹ Hưng</option>
-                                                    <option value="1">BMW Long Biên</option>
-                                                    <option value="2">BMW Sala</option>
-                                                    <option value="3">BMW Đà Nẵng</option>
-                                                    <option value="4">BMW Nguyễn Văn Trỗi</option>
+                                                <select id="showroom" class="showroom__select-box" name="input">
+                                                    <option value="0" disabled selected>Chọn Trung tâm Dịch vụ.</option>
+                                                    <option value="BMW Phú Mỹ Hưng">BMW Phú Mỹ Hưng</option>
+                                                    <option value="BMW Long Biên">BMW Long Biên</option>
+                                                    <option value="BMW Sala">BMW Sala</option>
+                                                    <option value="BMW Đà Nẵng">BMW Đà Nẵng</option>
+                                                    <option value="BMW Nguyễn Văn Trỗi">BMW Nguyễn Văn Trỗi</option>
                                                 </select>
                                                 <div class="showroom__select-icon">
                                                     <i class="fa-solid fa-chevron-down text-white"></i>
                                                 </div>
                                             </div>
                                         </div>
+                                        <table>
+                                            <tr class="input__container">
+                                                <td>
+                                                    <label for="date">Chọn ngày: </label>
+                                                </td>
+                                                <td>
+                                                    <input id="date" type="date" name="input" class="name-id-2">
+                                                </td>
+                                            </tr>
+                                            <tr class="input__container">
+                                                <td>
+                                                    <label for="time">Chọn giờ: </label>
+                                                </td>
+                                                <td>
+                                                    <select id="time" name="input"  class="name-id-2">
+                                                        <option value="0" disabled selected>Vui lòng chọn</option>
+                                                        <option value="8h">8h</option>
+                                                        <option value="9h">9h</option>
+                                                        <option value="10h">10h</option>
+                                                        <option value="14h">14h</option>
+                                                        <option value="15h">15h</option>
+                                                        <option value="16h">16h</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+
+                                        </table>
                                         <div class="showroom__container-map">
                                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1938775228377!2d106.67228917480519!3d10.796458089353496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529837c180a19%3A0xbf43d70040a95b8e!2zU2hvd3Jvb20gQk1XIFBow7ogTmh14bqtbg!5e0!3m2!1svi!2s!4v1711033244665!5m2!1svi!2s" width="700" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                         </div>
@@ -446,6 +463,18 @@
                                 </div>
                                 <div class="info-main-blue">
                                     Showroom và lịch hẹn
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <p>Showroom:</p>
+                                            <p>Ngày: </p>
+                                            <p>Giờ:</p>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <p id="showroom-load-1">.</p>
+                                            <p id="date-load-1">.</p>
+                                            <p id="time-load-1">.</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="info-main-grey">
                                     Các dịch vụ bảo dưỡng
@@ -455,13 +484,10 @@
                     </div>
                     <div class="tab-pane" id="tabs-4" role="tabpanel">
                         <div class="row" style="height: 100px; padding: 25px 0;font-size: 14px;">
-                            <div class="col-lg-9" style="padding: 15px 0;">
+                            <div style="padding: 15px 0;">
                                 <span style="padding-right: 10px;"><strong>Đặt lịch bảo dưỡng</strong> </span> 
                                 <i class="fa fa-angle-right" style="padding-right: 10px;"></i> 
                                 <span>Các dịch vụ</span>
-                            </div>
-                            <div class="col-lg-3" style="padding: 15px 0;">
-                                <h4 >Đã hoàn thành 60%</h4>
                             </div>
                         </div>
                         <div class="row">
@@ -469,7 +495,89 @@
                                 <h4 class="maintain-title-info"><strong>Chọn dịch vụ phù hợp với bạn</strong></h4>
                                 <p>Chúng tôi cần một số thông tin về dịch vụ bạn cần để có thể phục vụ tốt nhất.</p>
                                 <div>
-                                    
+                                    <h4>Bảo dưỡng</h4>
+                                    <div class="row">
+                                        <div class="col-lg-6 service">
+                                            <div class="row">
+                                                <div class="col-lg-10" style="margin-top: 13px; padding: 0;">
+                                                    Hệ thống máy
+                                                </div>
+                                                <div class="col-lg-2" style="margin-top: 5px;">
+                                                    <input name="checkbox" id="maintenance-1" type="checkbox" class="round-checkbox" onclick="update(1)">
+                                                    <label class="round" for="maintenance-1">
+                                                        <div id="icon-1"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 service">
+                                            <div class="row">
+                                                <div class="col-lg-10" style="margin-top: 13px; padding: 0;">
+                                                    Hệ thống thắng
+                                                </div>
+                                                <div class="col-lg-2" style="margin-top: 5px;">
+                                                    <input name="checkbox" id="maintenance-2" type="checkbox" class="round-checkbox" onclick="update(1)">
+                                                    <label class="round" for="maintenance-2">
+                                                        <div id="icon-2"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 service">
+                                            <div class="row">
+                                                <div class="col-lg-10" style="margin-top: 13px; padding: 0;">
+                                                    Cao su gạt mưa
+                                                </div>
+                                                <div class="col-lg-2" style="margin-top: 5px;">
+                                                    <input name="checkbox" id="maintenance-3" type="checkbox" class="round-checkbox" onclick="update(3)">
+                                                    <label class="round" for="maintenance-3">
+                                                        <div id="icon-3"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4>Bánh xe</h4>
+                                        <div class="col-lg-6 service">
+                                            <div class="row">
+                                                <div class="col-lg-10" style="margin-top: 13px; padding: 0;">
+                                                    Thay bánh xe
+                                                </div>
+                                                <div class="col-lg-2" style="margin-top: 5px;">
+                                                    <input name="checkbox" id="maintenance-4" type="checkbox" class="round-checkbox" onclick="update(4)">
+                                                    <label class="round" for="maintenance-4">
+                                                        <div id="icon-4"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 service">
+                                            <div class="row">
+                                                <div class="col-lg-10" style="margin-top: 13px; padding: 0;">
+                                                    Canh chỉnh góc lái
+                                                </div>
+                                                <div class="col-lg-2" style="margin-top: 5px;">
+                                                    <input name="checkbox" id="maintenance-5" type="checkbox" class="round-checkbox" onclick="update(5)">
+                                                    <label class="round" for="maintenance-5">
+                                                        <div id="icon-5"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h4>Bánh xe</h4>
+                                        <div class="col-lg-6 service">
+                                            <div class="row">
+                                                <div class="col-lg-10" style="margin-top: 13px; padding: 0;">
+                                                    Sửa chữa chung
+                                                </div>
+                                                <div class="col-lg-2" style="margin-top: 5px;">
+                                                    <input name="checkbox" id="maintenance-6" type="checkbox" class="round-checkbox" onclick="update(6)">
+                                                    <label class="round" for="maintenance-6">
+                                                        <div id="icon-6"></div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
@@ -483,12 +591,12 @@
                                             <p>SĐT: </p>
                                         </div>
                                         <div class="col-lg-7">
-                                            <p id="customer-name-load-3">.</p>
-                                            <p id="customer-id-load-3">.</p>
-                                            <p id="email-load-3">.</p>
+                                            <p id="customer-name-load-4">.</p>
+                                            <p id="customer-id-load-4">.</p>
+                                            <p id="email-load-4">.</p>
                                             <p>
-                                                <span id="id-phone-load-3">.</span>
-                                                <span id="phone-load-3"> </span>
+                                                <span id="id-phone-load-4">.</span>
+                                                <span id="phone-load-4"> </span>
                                             </p>
                                         </div>
                                     </div>
@@ -504,19 +612,37 @@
                                             <p>Quãng đường:</p>
                                         </div>
                                         <div class="col-lg-7">
-                                            <p id="name-company-load-2">.</p>
-                                            <p id="line-car-load-2">.</p>
-                                            <p id="name-car-load-2">.</p>
-                                            <p id="plate-load-2">.</p>
-                                            <p id="mileage-load-2">.</p>
+                                            <p id="name-company-load-3">.</p>
+                                            <p id="line-car-load-3">.</p>
+                                            <p id="name-car-load-3">.</p>
+                                            <p id="plate-load-3">.</p>
+                                            <p id="mileage-load-3">.</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="info-main-blue">
                                     Showroom và lịch hẹn
+                                    <div class="row">
+                                        <div class="col-lg-5">
+                                            <p>Showroom:</p>
+                                            <p>Ngày: </p>
+                                            <p>Giờ:</p>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <p id="showroom-load-2">.</p>
+                                            <p id="date-load-2">.</p>
+                                            <p id="time-load-2">.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="info-main-grey">
+                                <div class="info-main-blue">
                                     Các dịch vụ bảo dưỡng
+                                    <p id="maintenance-load-1"></p>
+                                    <p id="maintenance-load-2"></p>
+                                    <p id="maintenance-load-3"></p>
+                                    <p id="maintenance-load-4"></p>
+                                    <p id="maintenance-load-5"></p>
+                                    <p id="maintenance-load-6"></p>
                                 </div>
                             </div>
                         </div>    
@@ -532,6 +658,7 @@
                     </div>   
                 </div>
             </form>
+            <button id="submit" type="button" onclick="submitMaintain()">Xac nhan</button>
         </div>
     </main>
     <!-- Main Section End -->
@@ -624,7 +751,8 @@
     <script src="../bootstrap_template/js/main1.js"></script>
     <script src="../js/index.js"></script>
     <script src="../js/showroom_script.js"></script>
-    
+    <script src="../js/maintain.js"></script>
+
 </body>
 
 </html>
