@@ -129,3 +129,24 @@
 #bmw .icon i{
     margin-right: 10px;
 }
+
+@media screen and (max-width: 600px) {
+	#bmw .showroom__img {
+        margin-top: 30%;
+        object-fit: cover;
+        height: auto;
+    }
+    #bmw .showroom__img-header {
+        font-size: 45px;
+        margin-top: -10px;
+    }
+    #bmw .showroom__img-content {
+        font-size: 14px;
+        margin-top: -15px;
+    }
+    #bmw .showroom__img-text {
+        margin-bottom: 20px;
+    }
+    
+
+}
