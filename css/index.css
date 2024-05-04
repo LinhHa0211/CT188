@@ -190,7 +190,7 @@ footer{
 }
 
 
-.access > .fa, .fa-phone-square{
+.address > .fa, .fa-phone-square{
 	color: rgb(40, 38, 38);
 }
 
@@ -544,4 +544,88 @@ footer{
 }
 .top-btn > a:hover{
 	color: lightgray;
+}
+
+.res-content {
+	display: none;
+}
+.responsive-right{
+	display: none;
+}
+@media screen and (max-width: 600px) {
+	footer > #footer-1 div {
+		margin-bottom: 15px;
+	}
+	footer .access li {
+		margin-left: 2px;
+		width: 180px;
+		height: 40px;
+	}
+	.top-btn {
+		margin-left: 90%;
+	}
+	.top-btn > a{
+		text-decoration: none;
+		color: rgb(52, 47, 47);
+	}
+	.top-btn > a:hover{
+		color: rgb(52, 47, 47);
+	}
+	.header__nav{
+		background-color: rgba(192, 192, 192, 0.9);
+	}
+
+	#main-menu ul.sub-menu{
+		width: 100px;
+	}
+	#main-menu li a{
+		font-size: 12px;
+		padding: 5px 10px;
+		margin-top: 14px;
+	}
+
+	#main-menu > li.has-child::after{
+		display: none;
+	}
+
+	.header__nav__widget__btn {
+		text-align: left;
+	}
+	.header__nav__widget__btn  i {
+		font-size: 15px;
+		width: 20px;
+		text-align: center;
+	}
+	.header__nav__widget{
+		margin-top: 120px;
+		background-color: lightgray;
+		width: 100px;
+		height: 80px;
+		margin-right: -10px;
+		display: none;
+		position: absolute;
+		right: 15px;
+	}
+
+	.header__nav__widget a.search-switch, 
+	.header__nav__widget a.login-switch, 
+	.header__nav__widget a.cart-switch{
+		text-decoration: none;
+		font-size: 13px;
+		margin-right: -10px;
+		margin-left: 2px;
+	}
+
+	.responsive-right{
+		position: absolute;
+		right: 30px;
+		display: block;
+	}
+	.header__nav__widget.res-active{
+		display: block;
+	}
+	.res-content {
+		display: inline;
+	}
+
 }

@@ -3,6 +3,14 @@ $(document).ready(function() {
     $('.sub-menu').parent('li').addClass('has-child');
 });    
 
+
+document.getElementById('res-bars').onclick = function () {
+    var headerBar = document.getElementsByClassName('header__nav__widget')[0];
+    headerBar.classList.toggle('res-active');
+    console.log(1);
+}
+
+
 // Ảnh ở phần đầu của main
 var list = document.querySelector('.slider-img .list-img');
 var items = document.querySelectorAll('.slider-img .list-img .item-img');
@@ -54,3 +62,5 @@ prevBtn.addEventListener('click', function() {
     let items = document.querySelectorAll('.part-1 .block-img-2 .slide-img-2 .item-img-2');
     document.querySelector('.part-1 .block-img-2 .slide-img-2').prepend(items[items.length - 1]);
 });
+
+
