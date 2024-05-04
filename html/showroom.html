@@ -101,27 +101,36 @@
     
     <main class="main-showroom">
         
+        <!-- Phần slideshow chứa hình ảnh chuyển động của showroom -->
         <div class="showroom__image">
+            <!-- Dùng showroom__img để tùy chỉnh kích thước hình ảnh cho slideshow -->
             <img class="showroom__img" src="../images/showroom/showroomImgBackground.jpg" alt="">
+            
+            <!-- Dùng showroom__img-overlay để tạo lớp phủ màu cho hình ảnh slideshow -->
             <div class="showroom__img-overlay">
+
+                <!-- Dùng showroom__img-text để tùy chỉnh tiêu đề slideshow -->
                 <div class="showroom__img-text">
                     <h2 class="showroom__img-header">SHOWROOM</h2>
                     <p class="showroom__img-content">Đến với showroom của chúng tôi để trải nghiệm những dòng xe mới nhất.</p>
                 </div>
-               
             </div>
-            
         </div>
         
-        
+        <!-- Phần bản lời giới thiệu của showroom -->
         <div class="showroom__commit container w-100">
             <div class="row">
+
+                <!-- Dùng row kết hợp col-lg-6 để chia cột cho phần nội dung giới thiệu -->
                 <div class="col-lg-6 d-flex flex-column justify-content-start">
+
+                    <!-- Dùng showroom__commit-header để tùy chỉnh tiêu đề cho phần giới thiệu -->
                     <h2 class="showroom__commit-header">Tự hào mang đến một showroom BMW chất lượng cao</h2>
                     <div class="showroom__commit-line"></div>
                     <h3 class="showroom__commit-description">Nơi mà bạn có thể tìm thấy sự kết hợp hoàn hảo giữa sự sang trọng của BMW và dịch vụ chăm sóc khách hàng tận tâm</h3>
                     
                     <div class="row">
+                        <!-- Dùng row kết hợp với col-lg-6 để chia nội dung làm hai phần -->
                         <div class="col-lg-6">
                             <i class="fa-solid fa-address-card showroom__commit-icon"></i><br>
                             <span class="showroom__commit-miniheader">DỊCH VỤ TUYỆT VỜI</span>
@@ -134,19 +143,28 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Dùng row kết hợp col-lg-6 để chia cột cho phần hình ảnh giới thiệu -->
                 <div class="col-lg-6">
                     <img src="../images/showroom/showroomHelp.jpg" alt="">
                 </div>
             </div>
         </div>
+
+        <!-- Phần tìm kiếm showroom gần nhất -->
         <div class="container w-100">
             <h2 class="showroom__container-header text-black">LIÊN HỆ SHOWROOM</h2>
+
+            <!-- Dùng showroom__container-content để chứa nội dung của phần tìm kiếm showroom -->
             <div class="showroom__container-content row">
+
+                <!-- Dùng showroom__container-options để chứa các lựa chọn tìm kiếm showroom -->
                 <div class="showroom__container-options col-lg-4">
                     <p class="mb-3 mt-3 p-showroom">
                         Xin vui lòng chọn hệ thống showroom phân phối từ danh sách phía dưới hoặc trên bản đồ.
                     </p>
                     
+                    <!-- Dùng showroom__select-container để chứa select box chọn showroom -->
                     <div class = "showroom__select-container">
                         <select class="showroom__select-box" >
                             <option value="9" disabled selected>Chọn Trung tâm Dịch vụ.</option>
@@ -161,6 +179,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Dùng showroom__container-map để chứa bản đồ hiển thị vị trí của showroom -->
                 <div class="showroom__container-map col-lg-8">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1938775228377!2d106.67228917480519!3d10.796458089353496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529837c180a19%3A0xbf43d70040a95b8e!2zU2hvd3Jvb20gQk1XIFBow7ogTmh14bqtbg!5e0!3m2!1svi!2s!4v1711033244665!5m2!1svi!2s" width="700" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
