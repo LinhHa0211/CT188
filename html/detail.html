@@ -112,17 +112,22 @@
     <!-- Header Section End -->
 
     <!-- Main Section Begin -->
+    <!--Dùng class car-details và spad được bootstrap hỗ trợ để bao khối toàn bộ trang chi tiết-->
     <section class="car-details spad">
         <div class="container">
             <div class="row">
+                <!--Sử dụng class col-sm-10 được hỗ trợ để bao khối hình ảnh và nội dung chi tiết của sản phẩm-->                
                 <div class="col-lg-9">
                     <div class="car__details__pic">
+                        <!--Dùng clas car__details__pic__large được bootstrap hỗ trợ cho hình ảnh sản phẩm chính của trang -->
                         <div class="car__details__pic__large">
                             <span id="photo-main"></span>
                         </div>
+                        <!--Dùng class car__details__tab được bootstrap hỗ trợ để bao khối danh mục điều hướng các thông tin chi tiết-->
                         <div class="car__details__tab">
                             <ul class="nav nav-tabs" role="tablist">
-                                <li class="nav-item">
+                            <!--Dùng class nav được bootstrap hỗ trợ để tuỳ chỉnh chuyển hướng các tab-->
+                            <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#tabs-1" role="tab">Thông Số Kĩ Thuật</a>
                                 </li>
                                 <li class="nav-item">
@@ -135,12 +140,15 @@
                                     <a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab">Phụ Kiện</a>
                                 </li>
                             </ul>
+                            <!--Dùng class tab-content để bao khối 4 tab Thông số, Ngoại thất, Nội thất, Phụ kiện-->
                             <div class="tab-content">
+                                <!--Bootstrap hỗ trợ class tab-pane cho từng tab sản phẩm. Riêng tab-1 có thêm class active để hiển thị đầu tiên khi tải trang-->
                                 <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                     <div class="car-thumbs">
                                         <div class="car-thumbs-track car__thumb__slider owl-carousel" id="photo-car-1">   
                                         </div>
                                     </div>
+                                    <!--Dùng class car__details__tab__info để bao khối hiển thị thông tin chi tiết-->
                                     <div class="car__details__tab__info">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 info-detail">
