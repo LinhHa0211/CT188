@@ -142,6 +142,7 @@
 
     <!-- Main Section Begin -->
     <main id="bmw">
+        <!--Sử dụng các class giống với phần đầu của trang showroom để hiển thị các hình ảnh thay đổi liên tục-->        
         <div class="showroom__image contact-image">
             <div class="showroom__img-overlay">
                 <div class="showroom__img-text bmw__img-text">
@@ -151,8 +152,10 @@
             </div>
             <img class="showroom__img" src="../images/product/bmw/BMW-IX-5.avif" alt="">
         </div>
+        <!--Sử dụng class app_container để bao khối danh mục và các sản phẩm-->        
         <div class="app_container" style="margin-top: 150px;margin-bottom: 100px;">
             <section class="row">
+                <!--Sử dụng class col-sm-2 được hỗ trợ để bao khối phần danh mục-->
                 <div class="col-sm-2" style="border-right: 1px solid rgba(0,0,0,0.1);">
                     <nav style="margin-left: 50px;">
                         <h4 class="category__heading">
@@ -160,6 +163,7 @@
                             BMW
                         </h4>
                         <ul class="category-list">
+                            <!--Dùng class category-item cho các mục chuyển hướng của các dòng xe-->
                             <li class="category-item">
                                 <a href="#dong-xe-1" class="category-item__link"><i class="fa fa-angle-right"></i> Series I</a>
                             </li>
@@ -172,11 +176,14 @@
                         </ul>
                     </nav>
                 </div>
+                <!--Sử dụng class col-sm-10 được hỗ trợ để bao khối tất cả sản phẩm-->                
                 <div class="col-sm-10">
                     <div class="row">
                     <h2><strong id="dong-xe-1">Series I</strong></h2>
+                    <!--Sử dụng class col-sm-4 được hỗ trợ để chia đều các sản phẩm trên 1 dòng--> 
                     <div class="col-sm-4 menu" >
                         <a id="bmw-1" href="detail.html" onclick="addDetail('bmw-1')" class="info-item">
+                            <!--Dùng class car__item__text và car__item__text__inner từ bootstrap cho các thông tin cơ bản tên, giá, năm sản xuất của sản phẩm-->
                             <div class="car__item__text item-text">
                                 <div class="car__item__text__inner">
                                     <h4 ><div class="item"><span id="product-name-1"></span></div></h4>
@@ -186,6 +193,7 @@
                                     <div class="label-date date"><span id="year-1"></span></div>
                                 </div>
                             </div>
+                            <!--Dùng class  car__item__pic__slider và owl-carousel từ bootstrap cho các hình ảnh được thay đổi khi nhấp chuột-->
                             <div class="car__item__pic__slider owl-carousel">
                                 <img src="../images/product/bmw/BMW-I4-1.avif" alt="">
                                 <img src="../images/product/bmw/BMW-I4-2.avif" alt="">
@@ -195,17 +203,20 @@
                         </a>
                         <ul>
                             <li class="info">
+                                <!--Dùng hàm addDetail từ JavaScript để lưu id vào localStorage để nạp dữ liệu vào trang chi tiết-->
                                 <a href="detail.html" onclick="addDetail('bmw-1')" class="icon">
                                     <i class="fa-solid fa-list"></i>Tìm hiểu thêm
                                 </a>
                             </li>
                             <li class="info info-cart">
+                                <!--Dùng class add-cart cho phần thêm số lượng sản phẩm vào giỏ hàng-->
                                 <span class="add-cart icon">
                                     <i class="fa-solid fa-cart-plus"></i>Thêm vào giỏ hàng
                                 </span>
                             </li>
                         </ul>
                     </div>
+                    <!--Các sản phẩm bên dưới được gắn các thẻ tương tự sản phẩm 1.-->
                     <div class="col-sm-4 menu" >
                         <a id="bmw-2" href="detail.html" onclick="addDetail('bmw-2')" class="info-item">
                             <div class="car__item__text item-text">
