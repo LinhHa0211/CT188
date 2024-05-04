@@ -552,7 +552,7 @@ footer{
 .responsive-right{
 	display: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
 	footer > #footer-1 div {
 		margin-bottom: 15px;
 	}

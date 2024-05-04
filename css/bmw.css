@@ -130,7 +130,7 @@
     margin-right: 10px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
 	#bmw .showroom__img {
         margin-top: 30%;
         object-fit: cover;
