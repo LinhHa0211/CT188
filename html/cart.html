@@ -108,9 +108,12 @@
 
     <!-- Main Section Begin -->
     <main id="cart-main">
+        <!-- Bao khối giỏ hàng trong class cart-content, sau đó tạo bảng
+        với id cart-detail để chỉnh hiệu ứng cho bảng sản phẩm trong giỏ hàng -->
         <div id="cart-content">
             <h1>CHI TIẾT GIỎ HÀNG</h1>
             <table id="cart-detail" border="1" width="95%">
+                <!-- Các class bên dưới dùng để chỉnh các ô tiêu đề của bảng đẹp hơn -->
                 <thead>
                     <tr>
                         <th class="car-img">Ảnh Xe</th>
@@ -123,9 +126,14 @@
                         <th></th>
                     </tr>
                 </thead>
+
+                <!-- Phần thân bảng để nối dữ liệu từ javascript qua, hiển thị các sản phẩm
+                đã thêm vào giỏ hàng -->
                 <tbody>
         
                 </tbody>
+
+                <!-- Phần chân bảng sử dụng các id để nối dữ liệu từ javascript qua -->
                 <tfoot>
                     <tr>
                         <td colspan="8" align="right">
@@ -149,6 +157,8 @@
                     </tr>
                 </tfoot>
             </table>
+
+            <!-- Class purchase-all-btn dùng để chỉnh định dạng cho nút đặt mua toàn bộ -->
             <div>
                 <button class="purchase-all-btn">Đặt Mua Toàn Bộ</button>
             </div>
