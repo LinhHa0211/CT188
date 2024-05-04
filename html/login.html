@@ -37,21 +37,18 @@
 
     <!-- Header Section Begin -->
     <header>
-        <!-- Sử dụng các class container, row, col-lg-12 trong bootstrap để 
-            xây dựng thanh điều hướng, chia các mục trong thanh điều hướng   -->
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="header__nav">
                         <nav>
-                            <!-- Đặt id main-menu và class sub-menu để tạo dropdown-menu -->
                             <ul id="main-menu">
                                 <a href="./index.html"><img id="logo-img" src="../images/logo.png"></a>
                                 <li id="header-show-home">
-                                    <a href="./index.html">Trang chủ</a>
+                                    <a href="./index.html" id="HEADER_HOME-PAGE">Trang chủ</a>
                                 </li>
                                 <li id="header-show-product">
-                                    <a href="#">Sản phẩm</a>
+                                    <a href="#" id="HEADER_PRODUCTS">Sản phẩm</a>
                                     <ul class="sub-menu">
                                         <li><a href="./bmw.html">BMW</a></li>
                                         <li><a href="./mercedes.html">Mercedes</a></li>
@@ -59,40 +56,40 @@
                                     </ul>
                                 </li>
                                 <li id="header-show-service">
-                                    <a href="#">Dịch vụ</a>
+                                    <a href="#" id="HEADER_SERVICE">Dịch vụ</a>
                                     <ul class="sub-menu">
-                                        <li><a href="./drive.html">Lái thử</a></li>
-                                        <li><a href="./maintain.html">Đăng ký bảo dưỡng</a></li>
-                                        <li><a href="./showroom.html">Showroom</a></li>
-                                        <li><a href="./contact.html">Liên hệ</a></li>
+                                        <li><a href="./drive.html" id="HEADER_SERVICE-DRIVE">Lái thử</a></li>
+                                        <li><a href="./maintain.html" id="HEADER_SERVICE-MAINTAIN">Đăng ký bảo dưỡng</a></li>
+                                        <li><a href="./showroom.html" id="HEADER_SERVICE-SHOWROOM">Showroom</a></li>
+                                        <li><a href="./contact.html" id="HEADER_SERVICE-CONTACT">Liên hệ</a></li>
                                     </ul>
                                 </li>
                                 <li id="header-show-policy">
-                                    <a href="#">Chính sách</a>
+                                    <a href="#" id="HEADER_POLICY">Chính sách</a>
                                     <ul class="sub-menu">
-                                        <li><a href="./sell_policy.html">Chính sách bán hàng</a></li>
-                                        <li><a href="./warranty_policy.html">Chính sách bảo hành</a></li>
-                                        <li><a href="./vip_policy.html">Khách hàng thân thiết</a></li>
+                                        <li><a href="./sell_policy.html" id="HEADER_POLICY-SALES">Chính sách bán hàng</a></li>
+                                        <li><a href="./warranty_policy.html" id="HEADER_POLICY-WARRANTY">Chính sách bảo hành</a></li>
+                                        <li><a href="./vip_policy.html" id="HEADER_POLICY-VIP">Khách hàng thân thiết</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </nav>
-                        <!-- Class responsive-right để tạo menu khi responsive ở chế độ điện thoại -->
-                        <div class="responsive-right">
-                            <i class="fa fa-bars" id="res-bars"></i>
-                        </div>
-                        <!-- Class header__nav__widget để tạo các nút tìm kiếm, giỏ hàng, đăng nhập/đăng ký -->
+                        
                         <div class="header__nav__widget">
                             <div class="header__nav__widget__btn">
                                 <a href="./search.html" class="search-switch">
-                                    <i class="fa fa-search"></i> <span class="res-content">Tìm kiếm</span>
+                                    <i class="fa fa-search"></i>
                                 </a>
-                                <a href="./cart.html" class="cart-switch">
-                                    <i class="fa-solid fa-cart-shopping"></i> <span class="res-content">Giỏ hàng</span>
+                                <a href="./cart.html">
+                                    <i class="fa-solid fa-cart-shopping"></i>
                                 </a>
-                                <a href="./login.html" class="login-switch">
-                                    <i class="fa fa-user"></i> <span class="res-content">Đăng nhập</span>
+                                <a href="./login.html">
+                                    <i class="fa fa-user"></i>
                                 </a>
+                            </div>
+                            <div id="language-button">
+                                <button onclick="setLanguage('en-US', 'login')">EN</button>
+                                <button onclick="setLanguage('vi-VN', 'login')">VI</button>
                             </div>
                         </div>
                     </div>
