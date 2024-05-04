@@ -35,14 +35,16 @@
         <div class="loader"></div>
     </div>
 
-
     <!-- Header Section Begin -->
     <header>
+        <!-- Sử dụng các class container, row, col-lg-12 trong bootstrap để 
+            xây dựng thanh điều hướng, chia các mục trong thanh điều hướng   -->
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="header__nav">
                         <nav>
+                            <!-- Đặt id main-menu và class sub-menu để tạo dropdown-menu -->
                             <ul id="main-menu">
                                 <a href="./index.html"><img id="logo-img" src="../images/logo.png"></a>
                                 <li id="header-show-home">
@@ -75,9 +77,11 @@
                                 </li>
                             </ul>
                         </nav>
+                        <!-- Class responsive-right để tạo menu khi responsive ở chế độ điện thoại -->
                         <div class="responsive-right">
                             <i class="fa fa-bars" id="res-bars"></i>
                         </div>
+                        <!-- Class header__nav__widget để tạo các nút tìm kiếm, giỏ hàng, đăng nhập/đăng ký -->
                         <div class="header__nav__widget">
                             <div class="header__nav__widget__btn">
                                 <a href="./search.html" class="search-switch">
@@ -100,17 +104,21 @@
 
     <!-- Main Section Begin -->
     <main id="search-main">
+        <!-- Sử dụng class search-wrapper để chứa các thành phần trong trang -->
         <div class="search-wrapper">
+            <!-- Sử dụng class search-container để chứa ô nhập liệu tìm kiếm và nút tìm kiếm -->
             <div id="search-container">
                 <input type="search" id="search-input" placeholder="Nhập vào nội dung cần tìm kiếm...">
                 <button id="search-input-button">Tìm kiếm</button>
             </div>
+            <!-- Sử dụng id search-buttons để chứa các nút phân loại sản phẩm theo hãng xe có class button-value -->
             <div id="search-buttons">
                 <button class="button-value" onclick="filterProduct('all')">All</button>
                 <button class="button-value" onclick="filterProduct('BMW')">BMW</button>
                 <button class="button-value" onclick="filterProduct('Mercedes')">Mercedes</button>
                 <button class="button-value" onclick="filterProduct('Toyota')">Toyota</button>
             </div>
+            <!-- Sử dụng id products để tạo ra thẻ div chứa các kết quả tìm kiếm được -->
             <div id="products"></div>
         </div>
     </main>

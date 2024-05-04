@@ -30,21 +30,23 @@
         <div class="loader"></div>
     </div>
 
-   
     <!-- Header Section Begin -->
     <header>
+        <!-- Sử dụng các class container, row, col-lg-12 trong bootstrap để 
+            xây dựng thanh điều hướng, chia các mục trong thanh điều hướng   -->
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="header__nav">
                         <nav>
+                            <!-- Đặt id main-menu và class sub-menu để tạo dropdown-menu -->
                             <ul id="main-menu">
                                 <a href="./index.html"><img id="logo-img" src="../images/logo.png"></a>
                                 <li id="header-show-home">
-                                    <a href="./index.html" id="HEADER_HOME-PAGE">Trang chủ</a>
+                                    <a href="./index.html">Trang chủ</a>
                                 </li>
                                 <li id="header-show-product">
-                                    <a href="#" id="HEADER_PRODUCTS">Sản phẩm</a>
+                                    <a href="#">Sản phẩm</a>
                                     <ul class="sub-menu">
                                         <li><a href="./bmw.html">BMW</a></li>
                                         <li><a href="./mercedes.html">Mercedes</a></li>
@@ -52,39 +54,40 @@
                                     </ul>
                                 </li>
                                 <li id="header-show-service">
-                                    <a href="#" id="HEADER_SERVICE">Dịch vụ</a>
+                                    <a href="#">Dịch vụ</a>
                                     <ul class="sub-menu">
-                                        <li><a href="./drive.html" id="HEADER_SERVICE-DRIVE">Lái thử</a></li>
-                                        <li><a href="./maintain.html" id="HEADER_SERVICE-MAINTAIN">Đăng ký bảo dưỡng</a></li>
-                                        <li><a href="./showroom.html" id="HEADER_SERVICE-SHOWROOM">Showroom</a></li>
-                                        <li><a href="./contact.html" id="HEADER_SERVICE-CONTACT">Liên hệ</a></li>
+                                        <li><a href="./drive.html">Lái thử</a></li>
+                                        <li><a href="./maintain.html">Đăng ký bảo dưỡng</a></li>
+                                        <li><a href="./showroom.html">Showroom</a></li>
+                                        <li><a href="./contact.html">Liên hệ</a></li>
                                     </ul>
                                 </li>
                                 <li id="header-show-policy">
-                                    <a href="#" id="HEADER_POLICY">Chính sách</a>
+                                    <a href="#">Chính sách</a>
                                     <ul class="sub-menu">
-                                        <li><a href="./sell_policy.html" id="HEADER_POLICY-SALES">Chính sách bán hàng</a></li>
-                                        <li><a href="./warranty_policy.html" id="HEADER_POLICY-WARRANTY">Chính sách bảo hành</a></li>
-                                        <li><a href="./vip_policy.html" id="HEADER_POLICY-VIP">Khách hàng thân thiết</a></li>
+                                        <li><a href="./sell_policy.html">Chính sách bán hàng</a></li>
+                                        <li><a href="./warranty_policy.html">Chính sách bảo hành</a></li>
+                                        <li><a href="./vip_policy.html">Khách hàng thân thiết</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </nav>
+                        <!-- Class responsive-right để tạo menu khi responsive ở chế độ điện thoại -->
+                        <div class="responsive-right">
+                            <i class="fa fa-bars" id="res-bars"></i>
+                        </div>
+                        <!-- Class header__nav__widget để tạo các nút tìm kiếm, giỏ hàng, đăng nhập/đăng ký -->
                         <div class="header__nav__widget">
                             <div class="header__nav__widget__btn">
                                 <a href="./search.html" class="search-switch">
-                                    <i class="fa fa-search"></i>
+                                    <i class="fa fa-search"></i> <span class="res-content">Tìm kiếm</span>
                                 </a>
-                                <a href="./cart.html">
-                                    <i class="fa-solid fa-cart-shopping"></i>
+                                <a href="./cart.html" class="cart-switch">
+                                    <i class="fa-solid fa-cart-shopping"></i> <span class="res-content">Giỏ hàng</span>
                                 </a>
-                                <a href="./login.html">
-                                    <i class="fa fa-user"></i>
+                                <a href="./login.html" class="login-switch">
+                                    <i class="fa fa-user"></i> <span class="res-content">Đăng nhập</span>
                                 </a>
-                            </div>
-                            <div id="language-button">
-                                <button onclick="setLanguage('en-US', 'login')">EN</button>
-                                <button onclick="setLanguage('vi-VN', 'login')">VI</button>
                             </div>
                         </div>
                     </div>
@@ -96,12 +99,14 @@
     
     <!-- Main Section Begin -->
     <main id="register-main">
+        <!-- Sử dụng class wrapper để chứa form và nút đóng form -->
         <div class="wrapper">
             <span class="close-icon"><a href="index.html"><i class="fa-solid fa-xmark"></i></a></span>
+            <!-- Sử dụng class form để chứa các thành phần trong form -->
             <div class="form">
-                
                 <h2 id="FORM_REGISTER_NAME">Registration</h2>
                 <form onsubmit="return registerValidate(this);" action="#" method="post" enctype="application/x-www-form-urlencoded">
+                    <!-- Sử dụng class form__input-box để chứa các ô nhập liệu trong form -->
                     <div class="form__input-box">
                         <span class="icon"><i class="fa-solid fa-user"></i></span>
                         <input type="text" name="username" required>
@@ -131,28 +136,29 @@
     <!-- Main Section End -->
 
     <!-- Footer Section Begin -->
-  
     <footer>
+        <!-- Ứng dụng class row và col-sm của bootstrap để chia bố cục cho footer, kết hợp với id footer-1
+        chỉnh phần trên cho footer đẹp hơn -->
         <div id="footer-1" class="row">
             <div class="col-sm-2">
                 <ul>
-                    <h6 id="FOOTER_ABOUT-US">Về Chúng Tôi</h6>
-                    <li id="FOOTER_HELP-CENTER">Trung tâm trợ giúp</li>
-                    <li id="FOOTER_SHOPPING-GUIDE">Hướng dẫn mua hàng</li>
-                    <li id="FOOTER_THIRD-PARTY">Hỗ trợ như bên thứ ba</li>
+                    <h6>Về Chúng Tôi</h6>
+                    <li>Trung tâm trợ giúp</li>
+                    <li>Hướng dẫn mua hàng</li>
+                    <li>Hỗ trợ như bên thứ ba</li>
                 </ul>
             </div>
             <div class="col-sm-2">
                 <ul>
-                    <h6 id="FOOTER_ABOUT-COMMODITIES">Về sản phẩm</h6>
-                    <li id="FOOTER_BEST-SELLING-MODEL">Mẫu xe bán chạy</li>
-                    <li id="FOOTER_LASTEST-MODEL">Mẫu xe mới nhất</li>
-                    <li id="FOOTER_CLASSIC-CAR">Mẫu xe cổ</li>
+                    <h6>Về sản phẩm</h6>
+                    <li>Mẫu xe bán chạy</li>
+                    <li>Mẫu xe mới nhất</li>
+                    <li>Mẫu xe cổ</li>
                 </ul>
             </div>
             <div class="col-sm-3">
                 <ul class="payment">
-                    <h6 id="FOOTER_MODE-OF-PAYMENT">Phương thức thanh toán</h6>
+                    <h6>Phương thức thanh toán</h6>
                     <li><img id="napas" src="../images/footer/napas.png"></li>
                     <li><img id="visa" src="../images/footer/visa.png"></li>
                     <li><img id="paypal" src="../images/footer/paypal.png"></li>
@@ -160,7 +166,7 @@
             </div>
             <div class="col-sm-2">
                 <ul class="follow">
-                    <h6 id="FOOTER_FOLLO-US">Theo dõi chúng tôi trên</h6>
+                    <h6>Theo dõi chúng tôi trên</h6>
                     <li><i class="fa fa-facebook-square"></i> Facebook</li>
                     <li><i class="fa fa-instagram"></i> Instagram</li>
                     <li><i class="fa fa-twitter"></i> Twitter</li>
@@ -168,7 +174,7 @@
             </div>
             <div class="col-sm-3">
                 <div class="row">
-                    <h6 id="FOOTER_ACCESS-APPLICATION">Truy cập vào ứng dụng trên</h6>
+                    <h6>Truy cập vào ứng dụng trên</h6>
                     <div class="col-sm-5">
                         <img id="qr" src="../images/footer/qr.png">
                     </div>
@@ -176,25 +182,29 @@
                         <ul class="access">
                             <li><i class="fa fa-google-play"></i> Google Play</li>
                             <li><i class="fa fa-app-store"></i> App Store</li>
-
                         </ul>
                     </div>
                 </div>
-                
             </div>
         </div>
+        
+        <!-- Ứng dụng class row và col-sm của bootstrap để chia bố cục cho footer, kết hợp với id footer-2
+        chỉnh phần dưới cho footer đẹp hơn -->
         <div id="footer-2" class="row">
             <div class="address">
-                <p id="FOOTER_HOTLINE">Hotline: &ensp; <i class="fa fa-phone-square"></i> 0292 388 9898 &ensp; - &ensp; <i class="fa fa-phone-square"></i> 0292 366 6688</p>
-                <p id="FOOTER_ADRESS">Địa chỉ: &ensp; 12A, Đại Lộ Hòa Bình (gần đường 30/4), Phường Tân An, Quận Ninh Kiều, TPCT</p>
-                <p id="FOOTER_COPYRIGHT">&copy; 2024 - Bản quyền thuộc về Nhóm 1</p>
+                <p>Hotline: &ensp; <i class="fa fa-phone-square"></i> 0292 388 9898 &ensp; - &ensp; <i class="fa fa-phone-square"></i> 0292 366 6688</p>
+                <p>Địa chỉ: &ensp; 12A, Đại Lộ Hòa Bình (gần đường 30/4), Phường Tân An, Quận Ninh Kiều, TPCT</p>
+                <p>&copy; 2024 - Bản quyền thuộc về Nhóm 1</p>
             </div>
         </div>
+
+        <!-- Class top-btn dùng để tạo nút di chuyển lên đầu trang -->
         <div class="top-btn">
             <a href="#top"><i class="fa fa-angle-up"></i></a>
         </div>
     </footer>
     <!-- Footer Section End -->
+
     <script src="../js/translation.js"></script>
     <script>
         changeRegisterLanguage();
